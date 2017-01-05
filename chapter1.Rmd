@@ -1,20 +1,20 @@
 --- 
-title_meta  : Chapter 1
-title       : Intro to basics
-description : "In this chapter, you will take your first steps with R. You will learn how to use the console as a calculator and how to assign variables. You will also get to know the basic data types in R. Let's get started!"
+title_meta  : Capítulo 1
+title       : Introdução ao Básico
+description : "Neste capítulo, você irá dará seus primeiros passos em R. Você aprenderá como usar o console como uma calculadora e a como nomear variáveis. Você também irá aprender os tipos básicos de dados em R. Vamos começar!"
 
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
-## How it works
+## Como funciona a plataforma
 
-In the editor on the right you should type R code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your R code is shown in the console in the lower right corner.
+No editor à direita você deve digitar códigos em R para resolver os exercícios. Quando você clicar no botão ‘Submit Answer’, cada linha do código será interpretada e executada em R. Em seguida, você receberá uma mensagem se o seu código está correto ou não. A saída do seu código em R será mostrada no console no canto inferior direito.
 
-R makes use of the `#` sign to add comments, so that you and others can understand what the R code is about. Just like Twitter! Comments are not run as R code, so they will not influence your result. For example, _Calculate 3 + 4_ in the editor on the right is a comment.
+R faz uso do sinal de `#` para adicionar comentários, a fim de permitir a você e outras pessoas entenderem o funcionamento do seu código. Igual no Twitter! Comentários não são executados como um código em R, então eles não irão influenciar no seu resultado. Por exemplo, no editor à direita, `Calcula 3 + 4` é um comentário.
 
-You can also execute R commands straight in the console. This is a good way to experiment with R code, as your submission is not checked for correctness.
+Você pode também executar comandos em R diretamente no console ao lado. Esta é uma boa forma de experimentar novos códigos em R, já que sua submissão não será corrigida ou validada.
 
 *** =instructions
-- In the editor on the right there is already some sample code. Can you see which lines are actual R code and which are comments?
-- Add a line of code that calculates the sum of 6 and 12, and hit the 'Submit Answer' button.
+- O editor à direita possui um código de exemplo. Você consegue identificar quais linhas são códigos em R e quais são comentários?
+- Adicione uma linha de código que calcule a soma de 6 + 12, e clique no botão ‘Submit Answer’.
 
 *** =hint
 Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!

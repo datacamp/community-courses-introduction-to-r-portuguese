@@ -73,7 +73,7 @@ Sabendo disto, siga as instruções abaixo para completar o exercício.
 - Note como o símbolo de `#` é usado para adicionar comentários aos códigos em R.
 
 *** =hint
-Outro exemplo do operador módulo: `9 %% 2` é igual a `1`.
+Outro exemplo com o operador de módulo: `9 %% 2` é igual a `1`.
 
 *** =pre_exercise_code
 ```{r}
@@ -125,30 +125,30 @@ Outro exemplo do operador módulo: `9 %% 2` é igual a `1`.
 *** =sct
 ```{r}
 msg = "Não remova os operadores dos códigos de exemplo!"
-test_output_contains("2^5", incorrect_msg = "The exponentiation example is not correct. Write `2 ^ 5` on a new line.")
-test_output_contains("28 %% 6", incorrect_msg = "There seems to be an issue with the modulo example. Write `28 %% 6` on a new line.")
-success_msg("Great! Head over to the next exercise.")
+test_output_contains("2^5", incorrect_msg = "O código de exponenciação está incorreto. Escreva `2 ^ 5` em uma nova linha e tente de novo.")
+test_output_contains("28 %% 6", incorrect_msg = "Parece que há um problema com seu código de módulo. Escreva `28 %% 6` em uma nova linha e tente novamente.")
+success_msg("Ótimo! Siga em frente para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:5f200ffd43
-## Variable assignment 
+## Declaração de Variáveis
 
-A basic concept in (statistical) programming is called a **variable**. 
+Um dos conceitos básicos da programação são as  **variáveis**.
 
-A variable allows you to store a value (e.g. 4) or an object (e.g. a function description) in R. You can then later use this variable's name to easily access the value or the object that is stored within this variable. 
+Na linguagem de programação R, uma variável permite que você armazene um valor (por exemplo, o número 4) ou um objeto (como uma função). Você pode mais tarde utilizar o nome desta variável para facilmente acessar o valor ou objeto que ela está armazenando.
 
-You can assign a value 4 to a variable `my_var` with the command
+Você pode armazenar o valor 4 em uma variável chamada `my_var`usando o comando
 
 ```
 my_var <- 4
 ```
 
 *** =instructions
-Over to you: complete the code in the editor such that it assigns the value 42 to the variable `x` in the editor. Click 'Submit Answer'. Notice that when you ask R to print `x`, the value 42 appears.
+Pra você: complete o código no editor armazenando o valor 42 na variável `x`. Em seguida, clique em 'Submit Answer'. Note que, quando você pede para R mostrar o valor de `x`, o valor 42 aparece no console.
 
 *** =hint
-Look at how the value 4 was assigned to `my_variable` in the exercise's assignment. Do the exact same thing in the editor, but now assign 42 to the variable `x`.
+Reveja como o valor 4 foi armazenado na variável `my_variable` na descrição do exercício. Faça exatamente a mesma coisa no editor, mas agora armazenando o valor 42 dentro da variável `x`.
 
 *** =pre_exercise_code
 ```{r}
@@ -157,27 +157,27 @@ Look at how the value 4 was assigned to `my_variable` in the exercise's assignme
 
 *** =sample_code
 ```{r}
-# Assign the value 42 to x
+# Armazena o valor 42 na variável x
 x <- 
 
-# Print out the value of the variable x
+# Exibe o valor da variável x
 x
 ```
 
 *** =solution
 ```{r}
-# Assign the value 42 to x
+# Armazena o valor 42 na variável x
 x <- 42
 
-# Print out the value of the variable x
+# Exibe o valor da variável x
 x
 ```
 
 *** =sct
 ```{r}
-test_object("x", undefined_msg = "Make sure to define a variable `x`.",
-            incorrect_msg = "Make sure that you assign the correct value to `x`.") 
-success_msg("Good job! Have you noticed that R does not print the value of a variable to the console when you did the assignment? `x <- 42` did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+test_object("x", undefined_msg = "Tenha certeza de que você declarou corretamente a variável `x`.",
+            incorrect_msg = "Tenha certeza de que você armazenou o valor correto na variável `x`.") 
+success_msg("Bom trabalho! Você percebeu que a linguagem R não exibiu no console o código que você digitou para declarar a variável? Isso é porque o código `x <- 42` não gera nenhuma saída (output), uma vez que R acredita que você precisará dessa variável no futuro. Do contrário, você não precisaria armazenar nenhum valor nessa variável, certo? Proceda para o próximo exercício!  Good job! Have you noticed that R does not print the value of a variable to the console when you did the assignment? `x <- 42` did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
 ```
 
 

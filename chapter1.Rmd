@@ -177,22 +177,21 @@ x
 ```{r}
 test_object("x", undefined_msg = "Tenha certeza de que você declarou corretamente a variável `x`.",
             incorrect_msg = "Tenha certeza de que você armazenou o valor correto na variável `x`.") 
-success_msg("Bom trabalho! Você percebeu que a linguagem R não exibiu no console o código que você digitou para declarar a variável? Isso é porque o código `x <- 42` não gera nenhuma saída (output), uma vez que R acredita que você precisará dessa variável no futuro. Do contrário, você não precisaria armazenar nenhum valor nessa variável, certo? Proceda para o próximo exercício!  Good job! Have you noticed that R does not print the value of a variable to the console when you did the assignment? `x <- 42` did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+success_msg("Bom trabalho! Você percebeu que a linguagem R não exibiu no console o código que você digitou para declarar a variável? Isso é porque o código `x <- 42` não gera nenhuma saída (output), uma vez que R acredita que você precisará dessa variável no futuro. Do contrário, você não precisaria armazenar nenhum valor nessa variável, certo?")
 ```
 
-
 --- type:NormalExercise xp:100 skills:1 key:c5944b90eb
-## Variable assignment (2)
+## Declaração de Variáveis (2)
 
-Suppose you have a fruit basket with five apples. As a data analyst in training, you want to store the number of apples in a variable with the name `my_apples`. 
+Vamos supor que você tem uma cesta de frutas com cinco maçãs. Como um Analista de Dados em treinamento, você quer armazenar o número de maçãs em uma variável com o nome `my_apples`.
 
 *** =instructions
-- Type the following code in the editor: `my_apples <- 5`. This will assign the value 5 to `my_apples`.
-- Type: `my_apples` below the second comment. This will print out the value of `my_apples`.
-- Click 'Submit Answer', and look at the console: you see that the number 5 is printed. So R now links the variable `my_apples` to the value 5.
+- Digite o seguinte código no editor: `my_apples <- 5`. Isso fará com que o número 5 seja armazenado na variável `my_apples`.
+- Digite: `my_apples` abaixo do segundo comentário. Isso fará com que o valor da variável `my_apples` seja exibido no console.
+- Clique em 'Submit Answer' e verifique o console: você verá que o número 5 foi exibido. A partir de agora, R vai associar o nome da variável `my_apples` ao valor 5.
 
 *** =hint
-Remember that if you want to assign a number or an object to a variable in R, you can make use of the assignment operator `<-`. Alternatively, you can use `=`, but `<-` is widely preferred in the R community.
+Lembre-se que se você quer armazenar um número ou objeto em uma variável em R, você pode fazer uso do operador de armazenamento `<-`. Outra forma de fazer isso é utilizando o sinal de `=`, mas, `<-` é preferido por grande parte da comunidade de R.
 
 *** =pre_exercise_code
 ```{r}
@@ -201,48 +200,48 @@ Remember that if you want to assign a number or an object to a variable in R, yo
 
 *** =sample_code
 ```{r}
-# Assign the value 5 to the variable my_apples
+# Armazene o valor 5 na variável my_apples
 
 
-# Print out the value of the variable my_apples
+# Exiba o valor da variável my_apples
 
 ```
 
 *** =solution
 ```{r}
-# Assign the value 5 to the variable my_apples
+# Armazene o valor 5 na variável my_apples
 my_apples <- 5
 
-# Print out the value of the variable my_apples
+# Exiba o valor da variável my_apples
 my_apples
 ```
 
 *** =sct
 ```{r}
 test_object("my_apples", 
-            undefined_msg = "Please make sure to define a variable `my_apples`.",
-            incorrect_msg = "Make sure that you assign the correct value to `my_apples`.")
-test_output_contains("my_apples", incorrect_msg = "Have you explicitly told R to print out the `my_apples` variable to the console?")
-success_msg("Great! Continue to the next exercise!")
+            undefined_msg = "Por favor, verifique se você definiu a variável `my_apples`.",
+            incorrect_msg = "Tenha certeza de que você armazenou o valor correto na variável `my_apples`.")
+test_output_contains("my_apples", incorrect_msg = "Você digitou o código para exibir o valor da variável `my_apples` no console?")
+success_msg("Excelente! Continue para o próximo exercício!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1c1bd25045
-## Variable assignment (3)
+## Declaração de Variáveis (3)
 
-Every tasty fruit basket needs oranges, so you decide to add six oranges. As a data analyst, your reflex is to immediately create the variable `my_oranges` and assign the value 6 to it. Next, you want to calculate how many pieces of fruit you have in total. Since you have given meaningful names to these values, you can now code this in a clear way: 
+Toda boa cesta de frutas precisa de laranjas, então, você decidiu adicionar seis laranjas a ela. Como um Analista de Dados, sua ação é criar imediatamente uma variável chamada `my_oranges` e armazenar nela o valor 6. Em seguida, você quer calcular quantas frutas você tem no total. Uma vez que você possui variáveis que armazenam tais valores, você pode criar um código simples para atender a esta tarefa:
 
 ```
 my_apples + my_oranges
 ```
 
 *** =instructions
-- Assign to `my_oranges` the value 6.
-- Add the variables `my_apples` and `my_oranges` and have R simply print the result.
-- Assign the result of adding `my_apples` and `my_oranges` to a new variable `my_fruit`.
+- Armazene o valor 6 a variável `my_oranges`.
+- Some as variáveis `my_apples` e `my_oranges`. Em seguida, verifique o resultado no console.
+- Armazene o valor da adição de `my_apples` e `my_oranges` a uma variável chamada `my_fruit`.
 
 *** =hint
-`my_fruit` is just the sum of `my_apples` and `my_oranges`. You can use the `+` operator to sum the two and `<-` to assign that value to the variable `my_fruit`.
+`my_fruit` nada mais é do que a soma de `my_apples` e `my_oranges`. Você pode usar o operador `+` para somá-los e utilizar `<-` para armazená-los na variável `my_fruit`.
 
 *** =pre_exercise_code
 ```{r}
@@ -251,39 +250,39 @@ my_apples + my_oranges
 
 *** =sample_code
 ```{r}
-# Assign a value to the variables my_apples and my_oranges
+# Armazene os devidos valores as variáveis my_apples e my_oranges
 my_apples <- 5
 
 
-# Add these two variables together
+# Some as duas variáveis
 
 
-# Create the variable my_fruit
+# Crie a variável my_fruit
 
 ```
 
 *** =solution
 ```{r}
-# Assign a value to the variables my_apples and my_oranges
+# Armazene os devidos valores as variáveis my_apples e my_oranges
 my_apples  <- 5
 my_oranges <- 6
 
-# Add these two variables together
+# Some as duas variáveis
 my_apples + my_oranges
 
-# Create the variable my_fruit
+# Crie a variável my_fruit
 my_fruit <- my_apples + my_oranges
 ```
 
 *** =sct
 ```{r}
-test_object("my_apples", incorrect_msg = "Keep the line that assigns 5 to `my_apples`.")
-test_object("my_oranges", incorrect_msg = "Keep the line that assigns 6 to `my_oranges`.")
+test_object("my_apples", incorrect_msg = "Não remova a linha de código que armazena 5 a variável `my_apples`.")
+test_object("my_oranges", incorrect_msg = "Mantenha a linha de código que armazena 6 a variável `my_oranges`")
 test_output_contains("my_apples + my_oranges",
-                     incorrect_msg = "Make sure to print out the result of adding `my_apples` and `my_oranges`. The code example in the description already gives away the answer to this instruction!")
-msg <- "Have you used `my_fruit <- my_apples + my_oranges` to create the `my_fruit` variable?"
+                     incorrect_msg = "Tenha certeza de exibir o valor da adição de `my_apples` e `my_oranges`. O código de exemplo na descrição do exercício possui a resposta para essa instrução!")
+msg <- "Você usou `my_fruit <- my_apples + my_oranges` para criar a variável `my_fruit`?"
 test_object("my_fruit", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change `my_apples` to equal 12 instead of 5 and rerun the script, `my_fruit` will automatically update as well. Continue to the next exercise.")
+success_msg("Boa! A grande vantagem de realizar cálculos entre variáveis é a reutilização de código. Se você simplesmente mudar o valor de `my_apples` de 5 para 12 e rodar novamente o código, `my_fruit` será atualizada automaticamente. Siga em frente para o próximo exercício!")
 ```
 
 

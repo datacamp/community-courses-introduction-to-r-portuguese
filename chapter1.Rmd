@@ -17,7 +17,7 @@ Você pode também executar comandos em R diretamente no console ao lado. Esta �
 - Adicione uma linha de código que calcule a soma de 6 + 12, e clique no botão ‘Submit Answer’.
 
 *** =hint
-Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!
+Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemplo!
 
 *** =pre_exercise_code
 ```{r}
@@ -26,54 +26,54 @@ Just add a line of R code that calculates the sum of 6 and 12, just like the exa
 
 *** =sample_code
 ```{r}
-# Calculate 3 + 4
+# Calcula 3 + 4
 3 + 4
 
-# Calculate 6 + 12
+# Calcula 6 + 12
 
 ```
 
 *** =solution
 ```{r}
-# Calculate 3 + 4
+# Calcula 3 + 4
 3 + 4
 
-# Calculate 6 + 12
+# Calcula 6 + 12
 6 + 12
 ```
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Make sure to add `6 + 12` on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
-success_msg("Awesome! See how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
+test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não inicie esta linha com um `#`, senão o código não será executado!")
+success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, já que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
-## Arithmetic with R
+## Aritmética com R
 
-In its most basic form, R can be used as a simple calculator. Consider the following arithmetic operators:
+Em sua forma mais básica, R pode ser usado até como uma simples calculadora. Para tal, considere os seguintes operadores aritméticos:
 
-- Addition: `+`
-- Subtraction: `-`
-- Multiplication: `*`
-- Division: `/`
-- Exponentiation: `^`
-- Modulo: `%%`
+- Adição: `+`
+- Subtração: `-`
+- Multiplicação: `*`
+- Divisão: `/`
+- Exponenciação: `^`
+- Módulo: `%%`
 
-The last two might need some explaining:
-- The `^` operator raises the number to its left to the power of the number to its right: for example `3^2` is 9.
-- The modulo returns the remainder of the division of the number to the left by the number on its right, for example 5 modulo 3 or `5 %% 3` is 2.
+Estes dois últimos necessitam de alguma explicação. Confira:
+- O operador `^` eleva o número da esquerda ao número que está a sua direita. Por exemplo: `3^2` é o mesmo que 3 elevado a 2, cujo o resultado é 9.
+- O Módulo (`%%`) retornará o resto da divisão entre o número da esquerda e o número da direita. Por exemplo: o resto da divisão entre 5 e 3, ou seja, `5 %% 3` será 2.
 
-With this knowledge, follow the instructions below to complete the exercise.
+Sabendo disto, siga as instruções abaixo para completar o exercício.
 
 *** =instructions
-- Type `2^5` in the editor to calculate 2 to the power 5.
-- Type `28 %% 6` to calculate 28 modulo 6.
-- Click 'Submit Answer' and have a look at the R output in the console.
-- Note how the `#` symbol is used to add comments on the R code.
+- Digite `2^5` no editor para elevar 2 a 5.
+- Digite `28 %% 6` para calcular o resto da divisão entre 28 e 6.
+- Clique em 'Submit Answer' e confira o resultado do seu código no console.
+- Note como o símbolo de `#` é usado para adicionar comentários aos códigos em R.
 
 *** =hint
-Another example of the modulo operator: `9 %% 2` equals `1`.
+Outro exemplo do operador módulo: `9 %% 2` é igual a `1`.
 
 *** =pre_exercise_code
 ```{r}
@@ -82,49 +82,49 @@ Another example of the modulo operator: `9 %% 2` equals `1`.
 
 *** =sample_code
 ```{r}
-# An addition
+# Adição
 5 + 5 
 
-# A subtraction
+# Subtração
 5 - 5 
 
-# A multiplication
+# Multiplicação
 3 * 5
 
- # A division
+# Divisão
 (5 + 5) / 2 
 
-# Exponentiation
+# Exponenciação
 
 
-# Modulo
+# Módulo
 
 ```
 
 *** =solution
 ```{r}
-# An addition
+# Adição
 5 + 5
 
-# A subtraction
+# Subtração
 5 - 5 
 
-# A multiplication
+# Multiplicação
 3 * 5
 
- # A division
+ # Divisão
 (5 + 5) / 2 
 
-# Exponentiation
+# Exponenciação
 2 ^ 5
 
-# Modulo
+# Módulo
 28 %% 6
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove the other arithmetic examples!"
+msg = "Não remova os operadores dos códigos de exemplo!"
 test_output_contains("2^5", incorrect_msg = "The exponentiation example is not correct. Write `2 ^ 5` on a new line.")
 test_output_contains("28 %% 6", incorrect_msg = "There seems to be an issue with the modulo example. Write `28 %% 6` on a new line.")
 success_msg("Great! Head over to the next exercise.")

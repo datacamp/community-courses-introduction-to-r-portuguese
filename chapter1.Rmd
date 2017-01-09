@@ -138,7 +138,7 @@ Um dos conceitos básicos da programação são as  **variáveis**.
 
 Na linguagem de programação R, uma variável permite que você armazene um valor (por exemplo, o número 4) ou um objeto (como uma função). Você pode mais tarde utilizar o nome desta variável para facilmente acessar o valor ou objeto que ela está armazenando.
 
-Você pode armazenar o valor 4 em uma variável chamada `my_var`usando o comando
+Vamos a um exemplo prático: você pode armazenar o valor 4 em uma variável chamada `my_var`usando o comando
 
 ```
 my_var <- 4
@@ -200,7 +200,7 @@ Lembre-se que se você quer armazenar um número ou objeto em uma variável em R
 
 *** =sample_code
 ```{r}
-# Armazene o valor 5 na variável my_apples
+# Crie e armazene o valor 5 na variável my_apples
 
 
 # Exiba o valor da variável my_apples
@@ -209,7 +209,7 @@ Lembre-se que se você quer armazenar um número ou objeto em uma variável em R
 
 *** =solution
 ```{r}
-# Armazene o valor 5 na variável my_apples
+# Crie e armazene o valor 5 na variável my_apples
 my_apples <- 5
 
 # Exiba o valor da variável my_apples
@@ -241,7 +241,7 @@ my_apples + my_oranges
 - Armazene o valor da adição de `my_apples` e `my_oranges` a uma variável chamada `my_fruit`.
 
 *** =hint
-`my_fruit` nada mais é do que a soma de `my_apples` e `my_oranges`. Você pode usar o operador `+` para somá-los e utilizar `<-` para armazená-los na variável `my_fruit`.
+`my_fruit` nada mais é do que a soma de `my_apples` e `my_oranges`. Você pode usar o operador `+` para somá-los e utilizar `<-` para armazená-lo na variável `my_fruit`.
 
 *** =pre_exercise_code
 ```{r}
@@ -250,7 +250,7 @@ my_apples + my_oranges
 
 *** =sample_code
 ```{r}
-# Armazene os devidos valores as variáveis my_apples e my_oranges
+# Armazene os devidos valores nas variáveis my_apples e my_oranges
 my_apples <- 5
 
 
@@ -263,7 +263,7 @@ my_apples <- 5
 
 *** =solution
 ```{r}
-# Armazene os devidos valores as variáveis my_apples e my_oranges
+# Armazene os devidos valores nas variáveis my_apples e my_oranges
 my_apples  <- 5
 my_oranges <- 6
 
@@ -348,7 +348,7 @@ R funciona com diversos tipos de dados. Para começar, vamos aprender os mais b�
 - Números decimais como `4.5` são chamados de **numerics**.
 - Números inteiros como `4` são conhecidos como **integers**, mas estes também são númericos (numerics).
 - Valores Booleanos, por exemplo, `TRUE` (Verdadeiro) ou `FALSE` (Falso) são chamados de **logical**.
-- Textos, também conhecidos como string possuem o nome **characters**.
+- Textos, também conhecidos como string, possuem o nome **characters**.
 
 Perceba como os sinais de aspas no editor fazem com que "algum texto" seja considerado um dado **character**.
 
@@ -376,7 +376,7 @@ Substitua os valores das variáveis no editor pelos valores que foram informados
 my_numeric <- 42.5
 
 # Altere o valor de my_character para "universe"
-my_character <- "some text"
+my_character <- "algum texto"
 
 # Altere o valor de my_logical para FALSE
 my_logical <- TRUE
@@ -459,7 +459,7 @@ msg <- "Não remova a declaração das variáveis!"
 lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
 patt <- "Você incluiu `class(%1$s)` no código para exibir a classe de `%1$s`?"
 test_output_contains("class(my_numeric)",
-                     incorrect_msg = "Não remova o código que exiber o tipo de dado de `my_numeric`.")
+                     incorrect_msg = "Não remova o código que exibe o tipo de dado de `my_numeric`.")
 test_output_contains("class(my_character)",
                      incorrect_msg = sprintf(patt, "my_character"))
 test_output_contains("class(my_logical)",

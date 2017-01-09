@@ -287,16 +287,16 @@ success_msg("Boa! A grande vantagem de realizar cálculos entre variáveis é a 
 
 
 --- type:NormalExercise xp:100 skills:1 key:915fcc7c99
-## Apples and oranges
+## Maçãs e Laranjas
 
-Common knowledge tells you not to add apples and oranges. But hey, that is what you just did, no :-)? The `my_apples` and `my_oranges` variables both contained a number in the previous exercise. The `+` operator works with numeric variables in R. If you really tried to add "apples" and "oranges", and assigned a text value to the variable `my_oranges` (see the editor), you would be trying to assign the addition of a numeric and a character variable to the variable `my_fruit`. This is not possible.
+No exercício anterior, números inteiros foram armazenados nas variáveis `my_apples` e `my_oranges`. Em linguagem R, o operador `+` funciona com variáveis numéricas. Se você tivesse armazenado um texto dentro de uma dessas variáveis, como `my_oranges` e tentasse somar os valores destas duas, R entenderia que você está tentando somar um número com um texto no momento da declaração da variável `my_fruit` (veja o exemplo no editor). Não é possível fazer isso.
 
 *** =instructions
-- Click 'Submit Answer' and read the error message. Make sure to understand why this did not work.
-- Adjust the code so that R knows you have 6 oranges and thus a fruit basket with 11 pieces of fruit.
+- Clique no botão 'Submit Answer' e leia a mensagem de erro que surge. Tenha certeza de que entende o porquê disto estar ocorrendo.
+- Ajuste o código para que R entenda que você tem 6 laranjas, e não "seis", fazendo que sua cesta tenha no total 11 frutas.
 
 *** =hint
-You have to assign the numeric value `6` to the `my_oranges` variable instead of the character value `"six"`. Note how the quotation marks are used to indicate that `"six"` is a character.
+Você precisa armazenar o valor `6` na variável `my_oranges` ao invés do texto `"seis"` . Perceba que as aspas são utilizadas para indicar que `"seis"` são caracteres de texto.
 
 *** =pre_exercise_code
 ```{r}
@@ -305,65 +305,65 @@ You have to assign the numeric value `6` to the `my_oranges` variable instead of
 
 *** =sample_code
 ```{r}
-# Assign a value to the variable my_apples
+# Armazene um valor na variável my_apples
 my_apples <- 5 
 
-# Fix the assignment of my_oranges
-my_oranges <- "six" 
+# Corrija o valor armazenado em my_oranges
+my_oranges <- "seis" 
 
-# Create the variable my_fruit and print it out
+# Crie a variável my_fruit e exiba-a no console
 my_fruit <- my_apples + my_oranges 
 my_fruit
 ```
 
 *** =solution
 ```{r}
-# Assign a value to the variable my_apples
+# Armazene um valor na variável my_apples
 my_apples <- 5  
 
-# Fix the assignment of my_oranges
+# Corrija o valor armazenado em my_oranges
 my_oranges <- 6
 
-# Create the variable my_fruit and print it out
+# Crie a variável my_fruit e exiba-a no console
 my_fruit <- my_apples + my_oranges 
 my_fruit
 ```
 
 *** =sct
 ```{r}
-test_error(incorrect_msg = "You can do this by setting the `my_oranges` variable to a numeric value, not a string!")
-test_object("my_apples", incorrect_msg = "Make sure that `my_apples` still contains `5`.")
-test_object("my_oranges", incorrect_msg = "Make sure that `my_oranges` is equal to `6`.")
-test_object("my_fruit", incorrect_msg = "The value of `my_fruit` is not correct. It should be 11, the sum of `my_apples` and `my_oranges`.")
-test_output_contains("my_fruit", incorrect_msg = "Don't remove the line that prints out `my_fruit`.")
-success_msg("Awesome, keep up the good work! Continue to the next exercise.")
+test_error(incorrect_msg = "Você consegue resolver esse problema configurando uma variável númerica em `my_oranges`, e não uma string (texto)!")
+test_object("my_apples", incorrect_msg = "Tenha certeza de que o número `5` continua armazenado na variável `my_apples`.")
+test_object("my_oranges", incorrect_msg = " Certifique-se que `my_oranges` é igual a `6`.")
+test_object("my_fruit", incorrect_msg = "O valor de `my_fruit` não está correto. Ela deveria ser `11`, uma vez que é a soma das variáveis `my_apples` e `my_oranges`.")
+test_output_contains("my_fruit", incorrect_msg = "Não remova a linha que exibe a variável `my_fruit`.")
+success_msg("Incrível! Continue o bom trabalho! Prossiga para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:0f23107394
-## Basic data types in R
+## Tipos básicos de dados em R
 
-R works with numerous data types. Some of the most basic types to get started are:
+R funciona com diversos tipos de dados. Para começar, vamos aprender os mais básicos:
 
-- Decimals values like `4.5` are called **numerics**.
-- Natural numbers like `4` are called **integers**. Integers are also numerics.
-- Boolean values (`TRUE` or `FALSE`) are called **logical**.
-- Text (or string) values are called **characters**.
+- Números decimais como `4.5` são chamados de **numerics**.
+- Números inteiros como `4` são conhecidos como **integers**, mas estes também são númericos (numerics).
+- Valores Booleanos, por exemplo, `TRUE` (Verdadeiro) ou `FALSE` (Falso) são chamados de **logical**.
+- Textos, também conhecidos como string possuem o nome **characters**.
 
-Note how the quotation marks on the right indicate that "some text" is a character.
+Perceba como os sinais de aspas no editor fazem com que "algum texto" seja considerado um dado **character**.
 
 *** =instructions
-Change the value of the:
+Altere o valor da:
 
-- `my_numeric` variable to `42`.
-- `my_character` variable to `"universe"`. Note that the quotation marks indicate that `"universe"` is a character.
-- `my_logical` variable to `FALSE`.
+- Variável `my_numeric` para `42`.
+- Variável `my_character` para `"universe"`.  Note que as aspas indicam que `"universe"` é um character.
+- Variável `my_logical` para o valor `FALSE`.
 
-Note that R is case sensitive!
+Não se esqueça que R é case sensitive, ou seja, diferencia maiúsculas de minúsculas!
 
 *** =hint 
-Replace the values in the editor with the values that are provided in the exercise. For example: 
-`my_numeric <- 42` assigns the value 42 to the variable `my_numeric`. 
+Substitua os valores das variáveis no editor pelos valores que foram informados no exercício. Por exemplo:
+`my_numeric <- 42` armazena o valor 42 na variável `my_numeric`. 
 
 *** =pre_exercise_code
 ```{r}
@@ -372,34 +372,34 @@ Replace the values in the editor with the values that are provided in the exerci
 
 *** =sample_code
 ```{r}
-# Change my_numeric to be 42
+# Altere o valor de my_numeric para 42
 my_numeric <- 42.5
 
-# Change my_character to be "universe"
+# Altere o valor de my_character para "universe"
 my_character <- "some text"
 
-# Change my_logical to be FALSE
+# Altere o valor de my_logical para FALSE
 my_logical <- TRUE
 ```
 
 *** =solution
 ```{r}
-# Change my_numeric to be 42
+# Altere o valor de my_numeric para 42
 my_numeric <- 42
 
-# Change my_character to be "universe"
+# Altere o valor de my_character para "universe"
 my_character <- "universe"
 
-# Change my_logical to be FALSE
+# Altere o valor de my_logical para FALSE
 my_logical <- FALSE
 ```
 
 *** =sct
 ```{r}
-test_object("my_numeric", incorrect_msg = "Have you correctly changed the declaration of `my_numeric` so it contains the value 42?")
-test_object("my_character", incorrect_msg = "Have you correctly changed `my_character` to `\"universe\"`? Don't forget the quotes!")
-test_object("my_logical", incorrect_msg = "Have you correctly changed `my_logical` to `FALSE`? All letters of `FALSE` should be capitalized!")
-success_msg("Great work! Continue to the next exercise.")
+test_object("my_numeric", incorrect_msg = "Você alterou o valor de `my_numeric` para 42?")
+test_object("my_character", incorrect_msg = "Você não alterou corretamente o valor de `my_character` para `\"universe\"`. Não se esqueça das aspas duplas!")
+test_object("my_logical", incorrect_msg = "Você alterou o valor de `my_logical` para `FALSE`? Todas as letras de `FALSE` precisam estar em maiúsculas. Não se esqueça!")
+success_msg("Excelente trabalho! Vamos para o próximo exercício.")
 ```
 
 

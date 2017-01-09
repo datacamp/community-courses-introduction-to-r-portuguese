@@ -1,14 +1,14 @@
 --- 
 title_meta  : Capítulo 1
 title       : Introdução ao Básico
-description : "Neste capítulo, você irá dará seus primeiros passos em R. Você aprenderá como usar o console como uma calculadora e a como nomear variáveis. Você também irá aprender os tipos básicos de dados em R. Vamos começar!"
+description : "Neste capítulo, você dará seus primeiros passos em R. Você aprenderá a usar o console como uma calculadora e a como declarar variáveis. Você também irá aprender os tipos básicos de dados em R. Vamos começar!"
 
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
 ## Como funciona a plataforma
 
-No editor à direita você deve digitar códigos em R para resolver os exercícios. Quando você clicar no botão ‘Submit Answer’, cada linha do código será interpretada e executada em R. Em seguida, você receberá uma mensagem se o seu código está correto ou não. A saída do seu código em R será mostrada no console no canto inferior direito.
+No editor à direita, você deverá digitar códigos em R para resolver os exercícios. Quando você clicar no botão ‘Submit Answer’, cada linha do código será interpretada e executada em R. Em seguida, você receberá uma mensagem se o seu código está correto ou não. A saída do seu código em R será mostrada no console no canto inferior direito.
 
-R faz uso do sinal de `#` para adicionar comentários, a fim de permitir a você e outras pessoas entenderem o funcionamento do seu código. Igual no Twitter! Comentários não são executados como um código em R, então eles não irão influenciar no seu resultado. Por exemplo, no editor à direita, `Calcula 3 + 4` é um comentário.
+R faz uso do sinal de `#` para adicionar comentários, a fim de permitir a você e outras pessoas entenderem o funcionamento do seu código. Igual no Twitter! Comentários não são executados como um código em R, então eles não irão influenciar no seu resultado. Por exemplo, no editor à direita, `Calcule 3 + 4` é um comentário.
 
 Você pode também executar comandos em R diretamente no console ao lado. Esta é uma boa forma de experimentar novos códigos em R, já que sua submissão não será corrigida ou validada.
 
@@ -26,19 +26,19 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 
 *** =sample_code
 ```{r}
-# Calcula 3 + 4
+# Calcule 3 + 4
 3 + 4
 
-# Calcula 6 + 12
+# Calcule 6 + 12
 
 ```
 
 *** =solution
 ```{r}
-# Calcula 3 + 4
+# Calcule 3 + 4
 3 + 4
 
-# Calcula 6 + 12
+# Calcule 6 + 12
 6 + 12
 ```
 
@@ -51,7 +51,7 @@ success_msg("Parabéns! Veja como o console mostra o resultado do seu código. A
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
 ## Aritmética com R
 
-Em sua forma mais básica, R pode ser usado até como uma simples calculadora. Para tal, considere os seguintes operadores aritméticos:
+Em sua forma mais básica, R pode ser usado até mesmo como uma simples calculadora. Para tal, considere os seguintes operadores aritméticos:
 
 - Adição: `+`
 - Subtração: `-`
@@ -60,7 +60,7 @@ Em sua forma mais básica, R pode ser usado até como uma simples calculadora. P
 - Exponenciação: `^`
 - Módulo: `%%`
 
-Estes dois últimos necessitam de alguma explicação. Confira:
+Vamos explicar melhor estes dois últimos. Confira:
 - O operador `^` eleva o número da esquerda ao número que está a sua direita. Por exemplo: `3^2` é o mesmo que 3 elevado a 2, cujo o resultado é 9.
 - O Módulo (`%%`) retornará o resto da divisão entre o número da esquerda e o número da direita. Por exemplo: o resto da divisão entre 5 e 3, ou seja, `5 %% 3` será 2.
 

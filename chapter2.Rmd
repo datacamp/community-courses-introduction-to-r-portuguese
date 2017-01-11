@@ -1,20 +1,20 @@
 --- 
-title_meta  : Chapter 2
-title       : Vectors
-description : "In this free R course, we'll take you on a trip to Vegas, where you will learn how to analyze your gambling results using vectors in R! After completing this chapter, you will be able to create vectors in R, name them, select elements from them and compare different vectors."
+title_meta  : Capítulo 2
+title       : Vetores
+description : "Neste curso de R gratuito, nós iremos fazer uma viagem a Las Vegas, onde você irá analizar seus resultados nos jogos usando vetores em R! Depois de completar este capítulo, você será capaz de criar vetores em R, nomeá-los, selecionar elementos dele e compará-lo com diferentes vetores. Vamos nessa!"
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
-## Create a vector
+## Criando um vetor
 
-Feeling lucky? You better, because this chapter takes you on a trip to the City of Sins, also known as *Statisticians Paradise*!
+Está com sorte hoje? É melhor que esteja, pois esse capítulo levará você para uma viagem a Cidade do Pecado, também conhecida como *Paraíso dos Estatísticos*!
 
-Thanks to R and your new data-analytical skills, you will learn how to uplift your performance at the tables and fire off your career as a professional gambler. This chapter will show how you can easily keep track of your betting progress and how you can do some simple analyses on past actions. Next stop, Vegas Baby... VEGAS!!
+Graças ao R e suas novas habilidades de análise de dados, você irá aprender como melhorar sua performance e alavancar sua carreira como profissional em jogos de azar. Este capítulo vai mostrar como você pode facilmente acompanhar seu progresso de apostas e como fazer algumas análises de suas ações passadas. Próxima parada: Vegas, baby... VEGAS!!
 
 *** =instructions
-- Do you still remember what you have learned in the first chapter? Assign the value `"Go!"` to the variable `vegas`. Remember: R is case sensitive!
+- Você ainda se lembra do que aprendeu no primeiro capítulo? Então, declare a variável `vegas` e defina `"Go!"` como seu valor. Lembre-se de colocar as aspas e não se esqueça que R é case sensitive, ou seja, diferencia maiúsculas e minúsculas.
 
 *** =hint
-Just type the following line in the editor:
+Simplesmente digite a seguinte linha no editor:
 ```
 vegas <- "Go!"
 ```
@@ -26,44 +26,45 @@ vegas <- "Go!"
 
 *** =sample_code
 ```{r}
-# Define the variable vegas
+# Declare a variavel vegas
 vegas <- 
 ```
 
 *** =solution
 ```{r}
-# Define the variable vegas
+# Declare a variavel vegas
 vegas <- "Go!"
 ```
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Make sure that you assign the correct value to `vegas`. Do not forget that R is case sensitive!")
-success_msg("Great! Head over to the next exercise.")
+test_object("vegas", incorrect_msg = "Você declarou corretamente a variável `vegas`? Não se esqueça que R é case sensitive!")
+success_msg("Ótimo! Vamos para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:fd427db76f
-## Create a vector (2)
+## Criando um vetor (2)
 
-Let us focus first! 
 
-On your way from rags to riches, you will make extensive use of vectors. Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, a vector is a simple tool to store data. For example, you can store your daily gains and losses in the casinos. 
+Certo, vamos nos focar!
 
-In R, you create a vector with the combine function [`c()`](http://www.rdocumentation.org/packages/base/functions/c). You place the vector elements separated by a comma between the parentheses. For example:
+Nessa sua trajetória da pobreza a riqueza, você irá fazer um extenso uso de vetores. Vetores são arrays (ou arranjo, em Português) de uma dimensão que podem armazenar dados numerics, character ou logical. Em outras palavras, vector é simplesmente uma ferramenta para armazenar dados. Por exemplo, você pode armazenar neles os seus ganhos e perdas diárias nos cassinos.
+
+Em R, você pode criar um vetor utilizando a função Combine [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Você deve separar os valores presentes em seu vetor utilizando vírgulas entre os parenteses. Por exemplo:
 
 ```
 numeric_vector <- c(1, 2, 3)
 character_vector <- c("a", "b", "c")
 ```
 
-Once you have created these vectors in R, you can use them to do calculations.
+Uma vez criados esses vetores em R, você pode realizar cálculos neles.
 
 *** =instructions 
-Complete the code such that `boolean_vector` contains the three elements: `TRUE`, `FALSE` and `TRUE` (in that order). 
+Complete o código para que `boolean_vector` contenha três elementos: `TRUE`, `FALSE` e `TRUE` (nesta ordem). 
 
 *** =hint 
-Assign `c(TRUE, FALSE, TRUE)` to the variable `boolean_vector` with the `<-` operator.
+Armazene `c(TRUE, FALSE, TRUE)` na variável `boolean_vector` com o operador `<-`.
 
 *** =pre_exercise_code
 ```{r}
@@ -75,7 +76,7 @@ Assign `c(TRUE, FALSE, TRUE)` to the variable `boolean_vector` with the `<-` ope
 numeric_vector <- c(1, 10, 49)
 character_vector <- c("a", "b", "c")
 
-# Complete the code for boolean_vector
+# Complete o código para a variável boolean_vector
 boolean_vector <-
 ```
 
@@ -84,18 +85,18 @@ boolean_vector <-
 numeric_vector <- c(1, 10, 49)
 character_vector <- c("a", "b", "c")
 
-# Complete the code for boolean_vector
+# Complete o código para a variável boolean_vector
 boolean_vector <- c(TRUE, FALSE, TRUE)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change the code that defined `numeric_vector` and `character_vector`!"
+msg <- "Não altere o código que declara as variáveis `numeric_vector` e `character_vector`!"
 test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. Don't place quotes around `TRUE` and `FALSE`! Also, make sure to adopt the same order as listed in the instructions.")
-success_msg("Perfect! Notice that adding a space behind the commas in the `c()` function improves the readability of your code. Let's practice some more with vector creation in the next exercise.")
+            incorrect_msg = "Tenha certeza que você armazenou os valores corretos na variável `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. Não coloque aspas em torno de `TRUE` e `FALSE`! Outra coisa: não se esqueça de colocar os valores exatamente na ordem descrita nas instruções.")
+success_msg("Perfeito! Perceba que adicionando espaços entre as vírgulas na função `c()` melhora a leitura do seu código. Vamos praticar mais criação de vetores no próximo exercício!")
 ```
 
 

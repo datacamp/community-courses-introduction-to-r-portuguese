@@ -101,61 +101,61 @@ success_msg("Perfeito! Perceba que adicionando espaços entre as vírgulas na fu
 
 
 --- type:NormalExercise xp:100 skills:1 key:9f41229dbc
-## Create a vector (3)
+## Criando um vetor (3)
 
-After one week in Las Vegas and still zero Ferraris in your garage, you decide that it is time to start using your data analytical superpowers.
+Depois de uma semana em Las Vegas e nenhuma Ferrari na sua garagem, você decide que é hora de usar seus super poderes de análise de dados.
 
-Before doing a first analysis, you decide to first collect all the winnings and losses for the last week: 
+Antes de fazer sua primeira análise, primeiro você quer coletar todas as vitórias e perdas na última semana:
 
-For `poker_vector`: 
+No vetor `poker_vector`: 
 
-- On Monday you won $140
-- Tuesday you lost $50
-- Wednesday you won $20 
-- Thursday you lost $120
-- Friday you won $240
+- Você ganhou $140 na segunda-feira
+- Você perdeu $50 na terça-feira
+- Na quarta-feira você ganhou $20
+- Já na quinta, você perdeu $120
+- E por fim, na sexta-feira, você ganhou $240
 
-For `roulette_vector`: 
+No vetor `roulette_vector`: 
 
-- On Monday you lost $24
-- Tuesday you lost $50
-- Wednesday you won $100
-- Thursday you lost $350
-- Friday you won $10
+- Você perdeu $24 na segunda-feira
+- Você perdeu $50 na terça-feira
+- Na quarta-feira você ganhou $100
+- Já na quinta, você perdeu $350
+- E por fim, na sexta-feira, você ganhou $10
 
-You only played poker and roulette, since there was a delegation of mediums that occupied the craps tables. To be able to use this data in R, you decide to create the variables `poker_vector` and `roulette_vector`.
+Você jogou apenas Poker e roleta no cassino. Para ser capaz de usar estes dados em R, você quis criar as variáveis `poker_vector` e `roulette_vector`.
 
 *** =instructions
-Assign the winnings/losses for roulette to the variable `roulette_vector`.
+Armazene os valores que você ganhou e perdeu na roleta na variável `roulette_vector`.
 
 *** =hint
-To help you with this step, the editor already contains the code for creating `poker_vector`. Assign the correct values to `roulette_vector` based on the numbers in the assignment. Do not forget that losses are negative numbers.
+Para te ajudar nessa etapa, nós criamos o código que armazena os ganhos e perdas de Poker na variável `poker_vector`. Dê uma olhada no editor. Atribua o valor correto a variável `roulette_vector`, baseado nos números da descrição do exercício. Não se esqueça que as suas perdas são números negativos.
 
 *** =sample_code
 ```{r}
-# Poker winnings from Monday to Friday
+# Vitorias e derrotas no Poker de segunda a sexta
 poker_vector <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
+# Vitorias e derrotas na Roleta de segunda a sexta
 roulette_vector <-  
 ```
 
 *** =solution
 ```{r}
-# Poker winnings from Monday to Friday
+# Vitorias e derrotas no Poker de segunda a sexta
 poker_vector <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
+# Vitorias e derrotas na Roleta de segunda a sexta
 roulette_vector <- c(-24, -50, 100, -350, 10)
 ```
 
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `poker_vector`.")
+            incorrect_msg = "Você atribuiu o valor correto a variável `poker_vector`?")
 test_object("roulette_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `roulette_vector`. Make sure to adopt the correct order!")
-success_msg("Very good! To check out the contents of your vectors, remember that you can always simply type the variable in the console and hit Enter. Proceed to the next exercise!")
+            incorrect_msg = "Tenha certeza de atribuir o valor correto a variável `roulette_vector`. Não se esqueça de seguir a ordem correta!")
+success_msg("Muito bem! Para ver o conteúdo dos vetores, tudo que você precisa fazer é digitar o nome da variável no console e apertar ENTER. Vamos para o próximo exercício?")
 ```
 
 

@@ -160,9 +160,11 @@ success_msg("Muito bem! Para ver o conteúdo dos vetores, tudo que você precisa
 
 
 --- type:NormalExercise xp:100 skills:1 key:3b0b80b192
-## Naming a vector
+## Dando um nome ao vetor
 
-As a data analyst, it is important to have a clear view on the data that you are using. Understanding what each element refers to is therefore essential. 
+Como um analista de dados, é importante ter uma visão clara dos dados que você está usando. Entender o que cada elemento significa é essencial. 
+
+No exercício anterior, nós criamos um vetor com suas vitórias e derrotas durante uma semana. Cada elemento do vetor se refere a um dia da semana, mas é difícil qual elemento pertence a um determinado dia. Seria legal se você pudesse mostrar qual 
 
 In the previous exercise, we created a vector with your winnings over the week. Each vector element refers to a day of the week but it is hard to tell which element belongs to which day. It would be nice if you could show that in the vector itself. 
 

@@ -376,17 +376,17 @@ success_msg("Bom trabalho! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:2969d8ed65
-## Calculating total winnings (2)
+## Calculando total de vitórias (2)
 
-Now you understand how R does arithmetic with vectors, it is time to get those Ferraris in your garage! First, you need to understand what the overall profit or loss per day of the week was. The total daily profit is the sum of the profit/loss you realized on poker per day, and the profit/loss you realized on roulette per day. 
+Agora que você entende como R faz operações aritméticas com vetores, é hora de termos algumas Ferraris na garagem! Primeiro, você precisa entender qual foi o total de lucros e perdas por dia na semana. O lucro total diário é a soma dos lucros e perdas que você teve no Poker por dia, e os lucros e perdas que você teve por dia na Roleta.
 
-In R, this is just the sum of `roulette_vector` and `poker_vector`.
+Em R, isso nada mais é que a soma de `roulette_vector` e `poker_vector`.
 
 *** =instructions
-Assign to the variable `total_daily` how much you won or lost on each day in total (poker and roulette combined).
+Armazene na variável `total_daily` o total de quanto você ganhou e perdeu por dia (combinando Poker e Roleta).
 
 *** =hint
-Similar to the previous exercise, assign the sum of two vectors to a new variable, `total_daily`.
+Igual ao exercício anterior, apenas armazene a soma dos dois vetores na variável `total_daily`.
 
 *** =pre_exercise_code
 ```{r}
@@ -395,61 +395,61 @@ Similar to the previous exercise, assign the sum of two vectors to a new variabl
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Assign to total_daily how much you won/lost on each day
+# Armazene em total_daily o total de perdas e ganhos de cada dia
 total_daily <- 
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Assign to total_daily how much you won/lost on each day
+# Armazene em total_daily o total de perdas e ganhos de cada dia
 total_daily <- poker_vector + roulette_vector
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_daily", incorrect_msg = "Make sure that you assign the sum of `poker_vector` and `roulette_vector` to `total_daily`.")
+test_object("total_daily", incorrect_msg = "Tenha certeza que você armazenou a soma de `poker_vector` e `roulette_vector` na variável `total_daily`.")
 
-success_msg("Great! Continue to the next exercise.")
+success_msg("Excelente! Continue para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:e66a56b9f0
-## Calculating total winnings (3)
+## Calculando total de vitórias (3)
 
-Based on the previous analysis, it looks like you had a mix of good and bad days. This is not what your ego expected, and you wonder if there may be a very tiny chance you have lost money over the week in total? 
+Baseado na análise anterior, parece que você tem uma mistura de bons e maus dias. Isso não era o que seu ego esperava, e você se pergunta se teve alguma chance de você ter perdido mais dinheiro do que ganho durante a semana.
 
-A function that helps you to answer this question is [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum). It calculates the sum of all elements of a vector. For example, to calculate the total amount of money you have lost/won with poker you do: 
+Uma função que pode responder a esta pergunta é [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum). Ela calcula a soma de todos os elementos de um vetor. Por exemplo, para calcular o total de dinheiro que você perdeu ou ganhou no Poker, você pode fazer o seguinte:
 
 ```
 total_poker <- sum(poker_vector)
 ```
 
 *** =instructions
-- Calculate the total amount of money that you have won/lost with roulette and assign to the variable `total_roulette`.
-- Now that you have the totals for roulette and poker, you can easily calculate `total_week` (which is the sum of all gains and losses of the week).
-- Print out `total_week`.
+- Calcule o total de dinheiro que você perdeu e ganhou na Roleta e armazene seu valor na variável `total_roulette`.
+- Agora que você tem os totais da Roleta e do Poker, você pode facilmente calcular `total_week` (que é a soma de todos os ganhos e perdas da semana).
+- Exiba o valor de `total_week` .
 
 *** =hint
-Use the [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) function to get the total of the `roulette_vector`. `total_week` is then the sum of `roulette_vector` and `poker_vector`.
+Use a função [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) para ter o total de `roulette_vector`. `total_week` nada mais é do que a soma de `roulette_vector` e `poker_vector`.
 
 *** =pre_exercise_code
 ```{r}
@@ -458,80 +458,80 @@ Use the [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) fun
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Total winnings with poker
+# Total de vitórias no Poker
 total_poker <- sum(poker_vector)
 
-# Total winnings with roulette
+# Total de vitórias na Roleta
 total_roulette <-  
 
-# Total winnings overall
+# Total geral de vitórias
 total_week <- 
 
-# Print out total_week
+# Exiba o valor de total_week
   
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Total winnings with poker
+# Total de vitórias no Poker
 total_poker <- sum(poker_vector)
 
-# Total winnings with roulette
+# Total de vitórias na Roleta
 total_roulette <-  sum(roulette_vector)
 
-# Total winnings overall
+# Total geral de vitórias
 total_week <- total_roulette + total_poker
 
-# Print out total_week
+# Exiba o valor de total_week
 total_week
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("total_poker", 
-            incorrect_msg = "Make sure that you assign to `total_poker` the sum of the `poker_vector`.")
+            incorrect_msg = "Tenha certeza de que você armazenou a soma de `poker_vector` em `total_poker`.")
 test_object("total_roulette",
-            incorrect_msg = "Make sure that you assign to `total_roulette` the sum of the `roulette_vector`.")
+            incorrect_msg = "Tenha certeza de que você armazenou a soma de `roulette_vector` em `total_roulette`.")
 test_object("total_week",
-            incorrect_msg = "Make sure that you assign to `total_week` the sum of the other two total vectors: `total_roulette` and `total_poker`.")
+            incorrect_msg = "Tenha certeza de que você armazenou a soma de `total_roulette` e `total_poker` em `total_week`.")
 
-test_output_contains("total_week", incorrect_msg = "Don't forget to write `total_week` on a new line to print out the variable.")
-success_msg("Well done. This is pretty bad news...")
+test_output_contains("total_week", incorrect_msg = "Não esqueça de escrever `total_week` em uma nova linha para exibir o valor da variável.")
+success_msg("Bom trabalho! Mas, sinto que tenho más notícias...")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:f532f5332d
-## Comparing total winnings
+## Comparando total de vitórias
 
-Oops, it seems like you are losing money. Time to rethink and adapt your strategy! This will require some deeper analysis... 
+Ops, parece que você está perdendo dinheiro. É hora de repensar e adaptar sua estratégia. Isso requer uma análise mais profunda...
 
-After a short brainstorm in your hotel's jacuzzi, you realize that a possible explanation might be that your skills in roulette are not as well developed as your skills in poker. So maybe your total gains in poker are higher (or `>` ) than in roulette.
+Após uma breve reflexão na jacuzzi do seu hotel, você percebeu que uma possível explicação poderia ser atribuida ao fato de que suas habilidades na Roleta não são tão boas quanto no Poker. Então, talvez os seus ganhos no Poker tenham sido maiores (ou `>`) que na Roleta.
 
 *** =instructions
-- Calculate `total_poker` and `total_roulette` as in the previous exercise. Use the `sum()` function twice.
-- Check if your total gains in poker are higher than for roulette by using a comparison. Simply print out the result of this comparison. What do you conclude, should you focus on roulette or on poker?
+- Assim como no exercício anterior, calcule `total_poker` e `total_roulette`. Você precisará usar a função `sum()` duas vezes.
+- Compare e verifique se o total de ganhos no Poker é maior que na Roleta. Simplesmente exiba os valores dessa comparação usando o operador `>`. O que você conclui: você deve focar no Poker ou na Roleta?
 
 *** =hint
-- You partly calculated the answer to this question in the previous exercise already!
-- To check if 6 is larger than 5, you type `6 > 5`. This returns a logical value (`TRUE` or `FALSE`).
+- Você já resolveu metade dessa questão no exercício anterior!
+- Para saber se 6 é maior que 5, digite `6 > 5`. A mensagem de retorno terá um valor lógico (`TRUE` ou `FALSE`).
 
 *** =pre_exercise_code
 ```{r}
@@ -540,52 +540,52 @@ After a short brainstorm in your hotel's jacuzzi, you realize that a possible ex
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Calculate total gains for poker and roulette
+# Calcule o total de ganhos na Roleta e no Poker
 total_poker <-
 total_roulette <-
 
-# Check if you realized higher total gains in poker than in roulette 
+# Compare e verifique se você teve um total maior no Poker que na Roleta
 
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias no Poker e Roleta de segunda a sexta:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Calculate total gains for poker and roulette
+# Calcule o total de ganhos na Roleta e no Poker
 total_poker <- sum(poker_vector)
 total_roulette <- sum(roulette_vector)
 
-# Check if you realized higher total gains in poker than in roulette
+# Compare e verifique se você teve um total maior no Poker que na Roleta
 total_poker > total_roulette
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg <- "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("total_poker", 
-            incorrect_msg = "Make sure that you assign to `total_poker` the sum of the `poker_vector`. Use `sum()`.")
+            incorrect_msg = "Tenha certeza de que você armazenou em `total_poker` a soma de `poker_vector`. Use `sum()`.")
 test_object("total_roulette",
-            incorrect_msg = "Make sure that you assign to `total_roulette` the sum of the `roulette_vector`. Use `sum()`.")
+            incorrect_msg = "Tenha certeza de que você armazenou em `total_roulette` a soma de `roulette_vector`. Use `sum()`.")
 test_output_contains("total_poker > total_roulette",
-                     incorrect_msg = "Have you correctly carried out the comparison? To check if `total_poker` is greater than `total_roulette`, you can use `total_poker > total_roulette`.")
-success_msg("Good job! Continue to the next exercise.")
+                     incorrect_msg = "Você comparou os totais? Para saber se `total_poker` é maior que `total_roulette`, simplesmente digite `total_poker > total_roulette`.")
+success_msg("Bom trabalho! Continue para o próximo exercício.")
 ```
 
 

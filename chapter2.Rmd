@@ -1,4 +1,4 @@
---- 
+---
 title_meta  : Capítulo 2
 title       : Vetores
 description : "Neste curso de R gratuito, nós iremos fazer uma viagem a Las Vegas, onde você irá analizar seus resultados nos jogos usando vetores em R! Depois de completar este capítulo, você será capaz de criar vetores em R, nomeá-los, selecionar elementos dele e compará-lo com diferentes vetores. Vamos nessa!"
@@ -27,7 +27,7 @@ vegas <- "Go!"
 *** =sample_code
 ```{r}
 # Declare a variavel vegas
-vegas <- 
+vegas <-
 ```
 
 *** =solution
@@ -60,10 +60,10 @@ character_vector <- c("a", "b", "c")
 
 Uma vez criados esses vetores em R, você pode realizar cálculos neles.
 
-*** =instructions 
-Complete o código para que `boolean_vector` contenha três elementos: `TRUE`, `FALSE` e `TRUE` (nesta ordem). 
+*** =instructions
+Complete o código para que `boolean_vector` contenha três elementos: `TRUE`, `FALSE` e `TRUE` (nesta ordem).
 
-*** =hint 
+*** =hint
 Armazene `c(TRUE, FALSE, TRUE)` na variável `boolean_vector` com o operador `<-`.
 
 *** =pre_exercise_code
@@ -107,7 +107,7 @@ Depois de uma semana em Las Vegas e nenhuma Ferrari na sua garagem, você decide
 
 Antes de fazer sua primeira análise, primeiro você quer coletar todas as vitórias e perdas na última semana:
 
-No vetor `poker_vector`: 
+No vetor `poker_vector`:
 
 - Você ganhou $140 na segunda-feira
 - Você perdeu $50 na terça-feira
@@ -115,7 +115,7 @@ No vetor `poker_vector`:
 - Já na quinta, você perdeu $120
 - E por fim, na sexta-feira, você ganhou $240
 
-No vetor `roulette_vector`: 
+No vetor `roulette_vector`:
 
 - Você perdeu $24 na segunda-feira
 - Você perdeu $50 na terça-feira
@@ -162,7 +162,7 @@ success_msg("Muito bem! Para ver o conteúdo dos vetores, tudo que você precisa
 --- type:NormalExercise xp:100 skills:1 key:3b0b80b192
 ## Dando um nome ao vetor
 
-Como um analista de dados, é importante ter uma visão clara dos dados que você está usando. Entender o que cada elemento significa é essencial. 
+Como um analista de dados, é importante ter uma visão clara dos dados que você está usando. Entender o que cada elemento significa é essencial.
 
 No exercício anterior, nós criamos um vetor com suas vitórias e derrotas durante uma semana. Cada elemento do vetor se refere a um dia da semana, mas é difícil qual elemento pertence a um determinado dia. Seria legal se você pudesse mostrar qual valor se refere a um determinado dia.
 
@@ -176,8 +176,8 @@ names(some_vector) <- c("Name", "Profession")
 Neste código, primeiro nós criamos um vetor chamado `some_vector` com dois valores (`John Doe` e `poker player`). Em seguida, nós atribuímos dois nomes para cada elemento do vetor. O primeiro elemento recebeu o nome `Name`, enquanto o segundo elemento recebeu o nome `Profession`. Se imprimirmos o vetor, ele ficará semelhante a uma tabela. Confira:
 
 ```
-          Name     Profession 
-    "John Doe" "poker player" 
+          Name     Profession
+    "John Doe" "poker player"
 ```
 
 *** =instructions
@@ -262,7 +262,7 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 
 # A variavel days_vector
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
- 
+
 # Defina os nomes dos dias em roulette_vector e poker_vector
 names(poker_vector) <-   
 names(roulette_vector) <-
@@ -323,7 +323,7 @@ c(5, 7, 9)
 Você também pode fazer cálculos usando as variáveis que representam os vetores:
 
 ```
-a <- c(1, 2, 3) 
+a <- c(1, 2, 3)
 b <- c(4, 5, 6)
 c <- a + b
 ```
@@ -346,8 +346,8 @@ A_vector <- c(1, 2, 3)
 B_vector <- c(4, 5, 6)
 
 # Faça a soma de A_vector e B_vector
-total_vector <- 
-  
+total_vector <-
+
 # Exiba total_vector
 
 ```
@@ -403,7 +403,7 @@ names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
 # Armazene em total_daily o total de perdas e ganhos de cada dia
-total_daily <- 
+total_daily <-
 ```
 
 *** =solution
@@ -472,10 +472,10 @@ total_poker <- sum(poker_vector)
 total_roulette <-  
 
 # Total geral de vitórias
-total_week <- 
+total_week <-
 
 # Exiba o valor de total_week
-  
+
 ```
 
 *** =solution
@@ -506,7 +506,7 @@ msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulett
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("total_poker", 
+test_object("total_poker",
             incorrect_msg = "Tenha certeza de que você armazenou a soma de `poker_vector` em `total_poker`.")
 test_object("total_roulette",
             incorrect_msg = "Tenha certeza de que você armazenou a soma de `roulette_vector` em `total_roulette`.")
@@ -579,7 +579,7 @@ test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_poker", 
+test_object("total_poker",
             incorrect_msg = "Tenha certeza de que você armazenou em `total_poker` a soma de `poker_vector`. Use `sum()`.")
 test_object("total_roulette",
             incorrect_msg = "Tenha certeza de que você armazenou em `total_roulette` a soma de `roulette_vector`. Use `sum()`.")
@@ -590,19 +590,19 @@ success_msg("Bom trabalho! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:8d78be44e9
-## Vector selection: the good times
+## Selecionando vetores: os bons tempos
 
-Your hunch seemed to be right. It appears that the poker game is more your cup of tea than roulette. 
+Seu palpite pareceu estar certo. Parece que Poker é mais sua praia do que Roleta.
 
-Another possible route for investigation is your performance at the beginning of the working week compared to the end of it. You did have a couple of Margarita cocktails at the end of the week... 
+Outra possível rota para investigação é sua performance no começo da semana de trabalho comparada ao final da semana. Sabe, você tomou alguns coqueteis de Margarita no final da semana, então...
 
-To answer that question, you only want to focus on a selection of the `total_vector`. In other words, our goal is to select specific elements of the vector. To select elements of a vector (and later matrices, data frames, ...), you can use square brackets. Between the square brackets, you indicate what elements to select. For example, to select the first element of the vector, you type `poker_vector[1]`. To select the second element of the vector, you type `poker_vector[2]`, etc. Notice that the first element in a vector has index 1, not 0 as in many other programming languages.
+Para responder a essa questão, você só precisa focar na seleção de `total_vector`. Em outras palavras, nosso objetivo é selecionar elementos específicos do vetor. Para selecionar um elemento de um vetor (e mais tarde matrizes, data frames, etc...), você deve usar colchetes. Entre os colchetes você deve indicar quais elementos quer selecionar. Por exemplo, para selecionar o primeiro elemento do vetor, você deve digitar `poker_vector[1]`. Para selecionar o segundo elemento, basta digitar `poker_vector[2]`, e por aí vai. Note que o primeiro elemento do vetor tem index 1, não 0 como a grande maioria das linguagens de programação.
 
 *** =instructions
-Assign the poker results of Wednesday to the variable `poker_wednesday`.
+Armazene os resutados de Poker da quarta-feira na variável `poker_wednesday`.
 
 *** =hint
-Wednesday is the third element of `poker_vector`, and can thus be selected with `poker_vector[3]`.
+Quarta-feira é o terceiro elemento do vector `poker_vector`, o qual pode ser selecionado com `poker_vector[3]`.
 
 *** =pre_exercise_code
 ```{r}
@@ -611,49 +611,49 @@ Wednesday is the third element of `poker_vector`, and can thus be selected with 
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
-poker_wednesday <- 
+# Defina a nova variável baseada na seleção
+poker_wednesday <-
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
+# Defina a nova variável baseada na seleção
 poker_wednesday <- poker_vector[3]
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = " Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_wednesday", 
-            undefined_msg = "Please make sure to define a variable `poker_wednesday`.",
-            incorrect_msg = "It looks like `poker_wednesday` does not contain the correct value of the `poker_vector`.")
-success_msg("Great! R also makes it possible to select multiple elements from a vector at once. Learn how in the next exercise!")
+test_object("poker_wednesday",
+            undefined_msg = " Por favor, tenha certeza que definiu a variável `poker_wednesday`.",
+            incorrect_msg = " Parece que `poker_wednesday` não está com o valor correto de `poker_vector`.")
+success_msg("Excelente! R também permite a seleção de múltiplos elementos de um vetor de uma vez só. Aprenda como no próximo exercício")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1351521670
-## Vector selection: the good times (2)
+## Selecionando vetores: os bons tempos (2)
 
-How about analyzing your midweek results? 
+Que tal analisar os seus resultados do meio da semana?
 
-To select multiple elements from a vector, you can add square brackets at the end of it. You can indicate between the brackets what elements should be selected. For example: suppose you want to select the first and the fifth day of the week: use the vector `c(1, 5)` between the square brackets. For example, the code below selects the first and fifth element of `poker_vector`:
+Para selecionar múltiplos elementos de um vetor, você pode adicionar colchetes ao final do vetor. Você também pode indicar entre os colchetes quais elementos deve ser selecionados. Por exemplo: suponha que você quer selecionar o primeiro e o quinto dia da semana: use `c(1, 5)` entre os colchetes para fazer isso. Perceba que no código abaixo selecionamos o primeiro e quinto elemento de `poker_vector`:
 
 ```
 poker_vector[c(1, 5)]
@@ -668,7 +668,7 @@ Use the vector `c(2, 3, 4)` between square brackets to select the correct elemen
 *** =pre_exercise_code
 ```{r}
 # no pec
-``` 
+```
 
 *** =sample_code
 ```{r}
@@ -680,7 +680,7 @@ names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
 # Define a new variable based on a selection
-poker_midweek <- 
+poker_midweek <-
 ```
 
 *** =solution
@@ -702,7 +702,7 @@ msg = "Do not change anything about the definition and naming of `poker_vector` 
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_midweek", 
+test_object("poker_midweek",
             incorrect_msg = "It looks like `poker_midweek` does not contain the correct values from `poker_vector`. You can use the vector `c(2, 3, 4)` inside square brackets.")
 success_msg("Well done! Continue to the next exercise to specialize in vector selection some more!");
 ```
@@ -731,7 +731,7 @@ names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
 # Define a new variable based on a selection
-roulette_selection_vector <- 
+roulette_selection_vector <-
 ```
 
 *** =solution
@@ -754,7 +754,7 @@ msg = "Do not change anything about the definition and naming of `poker_vector` 
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_selection_vector", 
+test_object("roulette_selection_vector",
             undefined_msg = "Please make sure to define a variable `roulette_selection_vector`.",
             incorrect_msg = "It looks like `roulette_selection_vector` does not contain the correct selection from `roulette_vector`. Make sure to to use the right indexes.")
 success_msg("Awesome! The colon operator is extremely useful and very often used in R programming, so remember it well. Proceed to the next exercise.")
@@ -764,7 +764,7 @@ success_msg("Awesome! The colon operator is extremely useful and very often used
 --- type:NormalExercise xp:100 skills:1 key:e6c263ddee
 ## Vector selection: the good times (4)
 
-Another way to tackle the previous exercise is by using the names of the vector elements (Monday, Tuesday, ...) instead of their numeric positions. For example, 
+Another way to tackle the previous exercise is by using the names of the vector elements (Monday, Tuesday, ...) instead of their numeric positions. For example,
 
 ```
 poker_vector["Monday"]
@@ -772,7 +772,7 @@ poker_vector["Monday"]
 
 will select the first element of `poker_vector` since `"Monday"` is the name of that first element.
 
-Just like you did in the previous exercise with numerics, you can also use the element names to select multiple elements, for example: 
+Just like you did in the previous exercise with numerics, you can also use the element names to select multiple elements, for example:
 
 ```
 poker_vector[c("Monday","Tuesday")]
@@ -801,8 +801,8 @@ names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
 # Select poker results for Monday, Tuesday and Wednesday
-poker_start <- 
-  
+poker_start <-
+
 # Calculate the average of the elements in poker_start
 
 ```
@@ -818,7 +818,7 @@ names(roulette_vector) <- days_vector
 
 # Select poker results for Monday, Tuesday and Wednesday
 poker_start <- poker_vector[c("Monday", "Tuesday", "Wednesday")]
-  
+
 # Calculate the average of the elements in poker_start
 mean(poker_start)
 ```
@@ -829,7 +829,7 @@ msg = "Do not change anything about the definition and naming of `poker_vector` 
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_start", 
+test_object("poker_start",
             incorrect_msg = "It looks like `poker_start` does not contain the first three values of `poker_vector`. You can use `c(\"Monday\", \"Tuesday\", \"Wednesday\")` inside square brackets to do this.")
 test_output_contains("mean(poker_start)", incorrect_msg = "Have you correctly calculated the average of the values in `poker_start` and printed it out? Use `mean(poker_start)`.")
 success_msg("Good job! Apart from subsetting vectors by index or by name, you can also subset vectors by comparison. The next exercises will show you how!");
@@ -839,7 +839,7 @@ success_msg("Good job! Apart from subsetting vectors by index or by name, you ca
 --- type:NormalExercise xp:100 skills:1 key:f0f619c901
 ## Selection by comparison - Step 1
 
-By making use of comparison operators, we can approach the previous question in a more proactive way. 
+By making use of comparison operators, we can approach the previous question in a more proactive way.
 
 The (logical) comparison operators known to R are:
 
@@ -860,7 +860,7 @@ As seen in the previous chapter, stating `6 > 5` returns `TRUE`. The nice thing 
 This command tests for every element of the vector if the condition stated by the comparison operator is `TRUE` or `FALSE`.
 
 *** =instructions
-- Check which elements in `poker_vector` are positive (i.e. > 0) and assign this to `selection_vector`. 
+- Check which elements in `poker_vector` are positive (i.e. > 0) and assign this to `selection_vector`.
 - Print out `selection_vector` so you can inspect it. The printout tells you whether you won (`TRUE`) or lost (`FALSE`) any money for each day.
 
 *** =hint
@@ -881,8 +881,8 @@ names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
 # Which days did you make money on poker?
-selection_vector <- 
-  
+selection_vector <-
+
 # Print out selection_vector
 
 ```
@@ -898,7 +898,7 @@ names(roulette_vector) <- days_vector
 
 # Which days did you make money on poker?
 selection_vector <- poker_vector > 0
-  
+
 # Print out selection_vector
 selection_vector
 ```
@@ -919,9 +919,9 @@ success_msg("Great!")
 --- type:NormalExercise xp:100 skills:1 key:2754fc5cd4
 ## Selection by comparison - Step 2
 
-Working with comparisons will make your data analytical life easier. Instead of selecting a subset of days to investigate yourself (like before), you can simply ask R to return only those days where you realized a positive return for poker. 
+Working with comparisons will make your data analytical life easier. Instead of selecting a subset of days to investigate yourself (like before), you can simply ask R to return only those days where you realized a positive return for poker.
 
-In the previous exercises you used `selection_vector <- poker_vector > 0` to find the days on which you had a positive poker return. Now, you would like to know not only the days on which you won, but also how much you won on those days. 
+In the previous exercises you used `selection_vector <- poker_vector > 0` to find the days on which you had a positive poker return. Now, you would like to know not only the days on which you won, but also how much you won on those days.
 
 You can select the desired elements, by putting `selection_vector` between the square brackets that follow `poker_vector`:
 
@@ -955,7 +955,7 @@ names(roulette_vector) <- days_vector
 selection_vector <- poker_vector > 0
 
 # Select from poker_vector these days
-poker_winning_days <- 
+poker_winning_days <-
 ```
 
 *** =solution
@@ -1017,7 +1017,7 @@ names(roulette_vector) <- days_vector
 selection_vector <-
 
 # Select from roulette_vector these days
-roulette_winning_days <- 
+roulette_winning_days <-
 ```
 
 *** =solution
@@ -1042,13 +1042,10 @@ msg = "Do not change anything about the definition and naming of `poker_vector` 
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("selection_vector", 
+test_object("selection_vector",
             incorrect_msg = "It looks like `selection_vector` does not contain the correct result. Use `roulette_vector > 0`.")
 test_object("roulette_winning_days",
             incorrect_msg = "It looks like `roulette_winning_days` does not contain the correct result. Use `roulette_vector[selection_vector]`.")
 
 success_msg("Great! This exercise concludes the chapter on vectors. The next chapter will introduce you to the two-dimensional version of vectors: matrices.")
 ```
-
-
-

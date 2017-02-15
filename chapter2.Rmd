@@ -637,7 +637,7 @@ poker_wednesday <- poker_vector[3]
 
 *** =sct
 ```{r}
-msg = " Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
@@ -660,10 +660,10 @@ poker_vector[c(1, 5)]
 ```
 
 *** =instructions
-Assign the poker results of Tuesday, Wednesday and Thursday to the variable `poker_midweek`.
+Armazene os resultados do Poker de terça-feira, quarta-feira e quinta-feira na variável `poker_midweek`.
 
 *** =hint
-Use the vector `c(2, 3, 4)` between square brackets to select the correct elements of `poker_vector`.
+Use o vetor `c(2, 3, 4)` entre os colchetes para selecionar os elementos corretos de `poker_vector`.
 
 *** =pre_exercise_code
 ```{r}
@@ -672,92 +672,92 @@ Use the vector `c(2, 3, 4)` between square brackets to select the correct elemen
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
+# Defina a variável baseado na seleção
 poker_midweek <-
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
+# Defina a variável baseado na seleção
 poker_midweek <- poker_vector[c(2, 3, 4)]
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_midweek",
-            incorrect_msg = "It looks like `poker_midweek` does not contain the correct values from `poker_vector`. You can use the vector `c(2, 3, 4)` inside square brackets.")
-success_msg("Well done! Continue to the next exercise to specialize in vector selection some more!");
+            incorrect_msg = "Parece que `poker_midweek` não contém os valores corretos de `poker_vector`. Você pode usar o vetor `c(2, 3, 4)` dentro dos colchetes.")
+success_msg("Muito bem! Continue para o próximo exercício para se especializar em seleção de vetores e muito mais!");
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:27976b79f4
-## Vector selection: the good times (3)
+## Selecionando vetores: os bons tempos (3)
 
-Selecting multiple elements of `poker_vector` with `c(2, 3, 4)` is not very convenient. Many statisticians are lazy people by nature, so they created an easier way to do this: `c(2, 3, 4)` can be abbreviated to`2:4`, which generates a vector with all natural numbers from 2 up to 4.
+Eu sei, selecionar múltiplos elementos de `poker_vector` usando `c(2, 3, 4)` não é nada conveniente. Muitos estatísticos são pessoas preguiçosas por natureza, então eles criaram uma forma muito mais fácil de fazer isso: `c(2, 3, 4)` pode ser abreviado usando apenas `2:4`, o que irá gerar um vetor com todos os números naturais de 2 a 4.
 
-So, another way to find the mid-week results is `poker_vector[2:4]`. Notice how the vector `2:4` is placed between the square brackets to select element 2 up to 4.
+Então, outra forma de achar os resultados do meio da semana é `poker_vector[2;4]`. Note que o vetor `2:4` é colocado entre os colchetes para selecionar os elementos de posição 2 até a posição 4.
 
 *** =instructions
-Assign to `roulette_selection_vector` the roulette results from Tuesday up to Friday; make use of `:` if it makes things easier for you.
+Armazene em `roulette_selection_vector` os resultados da Roleta de terça-feira a sexta-feira; faça uso de `:` se achar que é melhor para você.
 
 *** =hint
-Assign a selection of `roulette_vector` to `roulette_selection_vector` by placing `2:5` between square brackets.
+Armazene a seleção de `roulette_vector` em `roulette_selection_vector` colocando `2:5` entre colchetes.
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
+# Defina a variável baseado na seleção
 roulette_selection_vector <-
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
+# Vitórias de Poker e Roleta de segunda-feira a sexta-feira:
 poker_vector <- c(140, -50, 20, -120, 240)
 roulette_vector <- c(-24, -50, 100, -350, 10)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Define a new variable based on a selection
+# Defina a variável baseado na seleção
 roulette_selection_vector <- roulette_vector[2:5]
 ```
 
 *** =sct
 
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_selection_vector",
-            undefined_msg = "Please make sure to define a variable `roulette_selection_vector`.",
-            incorrect_msg = "It looks like `roulette_selection_vector` does not contain the correct selection from `roulette_vector`. Make sure to to use the right indexes.")
-success_msg("Awesome! The colon operator is extremely useful and very often used in R programming, so remember it well. Proceed to the next exercise.")
+            undefined_msg = "Tenha certeza de que definiu a variável `roulette_selection_vector`.",
+            incorrect_msg = "Parece que `roulette_selection_vector` não contém a seleção correta de `roulette_vector`. Tenha certeza de usar os indíces corretos.")
+success_msg("Incrível! O caracter de dois pontos é extremamente útil e frequentemente utilizado em programação em R, sendo assim, lembre-se dele. Prossiga para o próximo exercício.")
 ```
 
 

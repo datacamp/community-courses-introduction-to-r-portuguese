@@ -762,13 +762,15 @@ success_msg("Incrível! O caracter de dois pontos é extremamente útil e freque
 
 
 --- type:NormalExercise xp:100 skills:1 key:e6c263ddee
-## Vector selection: the good times (4)
+## Selecionando vetores: os bons tempos (4)
 
-Another way to tackle the previous exercise is by using the names of the vector elements (Monday, Tuesday, ...) instead of their numeric positions. For example,
+Outra forma de executar o exercício anterior é utilizando o nome dos elementos do vetor (Monday, Tuesday, ...) ao invés da posição númerica deles. Por exemplo,
 
 ```
 poker_vector["Monday"]
 ```
+
+irá selecionar o primeiro elemento
 
 will select the first element of `poker_vector` since `"Monday"` is the name of that first element.
 

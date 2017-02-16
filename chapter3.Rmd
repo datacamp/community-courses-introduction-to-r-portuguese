@@ -1,30 +1,30 @@
 --- 
-title_meta  : Chapter 3
-title       : Matrices
-description : In this chapter you will learn how to work with matrices in R. By the end of the chapter, you will be able to create matrices and to understand how you can do basic computations with them. You will analyze the box office numbers of Star Wars to illustrate the use of matrices in R. May the force be with you!
+title_meta  :Capítulo 3
+title       : Matrizes
+description : Neste capítulo você irá aprender como trabalhar com matrizes em R. Até o final deste capítulo, você será capaz de criar matrizes e entender como fazer computação básica com ela. Você irá analisar algumas informações sobre Star Wars para ilustrar o uso de matrizes em R. Que a Força esteja com você!
 
 --- type:NormalExercise xp:100 skills:1 key:d61aeba84c
-## What's a matrix?
+## O que é uma matriz?
 
-In R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. Since you are only working with rows and columns, a matrix is called two-dimensional. 
+Em R, uma matriz (ou matrix, em inglês) é uma coleção de elementos com o mesmo tipo de dado (numérico, caracter ou lógico)organizado em um número fixo de linhas e colunas. Enquanto você estiver trabalhando apenas com linhas e colunas, sua matriz é chamada de matriz bi-dimensional (two-dimensional).
 
-You can construct a matrix in R with the [`matrix()`](http://www.rdocumentation.org/packages/base/functions/matrix) function. Consider the following example:
+Você pode construir uma matriz em R com a função [`matrix()`](http://www.rdocumentation.org/packages/base/functions/matrix). Considere o seguinte exemplo:
 
 ```
 matrix(1:9, byrow = TRUE, nrow = 3)
 ```
 
-In the [`matrix()`](http://www.rdocumentation.org/packages/base/functions/matrix) function:
+Na função [`matrix()`](http://www.rdocumentation.org/packages/base/functions/matrix):
 
-- The first argument is the collection of elements that R will arrange into the rows and columns of the matrix. Here, we use `1:9` which is a shortcut for `c(1, 2, 3, 4, 5, 6, 7, 8, 9)`.
-- The argument `byrow` indicates that the matrix is filled by the rows. If we want the matrix to be filled by the columns, we just place `byrow = FALSE`. 
-- The third argument `nrow` indicates that the matrix should have three rows.
+- O primeiro argumento é uma coleção de elementos que R irá organizar em linhas e colunas na matriz. Aqui, nós usamos `1:9`, o qual é um atalho para `c(1, 2, 3, 4, 5, 6, 7, 8, 9)`.
+- O argumento `byrow` indica que a matriz será preenchida pelas linhas. Se nós quisessemos que a matriz fosse preenchida pelas colunas, nós colocaríamos `byrow = FALSE`.
+- O terceiro argumento `nrow` indica que a matriz deve ter três colunas.
 
 *** =instructions
-Construct a matrix with 3 rows containing the numbers 1 up to 9, filled row-wise.
+Construa uma matriz com 3 linhas contendo os números de 1 a 9, preenchida pela linha.
 
 *** =hint
-Read the assignment carefully, the answer is already given!
+Leia a tarefa com atenção, a resposta já foi dada!
 
 *** =pre_exercise_code
 ```{r}
@@ -33,22 +33,23 @@ Read the assignment carefully, the answer is already given!
 
 *** =sample_code
 ```{r}
-# Construct a matrix with 3 rows that contain the numbers 1 up to 9
+# Construa uma matriz com 3 linhas que contenha os números de 1 a 9
+
 ```
 
 *** =solution
 ```{r}
-# Construct a matrix with 3 rows that contain the numbers 1 up to 9
+# Construa uma matriz com 3 linhas que contenha os números de 1 a 9
 matrix(1:9, byrow = TRUE, nrow = 3)
 ```
 
 *** =sct
 ```{r}
 test_function("matrix", c("data", "byrow", "nrow"),
-              incorrect_msg = "Have you correctly created the matrix? Have a look at the assignment, the answer is already given!")
+              incorrect_msg = "Você criou a matriz corretamente? Dá uma olhada na descrição da tarefa. A resposta já foi dada!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "There seems to be an issue with the matrix definition. Have a look at the assignment, the answer is already given!")
-success_msg("Great! Continue to the next exercise.")
+                     incorrect_msg = "Parece haver um problema com a declaração da matriz. Dá uma olhada na descrição da tarefa. A resposta já foi dada!")
+success_msg("Ótimo! Continue para o próximo exercício.")
 ```
 
 

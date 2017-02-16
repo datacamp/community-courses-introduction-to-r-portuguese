@@ -273,21 +273,21 @@ success_msg("Muito bem! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:86b87a8545
-## Adding a column for the Worldwide box office 
+## Adicionando uma coluna para a bilheteria mundia
 
-In the previous exercise you calculated the vector that contained the worldwide box office receipt for each of the three Star Wars movies. However, this vector is not yet part of `star_wars_matrix`.
+No exercício anterior você calculou o vetor que contém a bilheteria recebida por cada um dos três primeiros filmes de Star Wars. Contudo, esse vetor não faz parte da matriz `star_wars_matrix`.
 
-You can add a column or multiple columns to a matrix with the [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) function, which merges matrices and/or vectors together by column. For example: 
+Você pode adicionar uma ou várias colunas a uma matriz com a função [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), que une matrizes e/ou vetores por uma coluna. Por exemplo:
 
 ```
 big_matrix <- cbind(matrix1, matrix2, vector1 ...)
 ```
 
 *** =instructions
-Add `worldwide_vector` as a new column to the `star_wars_matrix` and assign the result to `all_wars_matrix`. Use the [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) function.
+Adicione `worldwide_vector` como uma nova coluna de `star_wars_matrix` e armazene o resultado em all_wars_matrix. Use a função [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind).
 
 *** =hint
-In this exercise, you should pass two variables to `cbind()`: `star_wars_matrix` and `worldwide_vector`, in this order. Assign the result to `all_wars_matrix`.
+Neste exercício, você deve passar duas variáveis para `cbind()`: `star_wars_matrix` e `worldwide_vector`, nesta mesma ordem. Armazene o resultado em `all_wars_matrix`.
 
 *** =pre_exercise_code
 ```{r}
@@ -296,45 +296,45 @@ In this exercise, you should pass two variables to `cbind()`: `star_wars_matrix`
 
 *** =sample_code
 ```{r}
-# Construct star_wars_matrix
+# Construa star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
                                            c("US", "non-US")))
 
-# The worldwide box office figures
+# A bilheteria mundial
 worldwide_vector <- rowSums(star_wars_matrix)
 
-# Bind the new variable worldwide_vector as a column to star_wars_matrix
+# Coloque a nova variável worldwide_vector como uma coluna em star_wars_matrix
 all_wars_matrix <- 
 ```
 
 *** =solution
 ```{r}
-# Construct star_wars_matrix
+# Construa star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
                                            c("US", "non-US")))
 
-# The worldwide box office figures
+# A bilheteria mundial
 worldwide_vector <- rowSums(star_wars_matrix)
 
-# Bind the new variable worldwide_vector as a column to star_wars_matrix
+# Coloque a nova variável worldwide_vector como uma coluna em star_wars_matrix
 all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the preset variables `box_office_all` and `star_wars_marix`!"
+msg <- "Não altere nada nas variáveis `box_office_all` e `star_wars_matrix`!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("worldwide_vector",
-            incorrect_msg = "Store the result of `rowSums(star_wars_matrix)` in `worldwide_vector`.")
+            incorrect_msg = "Armazene o resultado de `rowSums(star_wars_matrix)` em `worldwide_vector`.")
 
-msg <- "Have you correctly used `cbind()` to add `worldwide_vector` to `star_wars_matrix`? You should pass `star_wars_matrix` and `world_wide_vector` to `cbind()`, in this order. The resulting matrix, `all_wars_matrix`, should consist of three rows and three columns."
+msg <- "Você usou a função `cbind()` corretamente para adicionar `worldwide_vector` em `star_wars_matrix`? Você deve passar `star_wars_matrix` e `world_wide_vector` como argumento em `cbind()`, nesta mesma ordem. A matriz resultante `all_wars_matrix` deve conter 3 linhas e 3 colunas."
 test_object("all_wars_matrix", incorrect_msg = msg)
-success_msg("Nice job! After adding column to a matrix, the logical next step is adding rows. Learn how in the next exercise.");
+success_msg("Bom trabalho! Depois de adicionar uma coluna a uma matriz, o próximo passo é adicionar linhas. Vamos aprender como fazer no próximo exercício.");
 ```
 
 

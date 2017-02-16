@@ -123,18 +123,18 @@ success_msg("Realmente a Força está com você! Continue para o próximo exerc�
 
 
 --- type:NormalExercise xp:100 skills:1 key:f734e8bf74
-## Naming a matrix
+## Nomeando uma matriz
 
-To help you remember what is stored in `star_wars_matrix`, you would like to add the names of the movies for the rows. Not only does this help you to read the data, but it is also useful to select certain elements from the matrix. 
+Para te ajudar a lembrar o que é armazenado em `star_wars_matrix`, provavelmente você iria gostar de colocar o nome dos filmes em cada linha. Isso não só te ajudaria a ler seus dados, como também seria útil poder selecionar certos elementos na matriz.
 
-Similar to vectors, you can add names for the rows and the columns of a matrix
+Similar aos vetores, você pode adicionar nomes nas linhas e colunas de uma matriz
 
 ```
 rownames(my_matrix) <- row_names_vector
 colnames(my_matrix) <- col_names_vector
 ```
 
-We went ahead and prepared two vectors for you: `region`, and `titles`. You will need these vectors to name the columns and rows of `star_wars_matrix`, respectively.
+Nos adiantamos e preparamos dois vetores para você: `region`, e `titles`. Você precisará desses vetores para nomear as colunas e linhas de `star_wars_matrix`, respectivamente.
 
 *** =instructions
 - Use `colnames()` to name the columns of `star_wars_matrix` with the `region` vector.

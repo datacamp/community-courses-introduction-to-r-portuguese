@@ -137,12 +137,12 @@ colnames(my_matrix) <- col_names_vector
 Nos adiantamos e preparamos dois vetores para você: `region`, e `titles`. Você precisará desses vetores para nomear as colunas e linhas de `star_wars_matrix`, respectivamente.
 
 *** =instructions
-- Use `colnames()` to name the columns of `star_wars_matrix` with the `region` vector.
-- Use `rownames()` to name the rows of `star_wars_matrix` with the `titles` vector.
-- Print out `star_wars_matrix` to see the result of your work.
+- Use `colnames()` para nomear as colunas da matriz `star_wars_matrix` utilizando `region` como valor.
+- Use `rownames()` para nomear as linhas de `star_wars_matrix` utilizando `titles` como valor.
+- Exiba o valor de `star_wars_matrix` para ver o resultado do seu trabalho.
 
 *** =hint
-You can use `colnames(star_wars_matrix) <- region` to name the columns of `star_wars_matrix`. Do a similar thing to name the rows.
+Você pode usar `colnames(star_wars_matrix) <- region` para nomear as colunas de `star_wars_matrix`. Faça algo similar para nomear as linhas.
 
 *** =pre_exercise_code
 ```{r}
@@ -151,87 +151,87 @@ You can use `colnames(star_wars_matrix) <- region` to name the columns of `star_
 
 *** =sample_code
 ```{r}
-# Box office Star Wars (in millions!)
+# Bilheteria de Star Wars (em milhões!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
 
-# Construct matrix
+# Construa uma matriz
 star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
 
-# Vectors region and titles, used for naming
+# Vetores region e title, que serão usados para nomear
 region <- c("US", "non-US")
 titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
 
-# Name the columns with region
+# Use region para nomear as colunas
 
 
-# Name the rows with titles
+# Use titles para nomear as linhas
 
 
-# Print out star_wars_matrix
+# Exiba star_wars_matrix
 ```
 
 *** =solution
 ```{r}
-# Box office Star Wars (in millions!)
+# Bilheteria de Star Wars (em milhões!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
 
-# Construct matrix
+# Construa uma matriz
 star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
 
-# Vectors region and titles, used for naming
+# Vetores region e title, que serão usados para nomear
 region <- c("US", "non-US")
 titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
 
-# Name the columns with region
+# Use region para nomear as colunas
 colnames(star_wars_matrix) <- region
 
-# Name the rows with titles
+# Use titles para nomear as linhas
 rownames(star_wars_matrix) <- titles
 
-# Print out star_wars_matrix
+# Exiba star_wars_matrix
 star_wars_matrix
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the box office variables `new_hope`, `empire_strikes` and `return_jedi`!"
+msg <- "Não mude nada nas variáveis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
-msg <- "Don't change the contents of `star_wars_matrix`; only the names of the rows and columns!" 
+msg <- "Não altere o conteúdo de `star_wars_matrix`; somente o nomes das colunas e linhas!" 
 test_object("star_wars_matrix", incorrect_msg = msg)
-msg <- "Don't change anything about the `region` and `titles` vectors that have been defined for you."
+msg <- "Não altere nada nos vetores `region` e `titles`. Eles já foram definidos para você."
 test_object("region", undefined_msg = msg, incorrect_msg = msg)
 test_object("titles", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", eq_condition = "equal",
-            incorrect_msg = "Did you set the row and column names of `star_wars_matrix` correctly? Use `colnames(star_wars_matrix) <- region` for the column names; do a similar thing to name the rows.")
-test_output_contains("star_wars_matrix", incorrect_msg = "Don't forget to print out `star_wars_matrix` after you've named the rows and columns.")
-success_msg("Great! You're on the way of becoming an R jedi! Continue to the next exercise.")
+            incorrect_msg = "Você definiu as linhas e colunas de `star_wars_matrix` corretamente? Use `colnames(star_wars_matrix) <- region` para nomear as colunas; faça algo similar com as linhas.")
+test_output_contains("star_wars_matrix", incorrect_msg = "Não se esqueça de exibir `star_wars_matrix` depois que você nomear as linhas e colunas.")
+success_msg("Bom trabalho! Você está no caminho de se tornar um jedi em R! Continue para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:3fd7499a12
-## Calculating the worldwide box office 
+## Calculando a bilheteria mundial
 
-The single most important thing for a movie in order to become an instant legend in Tinseltown is its worldwide box office figures. 
+A coisa mais importante para que um filme se torne uma lenda é a sua bilheteria mundial.
 
-To calculate the total box office revenue for the three Star Wars movies, you have to take the sum of the US revenue column and the non-US revenue column. 
+Para calcular o faturamento total da bilheteria dos três primeiros filmes de Star Wars, você precisará pegar a soma das colunas US e non-US na matriz.
 
-In R, the function [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) conveniently calculates the totals for each row of a matrix. This function creates a new vector:
+Em R, a função [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) convenientemente calcula o total de cada linha de uma matriz. Essa função cria um novo vetor:
 
 ```
 rowSums(my_matrix)
 ```
 
 *** =instructions
-Calculate the worldwide box office figures for the three movies and put these in the vector named `worldwide_vector`.
+Calcule a bilheteria mundial dos três filmes e armazene-os em um vetor chamado `worldwide_vector`.
 
 *** =hint
-`rowSums(star_wars_matrix)` will calculate the sum of every row, so the total box office for each movie.
+`rowSums(star_wars_matrix)` irá calcular a soma de cada linha, criando assim o total de bilheteria para cada filme.
 
 *** =pre_exercise_code
 ```{r}
@@ -240,35 +240,35 @@ Calculate the worldwide box office figures for the three movies and put these in
 
 *** =sample_code
 ```{r}
-# Construct star_wars_matrix
+# Construa star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
                                            c("US", "non-US")))
 
-# Calculate worldwide box office figures
+# Calcule a bilheteria mundial
 worldwide_vector <- 
 ```
 
 *** =solution
 ```{r}
-# Construct star_wars_matrix
+# Construa star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
                                            c("US", "non-US")))
 
-# Calculate worldwide box office figures
+# Calcule a bilheteria mundial
 worldwide_vector <- rowSums(star_wars_matrix)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the preset variables `box_office_all` and `star_wars_marix`!"
+msg <- "Não altere nada nas variáveis `box_office_all` e `star_wars_matrix`!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
-test_object("worldwide_vector", incorrect_msg = "Call `rowSums()` on `star_wars_matrix` and store the result in `worldwide_vector`.")
-success_msg("Well done! Continue to the next exercise.")
+test_object("worldwide_vector", incorrect_msg = "Digite `rowSums()` usando `star_wars_matrix` como argumento e armazene o resultado em `worldwide_vector`.")
+success_msg("Muito bem! Continue para o próximo exercício.")
 ```
 
 

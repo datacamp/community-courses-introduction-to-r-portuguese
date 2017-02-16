@@ -54,21 +54,21 @@ success_msg("Ótimo! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:effc2fb945
-## Analyzing matrices, you shall
+## Analisar matrizes você deve
 
-It is now time to get your hands dirty. In the following exercises you will analyze the box office numbers of the Star Wars franchise. May the force be with you! 
+É hora de sujar as mãos. Nos exercícios seguintes você irá analisar os números de bilheteria da franquia Star Wars. Que a Força esteja com você!
 
-In the editor, three vectors are defined. Each one represents the box office numbers from the first three Star Wars movies. The first element of each vector indicates the US box office revenue, the second element refers to the Non-US box office (source: Wikipedia).
+No editor ao lado, três vetores foram criados. Cada um deles representa a bilheteria levantada pelos três primeiros filmes da franquia. O primeiro elemento de cada vetor indica a bilheteria que o filme fez nos Estados Unidos (em milhões de dólares); o segundo elemento é quanto cada filme faturou fora dos EUA (fonte: Wikipedia).
 
-In this exercise, you'll combine all these figures into a single vector. Next, you'll build a matrix from this vector.
+Neste exercício você irá combinar todas essas peças em um único vetor. Em seguida, você irá criar uma matriz a partir desse vetor.
 
 *** =instructions
-- Use `c(new_hope, empire_strikes, return_jedi)` to combine the three vectors into one vector. Call this vector `box_office`.
-- Construct a matrix with 3 rows, where each row represents a movie. Use the `matrix()` function to this. The first argument is the vector `box_office`, containing all box office figures. Next, you'll have to specify `nrow = 3` and `byrow = TRUE`. Name the resulting matrix `star_wars_matrix`.
+- Use `c(new_hope, empire_strikes, return_jedi)` para combinar os três elementos em um único vetor. Chame esse vetor de `box_office`.
+- Construa uma matriz de três linhas, onde cada uma representa um filme. Use a função `matrix()` para fazer isso. O primeiro argumento será o vetor `box_office`, contendo todas as bilheterias. Em seguida, você terá que especificar `nrow = 3` e `byrow = TRUE`. Chame essa matriz de `star_wars_matrix`.
 
 *** =hint
-- `box_office <- c(new_hope, empire_strikes, return_jedi)` will combine all numbers in the different vectors into a single vector with 6 elements.
-- `matrix(box_office, nrow = ..., by_row ...)` is a template for the solution to the second instruction.
+- `box_office <- c(new_hope, empire_strikes, return_jedi)` irá combinar todos os valores dos diferentes vetores em um único vetor de 6 elementos.
+- Já `matrix(box_office, nrow = ..., by_row ...)` é um modelo para a solução da segunda instrução.
 
 *** =pre_exercise_code
 ```{r}
@@ -77,48 +77,48 @@ In this exercise, you'll combine all these figures into a single vector. Next, y
 
 *** =sample_code
 ```{r}
-# Box office Star Wars (in millions!)
+# Bilheteria de Star Wars (em milhões!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
 
-# Create box_office
+# Crie box_office
 box_office <- 
 
-# Construct star_wars_matrix
+# Crie star_wars_matrix
 star_wars_matrix <- 
 ```
 
 *** =solution
 ```{r}
-# Box office Star Wars (in millions!)
+# Bilheteria de Star Wars (em milhões!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
 
-# Create box_office
+# Crie box_office
 box_office <- c(new_hope, empire_strikes, return_jedi)
 
-# Construct star_wars_matrix
+# Crie star_wars_matrix
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE) 
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the box office variables `new_hope`, `empire_strikes` and `return_jedi`!"
+msg <- "Não mude nada nas variáveis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("box_office", incorrect_msg = "Have you correctly combined the values of `new_hope`, `empire_strikes` and `return_jedi` into the vector `box_office`?")
+test_object("box_office", incorrect_msg = "Você combinou corretamente os valores de `new_hope`, `empire_strikes` e `return_jedi` no vetor `box_office`?")
 
 test_function("matrix", c("data", "nrow", "byrow"),
-              incorrect_msg = "Make sure to correctly specify the arguments you pass to `matrix()`: `box_office`, `nrow = 3`, `by_row = TRUE`.")
+              incorrect_msg = "Tenha certeza de especificar corretamente os argumentos em `matrix()`: `box_office`, `nrow = 3`, `by_row = TRUE`.")
 
 test_object("star_wars_matrix",
-            incorrect_msg = "Did you assign the result of the `matrix()` call to `star_wars_matrix`?")
+            incorrect_msg = "Você armazenou corretamente o resultado de `matrix()` em `star_wars_matrix`?")
 
-success_msg("The force is actually with you! Continue to the next exercise.")
+success_msg("Realmente a Força está com você! Continue para o próximo exercício")
 ```
 
 

@@ -284,7 +284,7 @@ big_matrix <- cbind(matrix1, matrix2, vector1 ...)
 ```
 
 *** =instructions
-Adicione `worldwide_vector` como uma nova coluna de `star_wars_matrix` e armazene o resultado em all_wars_matrix. Use a função [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind).
+Adicione `worldwide_vector` como uma nova coluna de `star_wars_matrix` e armazene o resultado em `all_wars_matrix`. Use a função [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind).
 
 *** =hint
 Neste exercício, você deve passar duas variáveis para `cbind()`: `star_wars_matrix` e `worldwide_vector`, nesta mesma ordem. Armazene o resultado em `all_wars_matrix`.

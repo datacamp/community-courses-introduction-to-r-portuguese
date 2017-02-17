@@ -339,42 +339,42 @@ success_msg("Bom trabalho! Depois de adicionar uma coluna a uma matriz, o próxi
 
 
 --- type:NormalExercise xp:100 skills:1 key:bcadb29139
-## Adding a row
+## Adicionando uma linha
 
-Just like every action has a reaction, every [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) has an [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). (We admit, we are pretty bad with metaphors.) 
+Assim como cada ação tem uma reação, cada [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) tem um [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). (OK, a gente admite: somo bem ruinzinhos em metáforas.) 
 
-Your R workspace, where all variables you defined 'live' ([check out what a workspace is](http://www.statmethods.net/interface/workspace.html)), has already been initialized and contains two matrices:
+seu workspace de R, onde todas as suas variáveis 'vivem' ([confira o que é um workspace](http://www.statmethods.net/interface/workspace.html)), foi iniciado e contém duas matrizes:
 
-- `star_wars_matrix` that we have used all along, with data on the first trilogy,
-- `star_wars_matrix2`, with similar data for the second trilogy. 
+- `star_wars_matrix`: a qual estivemos usado até agora, com dados da primeira trilogia,
+- `star_wars_matrix2`, com dados similares da segunda trilogia. 
 
-Type the name of these matrices in the console and hit Enter if you want to have a closer look. If you want to check out the contents of the workspace, you can type `ls()` in the console.
+Digite o nome dessas matrizes no console e aperta `ENTER` se você quiser ter um olhar mais detalhado sobre seu conteúdo. Se você quiser conferir os conteúdos da workspace, você pode digitar `ls()` no console.
 
 *** =instructions
-Use `rbind()` to paste together `star_wars_matrix` and `star_wars_matrix2`, in this order. Assign the resulting matrix to `all_wars_matrix`.
+Use `rbind()` para juntar `star_wars_matrix` e `star_wars_matrix2`, nesta mesma ordem. Armazene a matriz resultante em `all_wars_matrix`.
 
 *** =hint
-Bind the two matrices together like this:
+Junte duas matrizes assim:
 ```
 rbind(matrix1, matrix2)
 ```
-Assign the result to `all_wars_matrix`.
+Armazene o resultado em `all_wars_matrix`.
 
 
 *** =pre_exercise_code
 ```{r}
-# Construct matrix
+# Construindo a matriz
 box_office_all <- c(461, 314.4, 290.5, 247.9, 309.3, 165.8)
 movie_names <- c("A New Hope","The Empire Strikes Back","Return of the Jedi")
 col_titles <- c("US","non-US")
 star_wars_matrix <- matrix(box_office_all, nrow = 3, byrow = TRUE, dimnames = list(movie_names, col_titles))
 
-# Construa matrix2
+# Construindo a matrix2
 box_office_all2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
 movie_names2 <- c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
 star_wars_matrix2 <- matrix(box_office_all2, nrow=3, byrow = TRUE, dimnames = list(movie_names2, col_titles))
 
-# remove all except all_wars_matrix
+# Remove tudo menos all_wars_matrix
 rm(box_office_all)
 rm(movie_names)
 rm(col_titles)
@@ -384,32 +384,32 @@ rm(movie_names2)
 
 *** =sample_code
 ```{r}
-# star_wars_matrix and star_wars_matrix2 are available in your workspace
+# star_wars_matrix e star_wars_matrix2 estão disponíveis em seu workspace
 star_wars_matrix  
 star_wars_matrix2 
 
-# Combine both Star Wars trilogies in one matrix
+# Combine ambas as trilogias de Star Wars em uma matriz
 all_wars_matrix <- 
 ```
 
 *** =solution
 ```{r}
-# star_wars_matrix and star_wars_matrix2 are available in your workspace
+# # star_wars_matrix e star_wars_matrix2 estão disponíveis em seu workspace
 star_wars_matrix  
 star_wars_matrix2 
 
-# Combine both Star Wars trilogies in one matrix
+# Combine ambas as trilogias de Star Wars em uma matriz
 all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not override the variables that have been defined for you in the workspace (`star_wars_matrix` and `star_wars_matrix2`)."
+msg = "Não sobreponha as variáveis que foram definidas para você no workspace (`star_wars_matrix` e `star_wars_matrix2`)."
 test_object("star_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix2", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("all_wars_matrix", incorrect_msg = "Did you use the `rbind()` correctly to create `all_wars_matrix()`? `rbind()` should take two arguments: `star_wars_matrix` and `star_wars_matrix2`, in this order.")
+test_object("all_wars_matrix", incorrect_msg = "Você usou `rbind()` corretamente para criar `all_wars_matrix()`? `rbind()` usa dois argumentos: `star_wars_matrix` e `star_wars_matrix2`, nesta mesma ordem.")
 
-success_msg("Wonderful! Continue with the next exercise and see how you can combine the results of the `rbind()` function with the `colSums()` function!")
+success_msg("Maravilha! Continue para o próximo exercício para ver como você pode combinar os resultados da função `rbind()` com a função `colSums()`!")
 ```
 
 

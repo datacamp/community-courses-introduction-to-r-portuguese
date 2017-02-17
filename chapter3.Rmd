@@ -414,16 +414,16 @@ success_msg("Maravilha! Continue para o próximo exercício para ver como você 
 
 
 --- type:NormalExercise xp:100 skills:1 key:1bfe5ae096
-## The total box office revenue for the entire saga
+## Total de bilheteria da saga inteira
 
-Just like every [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) has a [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), every [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) has a [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Your R workspace already contains the `all_wars_matrix` that you constructed in the previous exercise; type `all_wars_matrix` to have another look. Let's now calculate the total box office revenue for the entire saga.
+Assim como cada [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) tem um [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), todo [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) tem um [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Seu workspace já contém a matriz `all_wars_matrix` que você construiu no exercício anterior; digite `all_wars_matrix` para dar uma olhada. Vamos agora calcular o total de bilheteria para toda a saga.
 
 *** =instructions
-- Calculate the total revenue for the US and the non-US region and assign `total_revenue_vector`. You can use the [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) function.
-- Print out `total_revenue_vector` to have a look at the results.
+- Calcule o total de revenda para as regiões US e non-US e armazene em `total_revenue_vector`. Você pode usar a função [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums).
+- Exiba `total_revenue_vector` para olhar os resultados.
 
 *** =hint
-You should use the [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) function with `star_wars_matrix` as the argument to find the total box office per region.
+Você deve usar a função [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) com `star_wars_matrix` como argumento para encontrar o total de bilheteria por região.
 
 *** =pre_exercise_code
 ```{r}
@@ -432,36 +432,36 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars
 
 *** =sample_code
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Total revenue for US and non-US
+# Total de revenda para US e non-US
 total_revenue_vector <- 
   
-# Print out total_revenue_vector
+# Exiba total_revenue_vector
 ```
 
 *** =solution
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Total revenue for US and non-US
+# Total de revenda para US e non-US
 total_revenue_vector <- colSums(all_wars_matrix)
 
-# Print out total_revenue_vector
+# Exiba total_revenue_vector
 total_revenue_vector
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change the contents of `all_wars_matrix`; it was created for you in the workspace."
+msg = "Não altere o conteúdo de `all_wars_matrix`; ele foi criado para você no workspace."
 test_object("all_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_function("colSums", "x", incorrect_msg = "Did you use the `colSums()` function on the all_wars_matrix?")
+test_function("colSums", "x", incorrect_msg = "Você usou a função `colSums()` em all_wars_matrix?")
 test_object("total_revenue_vector",
-            incorrect_msg = "Have you correctly assigned the result of `colSums(all_wars_matrix)` to `total_revenue_vector`?")
-test_output_contains("total_revenue_vector", incorrect_msg = "Don't forget to print out `total_revenue_vector`!")
-success_msg("Bellissimo! Head over to the next exercise to learn matrix subsetting.")
+            incorrect_msg = "Você armazenou corretamente o resultado de `colSums(all_wars_matrix)` em `total_revenue_vector`?")
+test_output_contains("total_revenue_vector", incorrect_msg = "Não esqueça de exibir `total_revenue_vector`!")
+success_msg("Excelente! Avance para o próximo exercício.")
 ```
 
 

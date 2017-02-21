@@ -470,24 +470,24 @@ success_msg("Excelente! Avance para o próximo exercício.")
 
 Igual aos vetores, você pode usar colchetes ``[ ]` para selecionar um ou múltiplos elementos de uma matriz. Enquanto nos vetores você possui apenas uma dimensão, nas matrizes você possui duas dimensões. Você deve, portanto, usar vírgulas para separar que elemento você quer selecionar e de qual coluna. Por exemplo:
 
-- `my_matrix[1,2]` selects the element at the first row and second column.
-- `my_matrix[1:3,2:4]` results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4.
+- `my_matrix[1,2]` seleciona o elemento na primeira linha e segunda coluna.
+- `my_matrix[1:3,2:4]` resulta em uma matriz com os dados da linha 1, 2, 3 e colunas 2, 3, 4.
 
-If you want to select all elements of a row or a column, no number is needed before or after the comma, respectively:
+Se você quer selecionar todos os elementos de uma linha ou coluna, nenhum número é necessário antes ou depois da vírgula, respectivamente:
 
-- `my_matrix[,1]` selects all elements of the first column.
-- `my_matrix[1,]` selects all elements of the first row.
+- `my_matrix[,1]` seleciona todos os elementos da primeira coluna.
+- `my_matrix[1,]` seleciona todos os elementos da primeira linhas.
 
-Back to Star Wars with this newly acquired knowledge! As in the previous exercise, `all_wars_matrix` is already available in your workspace.
+Após sabermos disso, vamos voltar para Star Wars! Assim como no exercício anterior, `all_wars_matrix` já está disponível em seu workspace.
 
 *** =instructions
-- Select the non-US revenue for all movies (the entire second column of `all_wars_matrix`), store the result as `non_us_all`.
-- Use `mean()` on `non_us_all` to calculate the average non-US revenue for all movies. Simply print out the result.
-- This time, select the non-US revenue for the first two movies in `all_wars_matrix`. Store the result as `non_us_some`.
-- Use `mean()` again to print out the average of the values in `non_us_some`.
+- Selecione a coluna non-US para todos os filmes (toda a segunda coluna de `all_wars_matrix`) e armazene o resultado em `non_us_all`.
+- Use `mean()` em `non_us_all` para calcular a média de faturamento de todos os filmes em países que não são os EUA. Simplesmente exiba o resultado no console.
+- Dessa vez, selecione o faturamento fora dos EUA para os dois primeiros filmes em `all_wars_matrix`. Armazene o resultado em `non_us_some`.
+- Use `mean()` de novo para exibir a média de valores em `non_us_some`.
 
 *** =hint
-You can select the entire second column of a matrix `my_matrix` with `my_matrix[,2]`.
+Você pode selecionar a segunda coluna inteira da matriz `my_matrix` com `my_matrix[,2]`.
 
 *** =pre_exercise_code
 ```{r}
@@ -496,54 +496,54 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars
 
 *** =sample_code
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Select the non-US revenue for all movies
+# Selecione o faturamento fora dos EUA para todos os filmes
 non_us_all <- 
   
-# Average non-US revenue
+# Média do faturamento fora dos EUA
 
   
-# Select the non-US revenue for first two movies
+# Selecione o faturamento fora dos EUA para os dois primeiros filmes
 non_us_some <- 
   
-# Average non-US revenue for first two movies
+# Média do faturamento fora dos EUA para os dois primeiros filmes
 
 ```
 
 *** =solution
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Select the non-US revenue for all movies
+# Selecione o faturamento fora dos EUA para todos os filmes
 non_us_all <- all_wars_matrix[,2]
   
-# Average non-US revenue
+# Média do faturamento fora dos EUA
 mean(non_us_all)
   
-# Select the non-US revenue for first two movies
+# Selecione o faturamento fora dos EUA para os dois primeiros filmes
 non_us_some <- all_wars_matrix[1:2,2]
   
-# Average non-US revenue for first two movies
+# Média do faturamento fora dos EUA para os dois primeiros filmes
 mean(non_us_some)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change the contents of `all_wars_matrix`; this matrix has already been created for you in the workspace."
+msg = "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("non_us_all",
-            incorrect_msg = "Did you assign to `non_us_all` the entire second column of `all_wars_matrix`? You can use `[, 2]` to do this!")
+            incorrect_msg = "Você armazenou em `non_us_all` a segunda coluna inteira de `all_wars_matrix`? Você pode usar `[, 2]` para fazer isso!")
 test_output_contains("mean(non_us_all)",
-                     incorrect_msg = "Have you calculated the average of the values in `non_us_all` by calling `mean(non_us_all)`? Simply print out the result.")
+                     incorrect_msg = "Você calculou a média dos valores em `non_us_all` ao usar `mean(non_us_all)`? Simplesmente exiba o resultado.")
 test_object("non_us_some",
-            incorrect_msg = "Did you assign to `non_us_some` the non-US revenue for the first two movies? You can use `[1:2,2]` to do this!")
+            incorrect_msg = "Você armazenou em `non_us_some` o faturamento fora dos EUA para os dois primeiros filmes? Você pode usar `[1:2,2]` para fazer isso!")
 test_output_contains("mean(non_us_some)",
-                     incorrect_msg = "Have you calculated the average of the values in `non_us_some` by calling `mean(non_us_some)`? Simply print out the result.")
-success_msg("Nice one! Continue to the next exercise.")
+                     incorrect_msg = "Você calculou a média dos valores em `non_us_some` usando `mean(non_us_some)`?simplesmente exiba o resultado.")
+success_msg("Boa! Continue para o próximo exercício.")
 ```
 
 

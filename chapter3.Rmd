@@ -548,20 +548,20 @@ success_msg("Boa! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:c81c656f06
-## A little arithmetic with matrices
+## Um pequeno problema de aritmética com matrizes
 
-Similar to what you have learned with vectors, the standard operators like `+`, `-`, `/`, `*`, etc. work in an element-wise way on matrices in R. 
+De forma similiar ao que você aprendeu com vetores, operadores padrão, como `+`, `-`, `/`, `*`, etc., funcionam da mesma forma com matrizes em R. 
 
-For example, `2 * my_matrix` multiplies each element of `my_matrix` by two.
+Por exemplo, `2 * my_matrix` multiplica cada elemento de `my_matrix` por dois.
 
-As a newly-hired data analyst for Lucasfilm, it is your job is to find out how many visitors went to each movie for each geographical area. You already have the total revenue figures in `all_wars_matrix`. Assume that the price of a ticket was 5 dollars. Simply dividing the box office numbers by this ticket price gives you the number of visitors.
+Como um Analista de Dados recém-contratado pelas Lucasfilm, é seu trabalho encontrar quantos visitantes foram para cada filme em cada região geográfica. Você já tem o total de faturamento em `all_wars_matrix`. Suponha que o preço do ingresso foi 5 dólares. Se você simplesmente dividir o número da bilheteria pelo preço do ingresso, você terá o número de visitantes.
 
 *** =instructions
-- Divide `all_wars_matrix` by 5, giving you the number of visitors in millions. Assign the resulting matrix to `visitors`.
-- Print out `visitors` so you can have a look.
+- Divida `all_wars_matrix` por 5, que dará a você o número de visitantes em milhões. Armazene a matriz resultante em `visitors`.
+- Exiba `visitors` para que você possa dar uma olhada.
 
 *** =hint
-The number of visitors is equal to `all_wars_matrix` divided by 5.
+O número de visitantes é igual a `all_wars_matrix` dividido por 5.
 
 *** =pre_exercise_code
 ```{r}
@@ -570,37 +570,37 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars
 
 *** =sample_code
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Estimate the visitors
+# Estime os visitantes
 visitors <- 
   
-# Print the estimate to the console
+# Exiba a estimativa no console
 
 ```
 
 *** =solution
 ```{r}
-# all_wars_matrix is available in your workspace
+# all_wars_matrix está disponível em seu workspace
 all_wars_matrix
 
-# Estimate the visitors
+# Estime os visitantes
 visitors <- all_wars_matrix / 5
 
-# Print the estimate to the console
+# Exiba a estimativa no console
 visitors
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change the contents of `all_wars_matrix`; this matrix has already been created for you in the workspace."
+msg = "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "It looks like `visitors` is not correct. Simply divide `all_wars_matrix` by 5 and store the resulting matrix as `visitors`.")
-test_output_contains("visitors", incorrect_msg = "Don't forget to also print out `visitors` so you can have a look.")
-success_msg("Great! What do these results tell you? A staggering 92 million people went to see A New Hope in US theaters! Continue to the next exercise.")
+            incorrect_msg = "Parece que `visitors` não está correto. Simplesmente divida `all_wars_matrix` por 5 e armazene a matriz resultante em `visitors`.")
+test_output_contains("visitors", incorrect_msg = "Não esqueça de exibir `visitors` para que você possa visualizá-lo.")
+success_msg("Excelente! O que esse resultado diz a você? Que 92 milhões de pessoas foram assistir Uma Nova Esperança nos cinemas americanos. Continue para o próximo exercício!")
 ```
 
 

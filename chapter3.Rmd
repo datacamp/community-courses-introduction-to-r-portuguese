@@ -609,7 +609,9 @@ success_msg("Excelente! O que esse resultado diz a você? Que 92 milhões de pes
 
 Assim como `2 * my_matrix` multiplica cada elemento de `my_matrix` por dois, `my_matrix1 * my_matrix2` cria uma nova matriz onde cada elemento é o produto correspondente dos elementos em `my_matrix1` e `my_matrix2`.
 
-After looking at the result of the previous exercise, big boss Lucas points out that the ticket prices went up over time. He asks to redo the analysis based on the prices you can find in `ticket_prices_matrix` (source: imagination).
+Após olhar os resultados do exercício anterior, seu chefe lhe informou que o valor dos ingressos aumentou com o decorrer do tempo. Ele pediu para você refazer a análise, usando como base os preços em`ticket_prices_matrix` (fonte: imaginação).
+
+_Aqueles que estão familiarizado com matrizes podem ter notado que _
 
 _Those who are familiar with matrices should note that this is not the standard matrix multiplication for which you should use `%*%` in R._
 

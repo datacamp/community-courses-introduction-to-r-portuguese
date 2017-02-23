@@ -118,7 +118,7 @@ success_msg("Muito bom! Se você quer saber mais sobre a função `factor()`, n�
 
 
 --- type:NormalExercise xp:100 skills:1 key:5bd4f50afc2c2dbc881e16b8ca94ca56960dff42
-## What's a factor and why would you use it? (3)
+## O que é um factor e por que eu devo usá-lo? (3)
 
 There are two types of categorical variables: a **nominal categorical variable** and an **ordinal categorical variable**.
 

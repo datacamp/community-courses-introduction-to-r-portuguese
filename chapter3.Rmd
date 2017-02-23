@@ -611,9 +611,7 @@ Assim como `2 * my_matrix` multiplica cada elemento de `my_matrix` por dois, `my
 
 Após olhar os resultados do exercício anterior, seu chefe lhe informou que o valor dos ingressos aumentou com o decorrer do tempo. Ele pediu para você refazer a análise, usando como base os preços em`ticket_prices_matrix` (fonte: imaginação).
 
-_Aqueles que estão familiarizado com matrizes podem ter notado que _
-
-_Those who are familiar with matrices should note that this is not the standard matrix multiplication for which you should use `%*%` in R._
+_Aqueles que estão familiarizado com matrizes devem ter notado que está não é uma multiplicação padrão de matrizes, para as quais você deve usar `%*%` em R._
 
 *** =instructions
 - Divide `all_wars_matrix` by `ticket_prices_matrix` to get the estimated number of US and non-US visitors for the six movies. Assign the result to `visitors`.

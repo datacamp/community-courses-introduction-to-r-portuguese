@@ -632,48 +632,48 @@ ticket_prices_matrix <- matrix(c(5, 5, 6, 6, 7, 7, 4, 4, 4.5, 4.5, 4.9, 4.9), nr
 
 *** =sample_code
 ```{r}
-# all_wars_matrix and ticket_prices_matrix are available in your workspace
+# all_wars_matrix e ticket_prices_matrix estão disponíveis em seu workspace
 all_wars_matrix
 ticket_prices_matrix
 
-# Estimated number of visitors
+# Número estimado de visitantes
 visitors <- 
 
-# US visitors
+# Visitantes nos EUA
 us_visitors <- 
 
-# Average number of US visitors
+# Média de visitantes nos EUA
 
 ```
 
 *** =solution
 ```{r}
-# all_wars_matrix and ticket_prices_matrix are available in your workspace
+# all_wars_matrix e ticket_prices_matrix estão disponíveis em seu workspace
 all_wars_matrix
 ticket_prices_matrix
 
-# Estimated number of visitors
+# Número estimado de visitantes
 visitors <- all_wars_matrix / ticket_prices_matrix
 
-# US visitors
+# Visitantes nos EUA
 us_visitors <- visitors[ ,1]
 
-# Average number of US visitors
+# Média de visitantes nos EUA
 mean(us_visitors)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change the contents of `all_wars_matrix`; this matrix has already been created for you in the workspace."
+msg <- "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("ticket_prices_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "Have you correctly created the `visitors` matrix? You should divide `all_wars_matrix` by `ticket_prices_matrix` to get there.")
-test_object("us_visitors", incorrect_msg = "To created `us_visitors`, you should correctly select the entire first column from `visitors`. You can use `[,1]` for this!")
-test_output_contains("mean(us_visitors)", incorrect_msg = "Once you have created `us_visitors`, you can use `mean()` to calculate the average number of visitors in the US. Make sure to print out the result.")
+            incorrect_msg = "Você criou corretamente a matriz `visitors`? Você deve dividir `all_wars_matrix` por `ticket_prices_matrix` para conseguir o resultado.")
+test_object("us_visitors", incorrect_msg = "Para criar `us_visitors`, você deve selecionar corretamente a primeira coluna inteira de `visitors`. Você pode usar `[,1]` para isso!")
+test_output_contains("mean(us_visitors)", incorrect_msg = "Uma vez criada `us_visitors`, você pode usar a função `mean()` para calcular o número média de visitantes nos EUA. Tenha certeza de exibir o resultado.")
 
-success_msg("It's a fact: the R force is with you! This exercise concludes the chapter on matrices. Next stop on your journey through the R language: factors.")
+success_msg("É fato: a Força R está com você! Esse exercício conclui o capítulo de matrizes. Próxima parada na jornada da linguagem R: fatores.")
 ```
 
 

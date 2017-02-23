@@ -120,17 +120,17 @@ success_msg("Muito bom! Se você quer saber mais sobre a função `factor()`, n�
 --- type:NormalExercise xp:100 skills:1 key:5bd4f50afc2c2dbc881e16b8ca94ca56960dff42
 ## O que é um factor e por que eu devo usá-lo? (3)
 
-There are two types of categorical variables: a **nominal categorical variable** and an **ordinal categorical variable**.
+Há dois tipos de variáveis categóricas: a **variável categórica nominal** e a **variável categórica ordinal**.
 
-A nominal variable is a categorical variable without an implied order. This means that it is impossible to say that 'one is worth more than the other'. For example, think of the categorical variable `animals_vector` with the categories `"Elephant"`, `"Giraffe"`, `"Donkey"` and `"Horse"`. Here, it is impossible to say that one stands above or below the other. (Note that some of you might disagree ;-) ).
+Uma variável nominal é uma variável categórica sem valor implícito. Isso significa que é impossível dizer que 'um vale mais que o outro'. Por exemplo, imagine uma variável categórica chamada `animals_vector` com as categorias `"Elefante"`, `"Girafa"`, `"Macaco"` e `"Cavalo"`. Note que é impossível dizer que um dos animais é melhor ou pior que o outro. (Claro que alguns de vocês deve descordar ;-) ).
 
-In contrast, ordinal variables do have a natural ordering. Consider for example the categorical variable `temperature_vector` with the categories: `"Low"`, `"Medium"` and `"High"`. Here it is obvious that `"Medium"` stands above `"Low"`, and `"High"` stands above `"Medium"`.
+Em contrapartida, variáveis ordinais possuem uma ordem natural. Considere o seguinte exemplo de variável categórica chamada `temperature_vector` com as categorias: `"Baixo"`, `"Médio"` e `"Alto"`. Aqui é óbvio que `"Médio"` fica acima de `"Baixo"`, enquanto `"Alto"` fica acima de `"Médio"`.
 
 *** =instructions
-Click 'Submit Answer' to check how R constructs and prints nominal and ordinal variables. Do not worry if you do not understand all the code just yet, we will get to that.
+Clique em `Submit Answer` para verificar como R constroe e exibe variáveis nominais e ordinais. Não se preocupe se você não entende todo o código ainda, você vai chegar lá.
 
 *** =hint
-Just click the 'Submit Answer' button and look at the console. Notice how R indicates the ordering of the factor levels for ordinal categorical variables.
+Apenas clique no botão `Submit Answer` e veja o console. Note que R indica a ordem dos níveis dos fatores para as variáveis categóricas ordinais.
 
 *** =pre_exercise_code
 ```{r}
@@ -139,12 +139,12 @@ Just click the 'Submit Answer' button and look at the console. Notice how R indi
 
 *** =sample_code
 ```{r}
-# Animals
+# Animais
 animals_vector <- c("Elephant", "Giraffe", "Donkey", "Horse")
 factor_animals_vector <- factor(animals_vector)
 factor_animals_vector
 
-# Temperature
+# Temperatura
 temperature_vector <- c("High", "Low", "High","Low", "Medium")
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
 factor_temperature_vector
@@ -152,12 +152,12 @@ factor_temperature_vector
 
 *** =solution
 ```{r}
-# Animals
+# Animais
 animals_vector <- c("Elephant", "Giraffe", "Donkey", "Horse")
 factor_animals_vector <- factor(animals_vector)
 factor_animals_vector
 
-# Temperature
+# Temperatura
 temperature_vector <- c("High", "Low", "High","Low", "Medium")
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
 factor_temperature_vector
@@ -165,14 +165,14 @@ factor_temperature_vector
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the sample code. Simply hit the Submit Answer button and inspect the solution!"
+msg <- "Não altere nada no código de exemplo. Simplesmente pressione o botão Submit Answer e olhe a solução!"
 test_object("animals_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("temperature_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_animals_vector", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("factor_animals_vector", incorrect_msg = msg)
 test_object("factor_temperature_vector", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("factor_temperature_vector", incorrect_msg = msg)
-success_msg("Can you already tell what's happening in this exercise? Awesome! Continue to the next exercise and get into the details of factor levels.")
+success_msg("Você consegue dizer o que está acontecendo no exercício? Incrível! Continue para o próximo exercício e saiba mais sobre os níveis de fatores.")
 ```
 
 

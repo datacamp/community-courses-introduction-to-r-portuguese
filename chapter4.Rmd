@@ -57,28 +57,27 @@ success_msg("Bom trabalha! Pronto para começar? Continue para o próximo exerc�
 
 
 --- type:NormalExercise xp:100 skills:1 key:6cc21c842b075347926bb1b244782213df32e370
-## What's a factor and why would you use it? (2)
+## O que é um factor e por que eu devo usá-lo? (2)
 
-To create factors in R, you make use of the function [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor). First thing that you have to do is create a vector that contains all the observations that belong to a limited number of categories. For example, `gender_vector` contains the sex of 5 different individuals:
+Para criar um fator em R, você precisa usar a função [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor). A primeira coisa que você tem que fazer é criar um vetor que contenha todas as observações que pertencem a um limitado número de categorias. Por exemplo, `gender_vector` contém o sexo de 5 diferentes indivíduos:
 
 ```
 gender_vector <- c("Male","Female","Female","Male","Male")
 ```
+Está claro que há duas categorias, ou, segundo os termos em R, **'factor levels'** (Níveis de fatores): "Male" e "Female".
 
-It is clear that there are two categories, or in R-terms **'factor levels'**, at work here: "Male" and "Female".
-
-The function [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) will encode the vector as a factor:
+A função [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) vai codificar o vetor como um fator:
 
 ```
 factor_gender_vector <- factor(gender_vector)
 ```
 
 *** =instructions
-- Convert the character vector `gender_vector` to a factor with `factor()` and assign the result to `factor_gender_vector`
-- Print out `factor_gender_vector` and assert that R prints out the factor levels below the actual values.
+- Converta os caracteres do vetor `gender_vector` para fator com a função `factor()` e armazene o resultado em `factor_gender_vector`.
+- Exiba `factor_gender_vector` e confirme que R exibiu os níveis de fatores abaixo dos valores atuais.
 
 *** =hint
-Simply use the function [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) on `gender_vector`. Have a look at the assignment, the answer is already there somewhere...
+Simplesmente use a função [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) em `gender_vector`. Dê uma olhada na descrição da tarefa, a resposta já está ali em algum lugar...
 
 *** =pre_exercise_code
 ```{r}
@@ -87,34 +86,34 @@ Simply use the function [`factor()`](http://www.rdocumentation.org/packages/base
 
 *** =sample_code
 ```{r}
-# Gender vector
+# Gender_vector
 gender_vector <- c("Male", "Female", "Female", "Male", "Male")
 
-# Convert gender_vector to a factor
+# Converta gender_vector para fator
 factor_gender_vector <-
 
-# Print out factor_gender_vector
+# Exiba factor_gender_vector
 
 ```
 
 *** =solution
 ```{r}
-# Gender vector
+# Gender_vector
 gender_vector <- c("Male", "Female", "Female", "Male", "Male")
 
-# Convert gender_vector to a factor
+# Converta gender_vector para fator
 factor_gender_vector <- factor(gender_vector)
 
-# Print out factor_gender_vector
+# Exiba factor_gender_vector
 factor_gender_vector
 ```
 
 *** =sct
 ```{r}
 test_object("factor_gender_vector",
-            incorrect_msg = "Did you assign the factor of `gender_vector` to `factor_gender_vector`?")
-test_output_contains("factor_gender_vector", incorrect_msg = "Don't forget to print out `factor_gender_vector`!")
-success_msg("Great! If you want to find out more about the `factor()` function, do not hesitate to type `?factor` in the console. This will open up a help page. Continue to the next exercise.");
+            incorrect_msg = "Você armazenou o fator de `gender_vector` em `factor_gender_vector`?")
+test_output_contains("factor_gender_vector", incorrect_msg = "Não esqueça de exibir `factor_gender_vector`!")
+success_msg("Muito bom! Se você quer saber mais sobre a função `factor()`, não hesite em digitar `?factor` no console. Isso vai abrir uma página de ajuda. Continue para o próximo exercício.");
 ```
 
 

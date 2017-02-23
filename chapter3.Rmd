@@ -614,13 +614,13 @@ Após olhar os resultados do exercício anterior, seu chefe lhe informou que o v
 _Aqueles que estão familiarizado com matrizes devem ter notado que está não é uma multiplicação padrão de matrizes, para as quais você deve usar `%*%` em R._
 
 *** =instructions
-- Divide `all_wars_matrix` by `ticket_prices_matrix` to get the estimated number of US and non-US visitors for the six movies. Assign the result to `visitors`.
-- From the `visitors` matrix, select the entire first column, representing the number of visitors in the US. Store this selection as `us_visitors`.
-- Calculate the average number of US visitors; print out the result.
+- Divida `all_wars_matrix` por `ticket_prices_matrix`  para ter um número estimado de visitantes para os seis primeiros filmes, tanto nos EUA quanto fora do EUA. Armazene o resultado em `visitors`.
+- A partir da matriz `visitors`, selecione a primeira coluna inteira, que representa o número de visitantes nos EUA. Armazene a seleção em `us_visitors`.
+- Calcule o número médio de visitantes nos EUA; exiba o resultado.
 
 *** =hint
-- You can use the function `mean()` to calculate the average of the inputs to the function.
-- To get the number of visitors in the US, select the first column from `visitors` using `visitors[ ,1]`.
+- Você pode usar a função `mean()` para calcular a média dos valores enviados para essa função.
+- Para ter o número de visitantes nos EUA, selecione a primeira coluna de `visitors` usando `visitors[ ,1]`.
 
 *** =pre_exercise_code
 ```{r}

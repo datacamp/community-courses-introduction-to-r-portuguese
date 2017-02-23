@@ -1,24 +1,24 @@
 ---
-title_meta  : Chapter 4
-title       : Factors
-description : Very often, data falls into a limited number of categories. For example, humans are either male or female. In R, categorical data is stored in factors. Given the importance of these factors in data analysis, you should start learning how to create, subset and compare them now!
+title_meta  : Capítulo 4
+title       : Fatores (Factors)
+description : Frequentemente, dados caem em uma quantidade limitada de categorias. Por exemplo, humanos são macho ou fêmea. Em R, dados categóricos são armazenados nos chamados fatores. Dada a importância desses fatores em análise de dados, você deve começar a aprender como criá-los, dividí-los e compará-los.
 
 --- type:NormalExercise xp:100 skills:1 key:05273321916d99bb9c0deadf75c6834d25a47244
-## What's a factor and why would you use it?
+## O que é um factor e por que eu devo usá-lo?
 
-In this chapter you dive into the wonderful world of **factors**.
+Neste capítulo você irá se aventurar pelo maravilhoso mundo dos **fatores**.
 
-The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable can belong to a **limited number of categories**. A continuous variable, on the other hand, can correspond to an infinite number of values.
+O termo fator se refere a um tipo de dado estatístico usado para armazenar variáveis categóricas. A diferença entre uma variável categórica e uma variável contínua é que, uma variável categórica pode pertencer a um **número limitado de categorias**. Uma variável contínua, por sua vez, pode corresponder a um número infinito de valores.
 
-It is important that R knows whether it is dealing with a continuous or a categorical variable, as the statistical models you will develop in the future treat both types differently. (You will see later why this is the case.)
+É importante que a linguagem R saiba se está trabalhando com uma variável contínua ou categórica, já que os modelos estatísticos que você irá desenvolver no futuro tratam estes dados diferentemente. (Você vai ver depois por que isso é importante.)
 
-A good example of a categorical variable is the variable 'Gender'. A human individual can either be "Male" or "Female", making abstraction of inter-sexes. So here "Male" and "Female" are, in a simplified sense, the two values of the categorical variable "Gender", and every observation can be assigned to either the value "Male" of "Female".
+Um bom exemplo de variável categórica é a variável `Gender`. Um indivíduo humano pode ser considerado "Male" (Macho) ou "Female" (Fêmea). Sendo assim, macho e fêmea são, de forma simplificada, os dois valores da variável categórica "Gender", e cada observação pode ser armazenada com o valor "Male" ou "Female".
 
 *** =instructions
-Assign to variable `theory` the value `"factors for categorical variables"`.
+Armazene na variável `theory` o valor `"factors for categorical variables"`.
 
 *** =hint
-Simply assign a variable (`<-`); make sure to capitalize correctly.
+Simplesmente armazene o valor na variável utilizando `<-`; cuidado com letras maiúsculas.
 
 *** =pre_exercise_code
 ```{r}
@@ -27,12 +27,12 @@ Simply assign a variable (`<-`); make sure to capitalize correctly.
 
 *** =sample_code
 ```{r}
-# Assign to the variable theory what this chapter is about!
+# Armazene na variável theory o que foi pedido!
 ```
 
 *** =solution
 ```{r}
-# Assign to the variable theory what this chapter is about!
+# Armazene na variável theory o que foi pedido!
 theory <- "factors for categorical variables"
 ```
 
@@ -44,15 +44,15 @@ theory <- "factors for categorical variables"
 #    lapply(bad_names, test_object, eval=FALSE)
 #    })
 
-msg_undef <- "It looks like you haven't defined the variable `theory`."
-msg_incor <- "The value of `theory` looks incorrect. Make sure to assign it the character string `\"factors for categorical variables\"`. Remember that R is case sensitive."
-msg_err <- "Make sure that you defined `theory` correctly, using `<-` for assignment."
+msg_undef <- "Parece que você não definiu a variável `theory`."
+msg_incor <- "O valor em `theory` parece incorreto. Tenha certeza de armazenar nela a string `\"factors for categorical variables\"`. Lembre-se que R é case sensitive."
+msg_err <- "Tenha certeza de que você definiu `theory` corretamente, usando `<-`."
 
 # If get error and theory is undefined, point out the error
 test_or(test_error(msg_err), test_object("theory", eval = FALSE))
 
 test_object("theory", undefined_msg = msg_undef, incorrect_msg = msg_incor)
-success_msg("Good job! Ready to start? Continue to the next exercise!")
+success_msg("Bom trabalha! Pronto para começar? Continue para o próximo exercício!")
 ```
 
 

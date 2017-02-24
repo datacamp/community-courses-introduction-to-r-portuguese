@@ -177,21 +177,21 @@ success_msg("Você consegue dizer o que está acontecendo no exercício? Incrív
 
 
 --- type:NormalExercise xp:100 skills:1 key:1aa698978d32d1a0befa4700d7da85a648e1d69e
-## Factor levels
+## Níveis de fatores (Factor levels)
 
-When you first get a data set, you will often notice that it contains factors with specific factor levels. However, sometimes you will want to change the names of these levels for clarity or other reasons. R allows you to do this with the function [`levels()`](http://www.rdocumentation.org/packages/base/functions/levels):
+Quando você começa um conjunto de dados, você Frequentemente notar que ele contém fatores com específicos níveis. Contudo, algumas vezes você precisará mudar os nomes desses níveis para esclarecimento ou outras razões. R permite você fazer isso com a função [`levels()`](http://www.rdocumentation.org/packages/base/functions/levels):
 
 ```
 levels(factor_vector) <- c("name1", "name2",...)
 ```
 
-A good illustration is the raw data that is provided to you by a survey. A standard question for every questionnaire is the gender of the respondent. You remember from the previous question that this is a factor and when performing the questionnaire on the streets its levels are often coded as `"M"` and `"F"`.
+Um bom exemplo de ilustração são os dados brutos que são providos a você por um questionário. Uma pergunta padrão feita as pessoas que respondem a um questionário é o gênero que ele corresponde. Você deve se lembrar do exercício anterior que isso é um fator e, quando é realizado o questionamento nas ruas seus nívels geralmente são `"M"` e `"F"`.
 
 ```
 survey_vector <- c("M", "F", "F", "M", "M")
 ```
 
-Next, when you want to start your data analysis, your main concern is to keep a nice overview of all the variables and what they mean. At that point, you will often want to change the factor levels to `"Male"` and `"Female"` instead of `"M"` and `"F"` to make your life easier.
+Em seguida, quando você quer iniciar sua análise de dados, sua principal preocupação é ter um bom resumo de todas as variáveis e seus significados. Nesse ponto, você provavelmente mudará o nível dos fatores para `"Male"` e `"Female"`, ao invés de `"M"` e `"F"`, tudo isso para tornar sua vida mais fácil.
 
 **Watch out:** the order with which you assign the levels is important. If you type `levels(factor_survey_vector)`, you'll see that it outputs `[1] "F" "M"`. If you don't specify the levels of the factor when creating the vector, `R` will automatically assign them alphabetically. To correctly map `"F"` to `"Female"` and `"M"` to `"Male"`, the levels should be set to `c("Female", "Male")`, in this order order.
 

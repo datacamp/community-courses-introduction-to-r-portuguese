@@ -193,14 +193,14 @@ survey_vector <- c("M", "F", "F", "M", "M")
 
 Em seguida, quando você quer iniciar sua análise de dados, sua principal preocupação é ter um bom resumo de todas as variáveis e seus significados. Nesse ponto, você provavelmente mudará o nível dos fatores para `"Male"` e `"Female"`, ao invés de `"M"` e `"F"`, tudo isso para tornar sua vida mais fácil.
 
-**Watch out:** the order with which you assign the levels is important. If you type `levels(factor_survey_vector)`, you'll see that it outputs `[1] "F" "M"`. If you don't specify the levels of the factor when creating the vector, `R` will automatically assign them alphabetically. To correctly map `"F"` to `"Female"` and `"M"` to `"Male"`, the levels should be set to `c("Female", "Male")`, in this order order.
+**Watch out:** A ordem que você usa para definir os níveis é importante! Se você digitar `levels(factor_survey_vector)`, você verá que ele exibe `[1] "F" "M"`. Se você não especifícar os níveis do fator quando criar o vetor, `R` irá definir definí-lo por ordem alfabética, automaticamente. Para mapear corretamente `"F"` para `"Female"`e `"M"` para `"Male"`, os níveis devem ser definidos como `c("Female", "Male")`, nesta mesma ordem.
 
 *** =instructions
-- Check out the code that builds a factor vector from `survey_vector`. You should use `factor_survey_vector` in the next instruction.
-- Change the factor levels of `factor_survey_vector` to `c("Female", "Male")`. Mind the order of the vector elements here.
+- Verifique o código que cria um fator em `survey_vector`. Você deve usar `factor_survey_vector` na próxima instrução.
+- Mude os níveis de fator em `factor_survey_vector` para `c("Female", "Male")`. Lembre-se da ordem correta dos elementos do vetor.
 
 *** =hint
-Mind the order in which you have to type in the factor levels. Hint: look at the order in which the levels are printed when typing `levels(factor_survey_vector)`.
+Tenha atenção a ordem dos níveis de fator que você deve digitar. Dica: olhe a ordem em que os níveis são exibidos ao digitar `levels(factor_survey_vector)`.
 
 *** =pre_exercise_code
 ```{r}
@@ -211,11 +211,11 @@ factor_survey_vector <- factor(survey_vector)
 
 *** =sample_code
 ```{r}
-# Code to build factor_survey_vector
+# Código para criar factor_survey_vector
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 
-# Specify the levels of factor_survey_vector
+# Especifique os níveis em factor_survey_vector
 levels(factor_survey_vector) <-
 
 factor_survey_vector
@@ -223,11 +223,11 @@ factor_survey_vector
 
 *** =solution
 ```{r}
-# Code to build factor_survey_vector
+# Código para criar factor_survey_vector
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 
-# Specify the levels of factor_survey_vector
+# Especifique os níveis em factor_survey_vector
 levels(factor_survey_vector) <- c("Female", "Male")
 
 factor_survey_vector
@@ -235,9 +235,9 @@ factor_survey_vector
 
 *** =sct
 ```{r}
-msg = "Do not change the definition of `survey_vector`!"
+msg = "Não altere a definição de `survey_vector`!"
 test_object("survey_vector", undefined_msg = msg, incorrect_msg = msg)
-msg = "Do not change or remove the code to create the factor vector."
+msg = "Não altere ou remova o código que cria o vetor de fatores"
 test_function("factor", "x", not_called_msg = msg, incorrect_msg = msg)
 
 # MC-note: ideally would want to test assign operator `<-`, and have it highlight whole line.
@@ -246,17 +246,17 @@ test_function("factor", "x", not_called_msg = msg, incorrect_msg = msg)
 # test_student_typed('c("Male", "Female")')
 
 test_object("factor_survey_vector", eq_condition = "equal",
-            incorrect_msg = paste("Did you assign the correct factor levels to `factor_survey_vector`? Use `levels(factor_survey_vector) <- c(\"Female\", \"Male\")`. Remember that R is case sensitive!"))
+            incorrect_msg = paste("Você definiu corretamente os níveis de fator para `factor_survey_vector`? Use `levels(factor_survey_vector) <- c(\"Female\", \"Male\")`. Lembre-se que R é case sensitive!"))
 
 
-success_msg("Wonderful! Proceed to the next exercise.")
+success_msg("Maravilha! Proceda para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:a549f13c0644ccc89cd39a10aa48706754637ed0
-## Summarizing a factor
+## Resumindo um fator
 
-After finishing this course, one of your favorite functions in R will be [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). This will give you a quick overview of the contents of a variable:
+Depois deste curso, uma de suas funções favoritas em R será [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Ela te dará um rápido resumo sobre o conteúdo da variável:
 
 ```
 summary(my_var)

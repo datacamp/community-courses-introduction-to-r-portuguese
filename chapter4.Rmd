@@ -262,13 +262,13 @@ Depois deste curso, uma de suas funções favoritas em R será [`summary()`](htt
 summary(my_var)
 ```
 
-Going back to our survey, you would like to know how many `"Male"` responses you have in your study, and how many `"Female"` responses. The [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) function gives you the answer to this question.
+Voltando ao nosso questionário, você deve querer saber quantas respostas `"Male"` você teve em seu estudo, e quantas respostas `"Female"` também. A função [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) lhe dará as respostas para essa pergunta.
 
 *** =instructions
-Ask a [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) of the `survey_vector` and `factor_survey_vector`. Interpret the results of both vectors. Are they both equally useful in this case?
+Use [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) em `survey_vector` e `factor_survey_vector`. Interprete os resultados de ambos os vetores.
 
 *** =hint
-Call the [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) function on both `survey_vector` and `factor_survey_vector`, it's as simple as that!
+Use a função [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) em `survey_vector` e `factor_survey_vector`, simplesmente assim!
 
 *** =pre_exercise_code
 ```{r}

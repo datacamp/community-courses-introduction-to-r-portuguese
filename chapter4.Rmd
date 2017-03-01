@@ -277,48 +277,48 @@ Use a função [`summary()`](http://www.rdocumentation.org/packages/base/functio
 
 *** =sample_code
 ```{r}
-# Build factor_survey_vector with clean levels
+# Crie factor_survey_vector com os níveis limpos
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 levels(factor_survey_vector) <- c("Female", "Male")
 factor_survey_vector
 
-# Generate summary for survey_vector
+# Gere um summary para survey_vector
 
 
-# Generate summary for factor_survey_vector
+# Gere um summary para factor_survey_vector
 
 ```
 
 *** =solution
 ```{r}
-# Build factor_survey_vector with clean levels
+# Crie factor_survey_vector com os níveis limpos
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 levels(factor_survey_vector) <- c("Female", "Male")
 factor_survey_vector
 
-# Generate summary for survey_vector
+# Gere um summary para survey_vector
 summary(survey_vector)
 
-# Generate summary for factor_survey_vector
+# Gere um summary para factor_survey_vector
 summary(factor_survey_vector)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the first few lines that define `survey_vector` and `factor_survey_vector`."
+msg = "Não altere nada nas linhas iniciais que declaram `survey_vector` e `factor_survey_vector`."
 test_object("survey_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_survey_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-msg <- "Have you correctly used `summary()` to generate a summary for `%s`?"
+msg <- "Você usou corretamente `summary()` para gerar o summary para `%s`?"
 test_output_contains("summary(survey_vector)", incorrect_msg = sprintf(msg, "survey_vector"))
 test_output_contains("summary(factor_survey_vector)", incorrect_msg = sprintf(msg, "factor_survey_vector"))
-success_msg("Nice! Have a look at the output. The fact that you identified `\"Male\"` and `\"Female\"` as factor levels in `factor_survey_vector` enables R to show the number of elements for each category.")
+success_msg("Boa! Dê uma olhada na saída do código. Devido ao fato de você identificar `\"Male\"` e `\"Female\"` como níveis de fator em `factor_survey_vector` permite a R exibir o número de elementos para cada categoria.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:90ecc160d1ebf2f75bf53f9c3843fc1632bdd0a5
-## Battle of the sexes
+## Batalha dos sexos
 
 In `factor_survey_vector` we have a factor with two levels: Male and Female. But how does R value these relatively to each other? In other words, who does R think is better, males or females?
 

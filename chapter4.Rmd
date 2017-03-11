@@ -320,13 +320,13 @@ success_msg("Boa! Dê uma olhada na saída do código. Devido ao fato de você i
 --- type:NormalExercise xp:100 skills:1 key:90ecc160d1ebf2f75bf53f9c3843fc1632bdd0a5
 ## Batalha dos sexos
 
-In `factor_survey_vector` we have a factor with two levels: Male and Female. But how does R value these relatively to each other? In other words, who does R think is better, males or females?
+Em `factor_survey_vector` nós temos um fator com dois níveis: Male (Macho) e Female (Fêmea). Mas, como R avalia estes níveis uns com os outros? Em outras palavras, quem a linguagem R vai pensar que é melhor: macho ou fêmea?
 
 *** =instructions
-Read the code in the editor and click 'Submit Answer' to see whether males are worth more than females.
+Leia o código no editor e clique em 'Submit Answer' para ver se machos valem mais que fêmeas.
 
 *** =hint
-Just click 'Submit Answer' and have a look at output that gets printed to the console.
+Apenas clique em 'Submit Answer' e dê uma olhada na saída do código que é exibido no console.
 
 *** =pre_exercise_code
 ```{r}
@@ -335,52 +335,52 @@ Just click 'Submit Answer' and have a look at output that gets printed to the co
 
 *** =sample_code
 ```{r}
-# Build factor_survey_vector with clean levels
+# Cria factor_survey_vector com os níveis limpos
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 levels(factor_survey_vector) <- c("Female", "Male")
 
-# Male
+# Macho
 male <- factor_survey_vector[1]
 
-# Female
+# Fêmea
 female <- factor_survey_vector[2]
 
-# Battle of the sexes: Male 'larger' than female?
+# Batalha dos sexos: Macho é maior que Fêmea?
 male > female
 ```
 
 *** =solution
 ```{r}
-# Build factor_survey_vector with clean levels
+# Cria factor_survey_vector com os níveis limpos
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 levels(factor_survey_vector) <- c("Female", "Male")
 
-# Male
+# Macho
 male <- factor_survey_vector[1]
 
-# Female
+# Fêmea
 female <- factor_survey_vector[2]
 
-# Battle of the sexes: Male 'larger' than female?
+# Batalha dos sexos: Macho é maior que Fêmea?
 male > female
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the code; simply hit Submit Answer and look at the result."
+msg = "Não altere nada no código, simplesmente clique em 'Submit Answer' e olhe o resultado."
 test_object("survey_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_survey_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("male", undefined_msg = msg, incorrect_msg = msg)
 test_object("female", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("male > female", incorrect_msg = msg)
-success_msg("Phew, it seems that R is gender-neutral. Or maybe it just wants to stay out of these discussions ;-).")
+success_msg("Ufa, parece que R é neutro nessa briga? Ou talvez só queira ficar longe de problemas ;-).")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:9ab0928916bf84ab225713a9a1ce40d9e322c6a0
-## Ordered factors
+## Fatores ordenados
 
 Since `"Male"` and `"Female"` are unordered (or nominal) factor levels, R returns a warning message, telling you that the greater than operator is not meaningful. As seen before, R attaches an equal value to the levels for such factors.
 

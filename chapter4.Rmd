@@ -493,20 +493,20 @@ success_msg("Sucesso! Dê uma boa olhada no console. Isso significa que, a parti
 
 
 --- type:NormalExercise xp:100 skills:1 key:db16e69805625bcfde227743a8cbc985f8482a37
-## Comparing ordered factors
+## Comparando fatores ordenados
 
-Having a bad day at work, 'data analyst number two' enters your office and starts complaining that 'data analyst number five' is slowing down the entire project. Since you know that 'data analyst number two' has the reputation of being a smarty-pants, you first decide to check if his statement is true.
+Ao ter um dia ruim no trabalho, o `Analista de Dados 2` entra no escritório e começa a reclamar que o `Analista de Dados 5` está atrasando todo o projeto. Você sabe que o `Analista de Dados 2' tem fama de espertinho, e decide checar se essa afirmação é verdadeira.
 
-The fact that `factor_speed_vector` is now ordered enables us to compare different elements (the data analysts in this case). You can simply do this by using the well-known operators.
+Agora que `factor_speed_vector` está ordenado, nos é possível comparar diferentes elementos (os Analistas de Dados, neste caso). Você pode fazer isso utilizando alguns operadores bem conhecidos. Consegue adivinhar qual?
 
 *** =instructions
-- Use `[2]` to select from `factor_speed_vector` the factor value for the second data analyst. Store it as `da2`.
-- Use `[5]` to select the `factor_speed_vector` factor value for the fifth data analyst. Store it as `da5`.
-- Check if `da2` is greater than `da5`; simply print out the result. Remember that you can use the `>` operator to check whether one element is larger than the other.
+- Use `[2]` para selecionar os valores do fator para o segundo Analista de Dados em `factor_speed_vector`. Armazene o resultado em `da2`.
+- Use `[5]` em `factor_speed_vector` para selecionar os valores do quinto Analista de Dados. Armazene o resultado em `da5`.
+- Verifique se `da2` é maior que `da5`; simplesmente exiba o resultado. Lembre-se de que você pode usar o operador `>` para saber qual elemento é maior que o outro.
 
 *** =hint
-- To select the factor value for the third data analyst, you'd need `factor_speed_vector[3]`.
-- To compare two values, you can use `>`. For example: `da3 > da4`.
+- Para selecionar o valor do terceiro Analista de Dados no fator, você deve usar `factor_speed_vector[3]`.
+- Para comparar dois valores, você pode usar `>`. Por exemplo: `da3 > da4`.
 
 *** =pre_exercise_code
 ```{r}
@@ -515,48 +515,48 @@ The fact that `factor_speed_vector` is now ordered enables us to compare differe
 
 *** =sample_code
 ```{r}
-# Create factor_speed_vector
+# Crie factor_speed_vector
 speed_vector <- c("fast", "slow", "slow", "fast", "insane")
 factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "fast", "insane"))
 
-# Factor value for second data analyst
+# Valor no fator para o segundo Analista de Dados
 da2 <-
 
-# Factor value for fifth data analyst
+# Valor no fator para o quinto Analista de Dados
 da5 <-
 
-# Is data analyst 2 faster than data analyst 5?
+# O Analista de Dados 2 é mais rápido que o Analista de Dados 5?
 
 ```
 
 *** =solution
 ```{r}
-# Create factor_speed_vector
+# Crie factor_speed_vector
 speed_vector <- c("fast", "slow", "slow", "fast", "insane")
 factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "fast", "insane"))
 
-# Factor value for second data analyst
+# Valor no fator para o segundo Analista de Dados
 da2 <- factor_speed_vector[2]
 
-# Factor value for fifth data analyst
+# Valor no fator para o quinto Analista de Dados
 da5 <- factor_speed_vector[5]
 
-# Is data analyst 2 faster data analyst 5?
+# O Analista de Dados 2 é mais rápido que o Analista de Dados 5?
 da2 > da5
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the commands that define `speed_vector` and `factor_speed_vector`!"
+msg = "Não altere o comando que declara `speed_vector` e `factor_speed_vector`!"
 test_object("speed_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_speed_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-msg <- "Have you correctly selected the factor value for the %s data analyst? You can use `factor_speed_vector[%s]`."
+msg <- "Você selecionou o valor correto no fator para o Analista de Dados %s? Você pode usar `factor_speed_vector[%s]`."
 test_object("da2", eq_condition = "equal", incorrect_msg = sprintf(msg, "second", "2"))
 test_object("da5", eq_condition = "equal", incorrect_msg = sprintf(msg, "fifth", "5"))
-test_output_contains("da2 > da5", incorrect_msg = "Have you correctly compared `da2` and `da5`? You can use the `>`. Simply print out the result.")
+test_output_contains("da2 > da5", incorrect_msg = "Você comparou `da2` and `da5`? Use o operador `>` e exiba o resultado no console.")
 
-success_msg("Bellissimo! What do the result tell you? Data analyst two is complaining about the data analyst five while in fact he or she is the one slowing everything down! This concludes the chapter on factors. With a solid basis in vectors, matrices and factors, you're ready to dive into the wonderful world of data frames, a very important data structure in R!")
+success_msg("Parabéns! O que o resultado diz a você? O Analista de Dados 2 está reclamando sobre o Analista de Dados 5, mas é ele ou ela quem está atrasando tudo! Essa lição conclui o capítulo de fatores. Com este conhecimento básico de vetores, matrizes e fatores, você está pronto para mergulhar no maravilhoso mundo dos data frames, uma estrutura de dados muito importante em R! Vamos lá?")
 ```
 
 

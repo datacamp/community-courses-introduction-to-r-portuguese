@@ -382,25 +382,26 @@ success_msg("Ufa, parece que R é neutro nessa briga? Ou talvez só queira ficar
 --- type:NormalExercise xp:100 skills:1 key:9ab0928916bf84ab225713a9a1ce40d9e322c6a0
 ## Fatores ordenados
 
-Since `"Male"` and `"Female"` are unordered (or nominal) factor levels, R returns a warning message, telling you that the greater than operator is not meaningful. As seen before, R attaches an equal value to the levels for such factors.
+Desde que `"Male"` e `"Female"` são níveis de fatores desordenados (ou nominais), R retorna uma mensagem de aviso, informando a você que o operador Maior que não é significante. Como vimos anteriormente, R atribui um valor igual para os níveis de tais fatores.
 
-But this is not always the case! Sometimes you will also deal with factors that do have a natural ordering between its categories. If this is the case, we have to make sure that we pass this information to R...
+Mas esse nem sempre é o caso! Algumas vezes você irá querer lidar com fatores que tem uma ordenação natual entre suas categorias. Se este é o caso, nós devemos ter certeza que passamos estas informações para R...
 
-Let us say that you are leading a research team of five data analysts and that you want to evaluate their performance. To do this, you track their speed, evaluate each analyst as `"slow"`, `"fast"` or `"insane"`, and save the results in `speed_vector`.
+Vamos supor que você está liderando um time de pesquisa de cinco analistas de dados e que você quer avaliar seu desempenho. Para fazer isso, você avalia a velocidade deles e avalia cada analista como `"slow"` (devagar), `"fast"` (rápido) ou `"insane"` (insano), além de salvar os resultados em `speed_vector`.
 
 *** =instructions
-As a first step, assign `speed_vector` a vector with 5 entries, one for each analyst. Each entry should be either `"slow"`, `"fast"`, or `"insane"`. Use the list below:
 
-- Analyst 1 is fast,
-- Analyst 2 is slow,
-- Analyst 3 is slow,
-- Analyst 4 is fast and
-- Analyst 5 is insane.
+Nesta primeira etapa, armazene em `speed_vector` um vetor com cinco entradas, uma para cada analista. Cada entrada deve conter `"slow"`, `"fast"`, ou `"insane"`. Use a lista abaixo:
 
-No need to specify these are factors yet.
+- Analista 1 é fast,
+- Analista 2 é slow,
+- Analista 3 é slow,
+- Analista 4 é fast e o
+- Analista 5 é insane.
+
+Não há necessidade de especificar esses fatores ainda.
 
 *** =hint
-Assign to `speed_vector` a vector containing character strings, `"fast"`, `"slow"` ...
+Armazene em `speed_vector` um vetor contendo caracteres string, como `"fast"`, `"slow"`, etc.
 
 *** =pre_exercise_code
 ```{r}
@@ -409,21 +410,21 @@ Assign to `speed_vector` a vector containing character strings, `"fast"`, `"slow
 
 *** =sample_code
 ```{r}
-# Create speed_vector
+# Crie speed_vector
 speed_vector <-
 ```
 
 *** =solution
 ```{r}
-# Create speed_vector
+# Crie speed_vector
 speed_vector <- c("fast", "slow", "slow", "fast", "insane")
 ```
 
 *** =sct
 ```{r}
 test_object("speed_vector",
-            incorrect_msg = "`speed_vector` should be a vector with 5 entries, one for each analyst's speed rating. Don't use capital letters; R is case sensitive!")
-success_msg("A job well done! Continue to the next exercise.")
+            incorrect_msg = "`speed_vector` deve ser um vetor com 5 entradas, uma para cada velocidade de analista avaliado. Não use letras maíusculas; R é case sensitive!")
+success_msg("Bom trabalho! Continue para o próximo exercício.")
 ```
 
 

@@ -4,15 +4,15 @@ title       : Data frames
 description : A grande maioria dos dados em que você trabalhará serão armazenados em data frames. Ao final deste capítulo focado em básico de R, você será capaz de criar um data frame, selecionar partes interessantes de um data frame e até ordenar um data frame de acordo com certas variáveis.
 
 --- type:NormalExercise xp:100 skills:1 key:7f95849020a2563168920409022ce7bed20835b5
-## What's a data frame?
+## O que é um data frame?
 
-You may remember from the chapter about matrices that all the elements that you put in a matrix should be of the same type. Back then, your data set on Star Wars only contained numeric elements. 
+Lembra-se que no capítulo sobre matrizes nós falamos que todos os elementos que você coloca em uma matriz devem ser do mesmo tipo? O dataset sobre os filmes de Star Wars, por exemplo, continha apenas números.
 
-When doing a market research survey, however, you often have questions such as:
+Contudo, quando você está fazendo uma pesquisa de mercado, é frequente encontrar questões como:
 
-- 'Are your married?' or 'yes/no' questions (`logical`)
-- 'How old are you?' (`numeric`)
-- 'What is your opinion on this product?' or other 'open-ended' questions (`character`)
+- 'Você é casado(a)?' ou outras questões onde a resposta é 'sim/não' (`logical`)
+- 'Qual sua idade?' (`numeric`)
+- 'Qual sua opinião sobre este produto?' ou outras questões discursivas (`character`)
 - ...
 
 The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. 

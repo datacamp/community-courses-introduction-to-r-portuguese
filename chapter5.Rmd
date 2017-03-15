@@ -15,7 +15,9 @@ Contudo, quando você está fazendo uma pesquisa de mercado, é frequente encont
 - 'Qual sua opinião sobre este produto?' ou outras questões discursivas (`character`)
 - ...
 
-The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. 
+O resultado do questionário acima nos trará um conjunto de dados com diferentes tipos de dados. Você frequentemente irá se achar trabalhando com datasets que contém diferentes tipos de dados, ao invés de apenas um.
+
+Um data frame (quadro de dados, em tradução livre) utiliza a variável de um conjunto de dados como colunas e suas observações (ou valores) como linhas. Caso já tenha utilizado diferentes pacotes de software estatístico
 
 A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
 

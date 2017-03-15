@@ -17,15 +17,13 @@ Contudo, quando você está fazendo uma pesquisa de mercado, é frequente encont
 
 O resultado do questionário acima nos trará um conjunto de dados com diferentes tipos de dados. Você frequentemente irá se achar trabalhando com datasets que contém diferentes tipos de dados, ao invés de apenas um.
 
-Um data frame (quadro de dados, em tradução livre) utiliza a variável de um conjunto de dados como colunas e suas observações (ou valores) como linhas. Caso já tenha utilizado diferentes pacotes de software estatístico
-
-A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
+Um data frame (quadro de dados, em tradução livre) utiliza a variável de um conjunto de dados como colunas e suas observações (ou valores) como linhas. Caso já tenha utilizado diferentes pacotes de softwares estatístico, como SAS ou SPSS, esse conceito deve lhe ser familiar.
 
 *** =instructions
-Click 'Submit Answer'. The data from the built-in example data frame [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) will be printed to the console.
+Clique em `Submit Answer`. Os dados do data frame de exemplo, chamado [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) será exibido no console.
 
 *** =hint
-Just click 'Submit Answer' and witness the magic!
+Apenas clique em `Submit Answer` e testemunhe a magia!
 
 *** =pre_exercise_code
 ```{r}
@@ -34,20 +32,20 @@ Just click 'Submit Answer' and witness the magic!
 
 *** =sample_code
 ```{r}
-# Print out built-in R data frame
+# Exibindo o data frame em R
 mtcars 
 ```
 
 *** =solution
 ```{r}
-# Print out built-in R data frame
+# Exibindo o data frame em R
 mtcars 
 ```
 
 *** =sct
 ```{r}
-test_output_contains("mtcars", incorrect_msg = "Do not change anything about the code, Make sure that you output `mtcars`.")
-success_msg("Great! Continue to the next exercise.")
+test_output_contains("mtcars", incorrect_msg = "Não altere nada no código.")
+success_msg("Ótimo! Continue para o próximo exercício.")
 ```
 
 

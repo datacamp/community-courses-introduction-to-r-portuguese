@@ -50,21 +50,21 @@ success_msg("Ótimo! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:3d0e64ecf5f69521ee538ecc713caa02b8b0ec46
-## Quick, have a look at your data set
+## Rápido, dê uma olhada no seu conjunto de dados
 
-Wow, that is a lot of cars! 
+Nossa, tem um monte de carros aí!
 
-Working with large data sets is not uncommon in data analysis. When you work with (extremely) large data sets and data frames, your first task as a data analyst is to develop a clear understanding of its structure and main elements. Therefore, it is often useful to show only a small part of the entire data set. 
+Trabalhar com grandes conjuntos de dados - do inglês Dataset - não é incomum em análise de dados. Quando você trabalha com datasets e dataframes (muito) grandes, sua primeira tarefa como um analista de dados é desenvolver um claro entendimento de sua estrutura e principais elementos. Entretanto, é sempre útil mostrar apenas pequenas partes de um dataset inteiro.
 
-So how to do this in R? Well, the function [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) enables you to show the first observations of a data frame. Similarly, the function [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) prints out the last observations in your data set.
+Então, como que se faz isso em R? Bem, a função [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) permite a você exibir as primeiras ou linhas de um dataframe. De forma similar, a função [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) exibe as últimas linhas do seu dataset.
 
-Both [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) and [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) print a top line called the 'header', which contains the names of the different variables in your data set.
+Ambos [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) e [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) exibem o cabeçalho, que trata-se da primeira linha do dataset, onde ficam os nomes das diferentes colunas (ou variáveis) do seu dataset.
 
 *** =instructions
-Call [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) on the [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) data set to have a look at the header and the first observations.
+Execute [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) no dataset [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) para que você possa ver o cabeçalho das primeiras linhas.
 
 *** =hint
-`head(mtcars)` will show the first observations of the `mtcars` data frame.
+`head(mtcars)` irá mostrar as primeiras linhas (ou observações) do dataframe `mtcars`.
 
 *** =pre_exercise_code
 ```{r}

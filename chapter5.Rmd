@@ -73,21 +73,21 @@ Execute [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) 
 
 *** =sample_code
 ```{r}
-# Call head() on mtcars
+# Execute head() em mtcars
 
 ```
 
 *** =solution
 ```{r}
-# Call head() on mtcars
+# Execute head() em mtcars
 head(mtcars)
 ```
 
 *** =sct
 ```{r}
-test_function("head", "x", incorrect_msg = "Have you correctly passed `mtcars` to the `head()` function?")
-test_output_contains("head(mtcars)", incorrect_msg = "Simply print out the result of the `head()` call, no need to assign it to a new variable.")
-success_msg("Wonderful! So, what do we have in this data set? For example, `hp` for example represents the car's horsepower; the Datsun has the lowest horse power of the 6 cars that are displayed. For a full overview of the variables' meaning, type `?mtcars` in the console and read the help page. Continue to the next exercise!");
+test_function("head", "x", incorrect_msg = "Você usou `mtcars` na função `head()`?")
+test_output_contains("head(mtcars)", incorrect_msg = "Simplesmente exiba o resultado da função `head()`, não é necessário armazená-lo em uma variável.")
+success_msg("Maravilha! Então, o que temos aqui neste dataset? Por exemplo, `hp` significa `horsepower`, ou seja, a potência do motor de um carro; O Datsun possui a menor potência entre os seis carros que foram exibidos pela função. Para saber o que cada variável significa, você pode digitar `?mtcars` no console e ler a página de ajuda. Continue para o próximo exercício!");
 ```
 
 

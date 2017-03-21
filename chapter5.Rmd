@@ -134,30 +134,30 @@ success_msg("Bom trabalho! Consegue visualizar todas as informações ditas na d
 
 
 --- type:NormalExercise xp:100 skills:1 key:df0b89706d90526b3c0bbe15e400b74cbd900704
-## Creating a data frame 
+## Criando um dataframe 
 
-Since using built-in data sets is not even half the fun of creating your own data sets, the rest of this chapter is based on your personally developed data set. Put your jet pack on because it is time for some space exploration! 
+Utilizar um dataset que foi criado pela própria linguagem de programação não é nem metade da diversão em criar seu próprio dataset. O restante deste curso irá focar no desenvolvimento do seu próprio dataset. Coloque sua mochila a jato, porque está na hora de explorarmos o espaço!
 
-As a first goal, you want to construct a data frame that describes the main characteristics of eight planets in our solar system. According to your good friend Buzz, the main features of a planet are:
+Como seu primeiro objetivo, você deverá construir um dataframe que descreva as principais características dos oito planetas em nosso sistema solar. De acordo com seu grande amigo Buzz, as principais características são:
 
-- The type of planet (Terrestrial or Gas Giant).
-- The planet's diameter relative to the diameter of the Earth.
-- The planet's rotation across the sun relative to that of the Earth.
-- If the planet has rings or not (TRUE or FALSE).
+- O tipo de planeta (Terrestre ou Gigantes Gasoso).
+- O diâmetro do planeta relativo ao diâmetro da Terra.
+- A rotação do planeta em torno do sol relativo a da Terra.
+- E se o planeta possui anéis ou não (TRUE ou FALSE).
 
-After doing some high-quality research on [Wikipedia](http://en.wikipedia.org/wiki/Planet), you feel confident enough to create the necessary vectors: `name`, `type`, `diameter`, `rotation` and `rings`; these vectors have already been coded up on the right. The first element in each of these vectors correspond to the first observation.
+Depois de ter feito algumas pesquisas no [Wikipedia](http://en.wikipedia.org/wiki/Planet), você se sente confiante o suficiente para criar os seguintes vetores: `name` (nome), `type` (tipo), `diameter` (diâmetro), `rotation` (rotação) e `rings` (anéis). Esses vetores já foram criados pra você. O primeiro elemento de cada vetor corresponde a primeira observação (ou linha, ou neste caso, um planeta).
 
-You construct a data frame with the [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame) function. As arguments, you pass the vectors from before: they will become the different columns of your data frame. Because every column has the same length, the vectors you pass should also have the same length. But don't forget that it is possible (and likely) that they contain different types of data.
+É possível criar um dataframe utilizando a função [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame). Como argumento, você passa os vetores informados anteriormente. Cada um deles se tornará uma coluna diferente em seu dataframe. Devido cada coluna ter o mesmo tamanho, os vetores que você passar também terão. Mas, não se esqueça que é possível (e muito comum) que eles possuam tipos diferentes de dados.
 
 *** =instructions
-Use the function [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame) to construct a data frame. Pass the vectors `name`, `type`, `diameter`, `rotation` and `rings` as arguments to `data.frame()`, in this order. Call the resulting data frame `planets_df`.
+Use a função [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame) para construir um dataframe. Passe os vetores `name`, `type`, `diameter`, `rotation` e `rings` como argumentos para `data.frame()`, nesta mesma ordem. O valor resultante deve ser armazenado na variável `planets_df`.
 
 *** =hint
-Your `data.frame()` call starts as follows:
+A função `data.frame()` deve começar assim:
 ```
 data.frame(planets, type, diameter)
 ```
-Can you finish it?
+Consegue terminar?
 
 *** =pre_exercise_code
 ```{r}
@@ -166,7 +166,7 @@ Can you finish it?
 
 *** =sample_code
 ```{r}
-# Definition of vectors
+# Definição dos vetores
 name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
           "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
@@ -174,14 +174,14 @@ diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
 rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
 rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 
-# Create a data frame from the vectors
+# Crie um dataframe a partir dos vetores
 planets_df <-
 
 ```
 
 *** =solution
 ```{r}
-# Definition of vectors
+# Definição dos vetores
 name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
           "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
@@ -189,13 +189,13 @@ diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
 rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
 rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 
-# Create a data frame from the vectors
+# Crie um dataframe a partir dos vetores
 planets_df <- data.frame(name, type, diameter, rotation, rings)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition of the vectors. Only add a `data.frame()` call to create `planets_df`."
+msg = "Não altere nada nas definições dos vetores. Apenas adicione `data.frame()` para criar `planets_df`."
 test_object("name", undefined_msg = msg, incorrect_msg = msg)
 test_object("type", undefined_msg = msg, incorrect_msg = msg)
 test_object("diameter", undefined_msg = msg, incorrect_msg = msg)
@@ -203,9 +203,9 @@ test_object("rotation", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("planets_df",
-            incorrect_msg = "Have you correctly called `data.frame()` to create `planets_df`. Inside `data.frame()`, make sure to pass all vectors in the correct order: `name`, `type`, `diameter`, `rotation` and finally `rings`.")
+            incorrect_msg = "Você armazenou corretamente o valor de `data.frame()` em `planets_df`? Dentro de `data.frame()`, tenha certeza de passar todos os vetores na ordem correta: `name`, `type`, `diameter`, `rotation` e finalmente `rings`.")
 
-success_msg("Great job! Continue to the next exercise. The logical next step, as you know by now, is inspecting the data frame you just created. Head over to the next exercise.");
+success_msg("Excelente trabalho! Continue para o próximo exercício. O próximo passo será inspecionar o dataframe que você acabou de criar. Vamos lá?");
 ```
 
 

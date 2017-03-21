@@ -92,23 +92,23 @@ success_msg("Maravilha! Então, o que temos aqui neste dataset? Por exemplo, `hp
 
 
 --- type:NormalExercise xp:100 skills:1 key:f4d5b1a2c4aef31645fc7e3505e699fb6e48f3e6
-## Have a look at the structure
+## Dando uma olhada na estrutura
 
-Another method that is often used to get a rapid overview of your data is the function [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). The function [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) shows you the structure of your data set. For a data frame it tells you:
+Outro método que é frequentemente usado para ter uma rápida visão de seus dados é utilizando a função [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). A função [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) mostrará a você a estrutura de seu dataset. Em um dataframe, ele dirá:
 
-- The total number of observations (e.g. 32 car types)
-- The total number of variables (e.g. 11 car features)
-- A full list of the variables names (e.g. `mpg`, `cyl` ... )
-- The data type of each variable (e.g. `num`)
-- The first observations
+- O total de observações (ou linhas), por exemplo, 32 tipos de carros
+- O total de variáveis (ou colunas), por exemplo, 11 características de carros
+- Uma lista completa com os nomes das variáveis (`mpg`, `cyl`, etc.)
+- O tipo de dados em cada variável, por exemplo, `num`
+- A primeira observação (ou linha)
 
-Applying the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function will often be the first thing that you do when receiving a new data set or data frame. It is a great way to get more insight in your data set before diving into the real analysis.
+Aplicar a função [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) será, provavelmente, uma das primeiras coisas a se fazer ao manipular um dataset ou dataframe. É uma ótima forma de adquirir insights sobre seu dataset antes de mergulhar em uma análise real.
 
 *** =instructions
-Investigate the structure of [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars). Make sure that you see the same numbers, variables and data types as mentioned above.
+Investigue a estrutura de [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars). Certifique-se de que consegue visualizar os mesmos números, variáveis e tipos de dados, conforme mencionado acima.
 
 *** =hint
-Use the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function on [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars).
+Use a função [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) em [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars).
 
 *** =pre_exercise_code
 ```{r}
@@ -117,19 +117,19 @@ Use the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) fu
 
 *** =sample_code
 ```{r}
-# Investigate the structure of mtcars
+# Investigue a estrutura de mtcars
 ```
 
 *** =solution
 ```{r}
-# Investigate the structure of mtcars
+# Investigue a estrutura de mtcars
 str(mtcars)
 ```
 
 *** =sct
 ```{r}
-test_output_contains("str(mtcars)", incorrect_msg = "Have you correctly called `str()` on `mtcars`?")
-success_msg("Nice work! Can you find all the information that is listed in the exercise's assignment? Continue to the next exercise.")
+test_output_contains("str(mtcars)", incorrect_msg = "Você usou corretamente a função `str()` em `mtcars`?")
+success_msg("Bom trabalho! Consegue visualizar todas as informações ditas na descrição do exercício? Continue para o próximo exercício.")
 ```
 
 

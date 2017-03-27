@@ -460,8 +460,8 @@ planets_df[rings_vector, ]
 msg <- "Não remova ou sobresescreva o data frame `planets_df` ou `rings_vector`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Have you correctly adapted the code to select _all_ columns for the planets that have rings? You can use `planets_df[rings_vector, ]`. Make sure to include the comma here, it's crucial!")
-success_msg("Wonderful! This is a rather tedious solution. The next exercise will teach you how to do it in a more concise way.")
+test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Você adaptou corretamente o código para selecionar todas as colunas de planetas que possuem anéis? Você pode usar `planets_df[rings_vector, ]`. Tenha certeza de incluir a vírgula, ela é crucial!")
+success_msg("Que beleza! Contudo, essa é uma solução tediosa. O próximo exercício vai te ensinar uma forma mais concisa para fazer isso.")
 ```
 
 

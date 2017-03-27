@@ -355,25 +355,25 @@ success_msg("Boa! Continue para o próximo exercício!")
 --- type:NormalExercise xp:100 skills:1 key:e550ecb6ec45b856e6160ddfbb3d7875998e8365
 ## Somente planetas com anéis
 
-You will often want to select an entire column, namely one specific variable from a data frame. If you want to select all elements of the variable `diameter`, for example, both of these will do the trick:
+Você frequentemente vai querer selecionar uma coluna inteira de um data frame. Se você quiser, por exemplo, selecionar todos os elementos da coluna `diameter`, ambos os códigos fazer a mesma coisa:
 
 ```
 planets_df[,3]
 planets_df[,"diameter"]
 ```
 
-However, there is a short-cut. If your columns have names, you can use the `$` sign:
+Contudo, há um atalho. Se sua coluna tiver um nome, você pode usar o sinal de `$`:
 
 ```
 planets_df$diameter
 ```
 
 *** =instructions
-- Use the `$` sign to select the `rings` variable from `planets_df`. Store the vector that results as `rings_vector`.
-- Print out `rings_vector` to see if you got it right.
+- Use o sinal de `$` para selecionar a coluna `rings` de `planets_df`. Armazene o vetor resultante em `rings_vector`.
+- Exiba o conteúdo de `rings_vector` para ver se você acertou.
 
 *** =hint
-`planets_df$diameter` selects the `diameter` column from `planets_df`; what do you need to select the `rings` column then?
+`planets_df$diameter` seleciona a coluna `diameter` do data frame `planets_df`; o que você precisa para selecionar a coluna `rings`? 
 
 *** =pre_exercise_code
 ```{r}
@@ -382,38 +382,38 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.
 
 *** =sample_code
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df já está pré-carregado em seu workspace
 
-# Select the rings variable from planets_df
+# Selecione a variável rings de planets_df
 rings_vector <- 
   
-# Print out rings_vector
+# Exiba rings_vector
 ```
 
 *** =solution
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df já está pré-carregado em seu workspace
 
-# Select the rings variable from planets_df
+# Selecione a variável rings de planets_df
 rings_vector <- planets_df$rings
 
-# Print out rings_vector
+# Exiba rings_vector
 rings_vector
 ```
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobresescreva o data frame `planets_df`!"
+msg = "Não remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector",
-            incorrect_msg = "Have you correctly selected the `rings` variable from `planets_df`? Use `$rings`. Store the result as `rings_vector`.")
-test_output_contains("rings_vector", incorrect_msg = "Don't forget to print out `rings_vector` after you've created it!")
-success_msg("Great! Continue to the next exercise and discover yet another way of subsetting!")
+            incorrect_msg = "Você selecionou corretamente a coluna `rings` de `planets_df`? Use `$rings`. Armazene o resultado em `rings_vector`.")
+test_output_contains("rings_vector", incorrect_msg = "Não se esqueça de exibir `rings_vector` depois de tê-lo criado!")
+success_msg("Ótimo! Continue para o próximo exercício e descubra outra forma legal de criar subconjuntos!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1581bf4667477f274188f4f637ec7fdc73659651
-## Only planets with rings (2)
+## Somente planetas com anéis (2)
 
 You probably remember from high school that some planets in our solar system have rings and others do not. But due to other priorities at that time (read: puberty) you can not recall their names, let alone their rotation speed, etc. 
 

@@ -415,23 +415,23 @@ success_msg("Ótimo! Continue para o próximo exercício e descubra outra forma 
 --- type:NormalExercise xp:100 skills:1 key:1581bf4667477f274188f4f637ec7fdc73659651
 ## Somente planetas com anéis (2)
 
-You probably remember from high school that some planets in our solar system have rings and others do not. But due to other priorities at that time (read: puberty) you can not recall their names, let alone their rotation speed, etc. 
+Você provavelmente se lembra de ter aprendido na escola que em nosso sistema solar existem planetas com anéis e outro que não possuem. Mas, devido a outras prioridades daquela época (lê-se: Puberdade), você pode não recordar seus nomes, dentre outras coisas.
 
-Could R help you out?
+Será que R pode te ajudar?
 
-If you type `rings_vector` in the console, you get:
+Se você digitar `rings_vector`, você receberá como resposta:
 
 ```
 [1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
 ```
 
-This means that the first four observations (or planets) do not have a ring (`FALSE`), but the other four do (`TRUE`). However, you do not get a nice overview of the names of these planets, their diameter, etc. Let's try to use `rings_vector` to select the data for the four planets with rings. 
+Isso significa que as quatro primeiras linhas (ou planetas) não possuem anéis (`FALSE`), mas os quatro seguintes possuem (`TRUE`). Todavia, você não consegue ver o nome desses planetas, seus diâmetros, etc. Vamos tentar utilizar `rings_vector` para selecionar os dados deste quatro planetas com anéis. 
 
 *** =instructions
-The code on the right selects the `name` column of all planets that have rings. Adapt the code so that instead of only the `name` column, _all_ columns for planets that have rings are selected.
+O código a direita seleciona a coluna `name` de todos os planetas que possuem anéis. Adapte o código para que ao invés de apenas selecionar a coluna `name`, selecione todas as colunas dos planetas que possuem anéis.
 
 *** =hint
-Remember that to select _all_ columns, you simply have to leave the columns part inside the `[ ]` empty! This means you'll need `[rings_vector, ]`.
+Lembre-se que para selecionar todas as colunas, você só precisa deixar a parte relativa a coluna vazia dentro dos `[ ]`! Sendo assim, você precisa usar `[rings_vector, ]`.
 
 *** =pre_exercise_code
 ```{r}
@@ -441,17 +441,17 @@ rings_vector <- planets_df$rings
 
 *** =sample_code
 ```{r}
-# planets_df and rings_vector are pre-loaded in your workspace
+# planets_df e rings_vector estão pré-carregados em seu workspace
 
-# Adapt the code to select all columns for planets with rings
+# Adapte o código para selecionar todas as colunas de planetas com anéis
 planets_df[rings_vector, "name"]
 ```
 
 *** =solution
 ```{r}
-# planets_df and rings_vector are pre-loaded in your workspace
+# planets_df e rings_vector estão pré-carregados em seu workspace
 
-# Adapt the code to select all columns for planets with rings
+# Adapte o código para selecionar todas as colunas de planetas com anéis
 planets_df[rings_vector, ]
 ```
 

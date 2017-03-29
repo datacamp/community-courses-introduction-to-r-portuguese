@@ -143,9 +143,9 @@ success_msg("Maravilha! Avance para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:89dd0126568b1ff5a84033c571907a8a282245e4
-## Creating a named list
+## Dando um nome a lista
 
-Well done, you're on a roll!
+Muito bem, você está com a corda toda!
 
 Just like on your to-do list, you want to avoid not knowing or remembering what the components of your list stand for. That is why you should give names to them: 
 

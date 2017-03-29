@@ -10,11 +10,9 @@ Parabéns! A esta altura do curso você já está familiarizado com:
 
 - **Vetores** (array de uma dimensão): podem armazenar valores numeric (números), character (caracteres) ou logical (TRUE e FALSE). Todos os elementos de um vetor são do mesmo tipo de dado.
 - **Matrizes** (array de duas dimensão): podem armazenar valores numeric, character e logical. Todos os elementos de uma matriz são do mesmo tipo de dado.
-- ***Data frames* (objetos de duas dimensões): podem 
+- **Data frames** (objetos de duas dimensões): podem armazenar valores numeric, character e logical também. Dentro de uma coluna, todos os elementos são do mesmo tipo de dados, mas diferentes colunas podem ser de diferentes tipos.
 
-- **Data frames** (two-dimensional objects): podem armazenar valores numeric, character e logical também. Dentro de uma coluna, todos os elementos são do mesmo tipo de dados, mas diferentes colunas podem ser de diferentes tipos.
-
-Muito bom para um iniciante em R, certo? ;-)
+Nada mal para um iniciante em R, certo? ;-)
 
 *** =instructions
 Clique em 'Submit Answer' para começar a aprender tudo sobre listas!
@@ -44,19 +42,20 @@ success_msg("Vamos nessa! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:68f93c5c504616bd18876da52cd123277d56fc8b
-## Lists, why would you need them? (2)
+## Listas, por que você precisa delas? (2)
 
-A **list** in R is similar to your to-do list at work or school: the different items on that list most likely differ in length, characteristic, type of activity that has to do be done, ... 
+Uma  **lista** em R é semelhante a uma lista de tarefas a fazer: os diferentes itens que estão na lista provavelmente serão diferentes um dos outros em comprimento, características, tipo de atividade que deve ser feita, etc...
 
-A list in R allows you to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.
+Uma lista em R permite a você juntar uma variedade de objetos sob um nome (isso é, o nome da lista) de forma ordenada.
+Estes objetos podem ser matrizes, vetores, data frames, e até mesmo outras listas. Nem mesmo é requerido que estes objetos possuam relação entre si.
 
-You could say that a list is some kind super data type: you can store practically any piece of information in it!
+Você poderia dizer que uma lista é algum tipo de super tipo de dado: você pode armazenar praticamente qualquer pedaço de informação nela!
 
 *** =instructions
-Click 'Submit Answer' to start the first exercise on lists.
+Clique em 'Submit Answer' para iniciar o primeiro exercício sobre listas.
 
 *** =hint
-Click 'Submit Answer' to start the first exercise on lists.
+Clique em 'Submit Answer' para iniciar o primeiro exercício sobre listas.
 
 *** =pre_exercise_code
 ```{r}
@@ -65,28 +64,29 @@ Click 'Submit Answer' to start the first exercise on lists.
 
 *** =sample_code
 ```{r}
-# Click 'Submit Answer' to start the first exercise on lists.
+# Clique em 'Submit Answer' para iniciar o primeiro exercício sobre listas.
 ```
 
 *** =solution
 ```{r}
-# Click 'Submit Answer' to start the first exercise on lists.
+# Clique em 'Submit Answer' para iniciar o primeiro exercício sobre listas.
 ```
 
 *** =sct
 ```{r}
-success_msg("Cool. Let's get our hands dirty!")
+success_msg("Boa! Tá na hora de sujar as mãos!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:4beee9cb532c889903218b49b83ab5ef133eac83
-## Creating a list
+## Criando uma lista
 
-Let us create our first list! To construct a list you use the function [`list()`](http://www.rdocumentation.org/packages/base/functions/list): 
+Vamos criar nossa primeira lista! Para fazê-lo, você deve usar a função [`list()`](http://www.rdocumentation.org/packages/base/functions/list): 
 
 ```
 my_list <- list(comp1, comp2 ...)
 ```
+
 
 The arguments to the list function are the list components. Remember, these components can be matrices, vectors, other lists, ...
 

@@ -6,19 +6,21 @@ description : Listas, diferentemente dos vetores, podem armazenar dados de difer
 --- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
 ## Listas, por que você precisa delas?
 
-Congratulations! At this point in the course you are already familiar with:
+Parabéns! A esta altura do curso você já está familiarizado com:
 
-- **Vectors** (one dimensional array): can hold numeric, character or logical values. The elements in a vector all have the same data type.
-- **Matrices** (two dimensional array): can hold numeric, character or logical values. The elements in a matrix all have the same data type.
-- **Data frames** (two-dimensional objects): can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.
+- **Vetores** (array de uma dimensão): podem armazenar valores numeric (números), character (caracteres) ou logical (TRUE e FALSE). Todos os elementos de um vetor são do mesmo tipo de dado.
+- **Matrizes** (array de duas dimensão): podem armazenar valores numeric, character e logical. Todos os elementos de uma matriz são do mesmo tipo de dado.
+- ***Data frames* (objetos de duas dimensões): podem 
 
-Pretty sweet for an R newbie, right? ;-)
+- **Data frames** (two-dimensional objects): podem armazenar valores numeric, character e logical também. Dentro de uma coluna, todos os elementos são do mesmo tipo de dados, mas diferentes colunas podem ser de diferentes tipos.
+
+Muito bom para um iniciante em R, certo? ;-)
 
 *** =instructions
-Click 'Submit Answer' to start learning everything about lists!
+Clique em 'Submit Answer' para começar a aprender tudo sobre listas!
 
 *** =hint
-Just click the 'Submit Answer' button.
+Apenas clique no botão 'Submit Answer'.
 
 *** =pre_exercise_code
 ```{r}
@@ -27,17 +29,17 @@ Just click the 'Submit Answer' button.
 
 *** =sample_code
 ```{r}
-# Just click the 'Submit Answer' button.
+# Apenas clique no botão 'Submit Answer'.
 ```
 
 *** =solution
 ```{r}
-# Just click the 'Submit Answer' button.
+# Apenas clique no botão 'Submit Answer'.
 ```
 
 *** =sct
 ```{r}
-success_msg("Ready, set, go! Continue to the next exercise.")
+success_msg("Vamos nessa! Continue para o próximo exercício.")
 ```
 
 

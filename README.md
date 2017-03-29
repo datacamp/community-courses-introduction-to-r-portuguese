@@ -1,3 +1,3 @@
-## Introduction to R
+## Introdução a R
 
-This repository contains the source files for the introduction to R course (id 58).
+Este repositório contém arquivos fontes para o curso de Introdução a R (id 58).

@@ -597,23 +597,23 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.
 
 *** =sample_code
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df está pré-carregado em seu workspace
 
-# Use order() to create positions
+# Use order() para criar positions
 positions <-  
 
-# Use positions to sort planets_df
+# Use positions para ordenar planets_df
 
 ```
 
 *** =solution
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df está pré-carregado em seu workspace
 
-# Use order() to create positions
+# Use order() para criar positions
 positions <- order(planets_df$diameter)
 
-# Use positions to sort planets_df
+# Use positions para ordenar planets_df
 planets_df[positions, ]
 ```
 
@@ -622,10 +622,10 @@ planets_df[positions, ]
 msg = "Não remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("positions",
-            incorrect_msg = "Have you correctly calculated the `positions` variable? You can use `sort(planets_df$diameter)`.")
+            incorrect_msg = "Você criou corretamente a variável `positions`? Você pode usar `sort(planets_df$diameter)`.")
 test_output_contains("planets_df[positions,]",
-                     incorrect_msg = "Use `planets_df[positions, ]` to sort `planets_df`; the comma inside the square brackets is crucial!")
-success_msg("Wonderful! This exercise concludes the chapter on data frames. Remember that data frames are extremely important in R, you will need them all the time. Another very often used data structure is the list. This will be the subject of the next chapter!")
+                     incorrect_msg = "Use `planets_df[positions, ]` para ordenar `planets_df`; a vírgula dentro dos colchetes é crucial!")
+success_msg("Maravilhoso! Este exercício conclui o capítulo de data frames. Lembre-se que data frames são extremamente importantes em R. Você precisará deles a todo momento. Outra estrutura muito utilizada também são as listas. Este será o assunto do próximo capítulo!")
 ```
 
 

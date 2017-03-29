@@ -87,14 +87,13 @@ Vamos criar nossa primeira lista! Para fazê-lo, você deve usar a função [`li
 my_list <- list(comp1, comp2 ...)
 ```
 
-
-The arguments to the list function are the list components. Remember, these components can be matrices, vectors, other lists, ...
+O argumento que deve ser enviado para a função list são os componentes da lista. Lembre-se, esses componentes podem ser matrizes, vetores, outras listas, ...
 
 *** =instructions
-Construct a list, named `my_list`, that contains the variables `my_vector`, `my_matrix` and `my_df` as list components.
+Contrua uma lista chamada `my_list`, que contenha a variável `my_vector`, `my_matrix` e `my_df` como componentes da lista.
 
 *** =hint
-Use the [`list()`](http://www.rdocumentation.org/packages/base/functions/list) function with `my_vector`, `my_matrix` and `my_df` as arguments separated by a comma.
+Use a função [`list()`](http://www.rdocumentation.org/packages/base/functions/list) com `my_vector`, `my_matrix` e `my_df` como argumentos separados por vírgulas.
 
 *** =pre_exercise_code
 ```{r}
@@ -103,43 +102,43 @@ Use the [`list()`](http://www.rdocumentation.org/packages/base/functions/list) f
 
 *** =sample_code
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vetor com números de 1 a 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matriz com números de 1 a 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Primeiros 10 elementos do data frame mtcars
 my_df <- mtcars[1:10,]
 
-# Construct list with these different elements:
+# Construa uma lista com esses diferentes elementos:
 my_list <- 
 ```
 
 *** =solution
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vetor com números de 1 a 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matriz com números de 1 a 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Primeiros 10 elementos do data frame mtcars
 my_df <- mtcars[1:10,]
 
-# Construct list with these different elements:
+# Construa uma lista com esses diferentes elementos:
 my_list <- list(my_vector, my_matrix, my_df)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of the variables `my_vector`, `my_matrix` or `my_df`!"
+msg = "Não remova ou mude a definição das variáveis `my_vector`, `my_matrix` ou `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "It looks like `my_list` does not contain the correct elements. Make sure to pass the variables `my_vector`, `my_matrix` and `my_df` to the `list()` function, separated by commas, in this order.")
-success_msg("Wonderful! Head over to the next exercise.")
+            incorrect_msg = "Parece que `my_list` não contém os elementos corretos. Tenha certeza que passou as variáveis `my_vector`, `my_matrix` e `my_df` dentro da função `list()`, separado por vírgulas e nessa ordem.")
+success_msg("Maravilhoso! Avance para o próximo exercício.")
 ```
 
 

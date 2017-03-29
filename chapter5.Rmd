@@ -527,13 +527,13 @@ success_msg("Excelente! Além de deixar as coisas mais concisas, `subset()` prov
 
 
 --- type:NormalExercise xp:100 skills:1 key:6a6fe74d3917c37380f7ac616ce084aa7814fb8a
-## Sorting
+## Ordenando
 
-Making and creating rankings is one of mankind's favorite affairs. These rankings can be useful (best universities in the world), entertaining (most influential movie stars) or pointless (best 007 look-a-like).
+Fazer e criar rankings é um dos assuntos favoritos da humanidade. Eles podem ser úteis (como as melhores universidade do mundo), podem entreter (o ator mais influente do mundo) por pontual (melhor pessoa parecida com 007).
 
-In data analysis you can sort your data according to a certain variable in the data set. In R, this is done with the help of the function [`order()`](http://www.rdocumentation.org/packages/base/functions/order). 
+Em análise de dados você pode ordenar seus dados de acordo com uma certa variável no data set. Em R, por exemplo, isso é feito com a ajuda da função [`order()`](http://www.rdocumentation.org/packages/base/functions/order). 
 
-[`order()`](http://www.rdocumentation.org/packages/base/functions/order) is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example:
+[`order()`](http://www.rdocumentation.org/packages/base/functions/order) é uma função que fornece a posição classificada de cada elemento quando ele é aplicado em uma variável, como um vetor por exemplo:
 
 ```
 > a <- c(100, 10, 1000)
@@ -541,9 +541,9 @@ In data analysis you can sort your data according to a certain variable in the d
 [1] 2 1 3
 ```
 
-10, which is the second element in `a`, is the smallest element, so 2 comes first in the output of `order(a)`. 100, which is the first element in `a` is the second smallest element, so 1 comes second in the output of `order(a)`.
+10 é o segundo elemento no vetor `a` que criamos acima, sendo assim, o número 2 aparece primeiro no resultado de `order(a)`. 100, por sua vez, é o primeiro elemento de `a` e o segundo maior número do vetor, então, 1 aparecerá em segundo no resultado de `order(a)`.
 
-This means we can use the output of `order(a)` to reshuffle `a`:
+Isso significa que nós podemos usar o resultado de `order(a)` para remodelar `a`:
     
 ```
 > a[order(a)]
@@ -551,10 +551,10 @@ This means we can use the output of `order(a)` to reshuffle `a`:
 ``` 
 
 *** =instructions
-Experiment with the [`order()`](http://www.rdocumentation.org/packages/base/functions/order) function in the console. Click 'Submit Answer' when you are ready to continue.
+Experimente utilizar a função [`order()`](http://www.rdocumentation.org/packages/base/functions/order) no console. Clique em `Submit Answer` quando você estiver pronto para continuar.
 
 *** =hint
-Just play with the [`order()`](http://www.rdocumentation.org/packages/base/functions/order) function in the console!
+Brinque com a função [`order()`](http://www.rdocumentation.org/packages/base/functions/order) no console!
 
 *** =pre_exercise_code
 ```{r}
@@ -563,32 +563,32 @@ Just play with the [`order()`](http://www.rdocumentation.org/packages/base/funct
 
 *** =sample_code
 ```{r}
-# Play around with the order function in the console
+# Divirta-se com a função order no console
 ```
 
 *** =solution
 ```{r}
-# Play around with the order function in the console
+# Divirta-se com a função order no console
 ```
 
 *** =sct
 ```{r}
-success_msg("Great! Now let's use the `order()` function to sort your data frame!")
+success_msg("Legal! Agora, vamos utilizar a função `order()` para ordenar seu data frame!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:fa88b58bf2cf62e0c181dfdcbdd2e1ddeac66807
-## Sorting your data frame
+## Ordenando seu data frame
 
-Alright, now that you understand the [`order()`](http://www.rdocumentation.org/packages/base/functions/order) function, let us do something useful with it. You would like to rearrange your data frame such that it starts with the smallest planet and ends with the largest one. A sort on the `diameter` column.
+Beleza, agora que você entende a função [`order()`](http://www.rdocumentation.org/packages/base/functions/order), vamos fazer algo útil com ela. Que tal você reorganizar seu data frame para que ele comece com o menor planeta e termine com o maior? Ordenar a coluna `diameter` é um bom começo.
 
 *** =instructions
-- Call `order()` on `planets_df$diameter` (the `diameter` column of `planets_df`). Store the result as `positions`.
-- Now reshuffle `planets_df` with the `positions` vector as row indexes inside square brackets. Keep all columns. Simply print out the result.
+- Use `order()` em `planets_df$diameter` (a coluna `diameter` de `planets_df`). Armazene o resultado em `positions`.
+- Agora, reordene `planets_df` utilizando o vetor `positions` como índices de linhas dentro dos colchetes. Mantenha todas as colunas. Simplesmente exiba o resultado.
 
 *** =hint
-- Use `order(planets_df$diameter)` to create `positions`.
-- Now, you can use `positions` inside square brackets: `planets_df[...]`; can you fill in the `...`?
+- Use `order(planets_df$diameter)` para criar `positions`.
+- Agora você pode usar `positions` dentro dos colchetes: `planets_df[...]`; consegue completar as `...`?
 
 *** =pre_exercise_code
 ```{r}

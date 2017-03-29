@@ -138,7 +138,7 @@ test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
             incorrect_msg = "Parece que `my_list` não contém os elementos corretos. Tenha certeza que passou as variáveis `my_vector`, `my_matrix` e `my_df` dentro da função `list()`, separado por vírgulas e nessa ordem.")
-success_msg("Maravilhoso! Avance para o próximo exercício.")
+success_msg("Maravilha! Avance para o próximo exercício.")
 ```
 
 

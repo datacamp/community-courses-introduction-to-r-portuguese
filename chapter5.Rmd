@@ -466,29 +466,29 @@ success_msg("Que beleza! Contudo, essa é uma solução tediosa. O próximo exer
 
 
 --- type:NormalExercise xp:100 skills:1 key:a4a8b72a74097196eb2f8a28b056987aae834565
-## Only planets with rings but shorter
+## Somente planetas com anéis, mas só os curtinhos
 
-So what exactly did you learn in the previous exercises? You selected a subset from a data frame (`planets_df`) based on whether or not a certain condition was true (rings or no rings), and you managed to pull out all relevant data. Pretty awesome! By now, NASA is probably already flirting with your CV ;-). 
+Então, o que você aprendeu no exercício anterior? Você selecionou um subconjunto de um data frame (`planets_df`) baseando-se em uma condição criada (se o planeta tem anéis ou não), além de conseguir retirar todos os dados relevantes. Muito bem! Neste momento a NASA deve estar flertando com seu currículo ;-).
 
-Now, let us move up one level and use the function [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset). You should see the [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) function as a short-cut to do exactly the same as what you did in the previous exercises. 
+Agora, vamos subir de nível e usar a função [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset). Imagine a função [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) como um atalho que faz exatamente o que você fez nos exercícios anteriores.
 
 ```
 subset(my_df, subset = some_condition)
 ``` 
 
-The first argument of [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) specifies the data set for which you want a subset. By adding the second argument, you give R the necessary information and conditions to select the correct subset. 
+O primeiro argumento de [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) especifíca o data set em que queremos pegar um subconjunto. Ao adicionar um segundo argumento, você dá a R a informação e condição necessária  para selecionar o subconjunto correto.
 
-The code below will give the exact same result as you got in the previous exercise, but this time, you didn't need the `rings_vector`!
+O código abaixo entregará o mesmo resultado que você conseguiu no exercício anterior, mas, desta vez, você não precisa do vetor `rings_vector`!
 
 ```
 subset(planets_df, subset = rings)
 ``` 
 
 *** =instructions
-Use `subset()` on `planets_df` to select planets that have a diameter smaller than Earth. Because the `diameter` variable is a relative measure of the planet's diameter w.r.t that of planet Earth, your condition is `diameter < 1`.
+Use `subset()` em `planets_df` para selecionar os planetas que tem o diâmetro menor que o da Terra. Devido a variável `diameter` ser uma medida relativa ao diâmetro da Terra, sua condição deve ser `diameter < 1`.
 
 *** =hint
-`subset(planets_df, subset = ...)` almost solves it; can you fill in the `...`?
+`subset(planets_df, subset = ...)` já é meio caminho andado; você consegue completar o que falta em `...`?
 
 *** =pre_exercise_code
 ```{r}
@@ -497,17 +497,17 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.
 
 *** =sample_code
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df está pré-carregado em seu workspace
 
-# Select planets with diameter < 1
+# Selecione os planetas com diameter < 1
 
 ```
 
 *** =solution
 ```{r}
-# planets_df is pre-loaded in your workspace
+# planets_df está pré-carregado em seu workspace
 
-# Select planets with diameter < 1
+# Selecione os planetas com diameter < 1
 subset(planets_df, subset = diameter < 1)
 ```
 
@@ -516,13 +516,13 @@ subset(planets_df, subset = diameter < 1)
 msg = "Não remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_correct({
-  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Have you correctly specified the `subset = ...` part inside `subset()`. The condition in this case is `diameter < 1`. Simply print out the result.")  
+  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Você especificou `subset = ...` como argumento de `subset()`? A condição neste caso é `diameter < 1`. Simplesmente exiba o resultado.")  
 }, {
   test_function("subset", args = "x", 
-                not_called_msg = "Make sure to use the `subset()` function to perform the selection!",
-                incorrect_msg = "The first argument you pass to `subset()` should be `planets_df`.")
+                not_called_msg = "Tenha certeza de usar a função `subset()` para realizar a seleção!",
+                incorrect_msg = "O primeiro argumento que você deveria passar a `subset()` é `planets_df`.")
 })
-success_msg("Great! Not only is the `subset()` function more concise, it is probably also more understandable for people who read your code. Continue to the next exercise.");
+success_msg("Excelente! Além de deixar as coisas mais concisas, `subset()` provavelmente deixará seu código mais compreensível para pessoas que o lerem. Continue para o próximo exercício.");
 ```
 
 

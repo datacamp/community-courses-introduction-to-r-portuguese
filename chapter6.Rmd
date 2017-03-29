@@ -1,10 +1,10 @@
 --- 
-title_meta  : Chapter 6
-title       : Lists
-description : Lists, as opposed to vectors, can hold components of different types, just like your to-do list at home or at work. This intro to R chapter will teach you how to create, name and subset these lists.
+title_meta  : Capítulo 6
+title       : Listas
+description : Listas, diferentemente dos vetores, podem armazenar dados de diferentes tipos, assim como s lista de tarefas a fazer em sua casa ou no trabalho. Este capítulo vai te ensinar como criar, nomear e criar subconjunto a partir dessas listas.
 
 --- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
-## Lists, why would you need them?
+## Listas, por que você precisa delas?
 
 Congratulations! At this point in the course you are already familiar with:
 

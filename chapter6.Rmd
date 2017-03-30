@@ -147,14 +147,15 @@ success_msg("Maravilha! Avance para o próximo exercício.")
 
 Muito bem, você está com a corda toda!
 
-Just like on your to-do list, you want to avoid not knowing or remembering what the components of your list stand for. That is why you should give names to them: 
+Assim como uma lista de coisas a fazer, você provavelmente vai querer evitar não se lembrar ou saber o que significa cada componente da sua lista, certo?
+É por isso que você deve nomeá-las:
 
 ```
 my_list <- list(name1 = your_comp1, 
                 name2 = your_comp2)
 ``` 
 
-This creates a list with components that are named `name1`, `name2`, and so on. If you want to name your lists after you've created them, you can use the `names()` function as you did with vectors. The following commands are fully equivalent to the assignment above:
+O código acima cria uma lista no qual os componentes são nomeados como `name1`, `name2`, e por aí vai. Se você quiser dar nomes a sua lista depois de tê-la criada, você pode usar a função `names()`, igual ao que você fez com vetores. Os comandos a seguir são completamente equivalentes para a tarefa acima:
 
 ```
 my_list <- list(your_comp1, your_comp2)
@@ -162,15 +163,15 @@ names(my_list) <- c("name1", "name2")
 ```
 
 *** =instructions
-- Change the code of the previous exercise (see editor) by adding names to the components. Use for `my_vector` the name `vec`, for `my_matrix` the name `mat` and for `my_df` the name `df`. 
-- Print out `my_list` so you can inspect the output.
+- Altere o código do exercício anterior (veja no editor) adicionando nomes aos componentes. Coloque o nome `vec` para `my_vector`, `mat` para `my_matrix` e `df` para `my_df`.
+- Exiba `my_list` para que você possa inspecionar o resultado.
 
 *** =hint
-The first method of assigning names to your list components is the easiest. It starts like this: 
+O primeiro método de associar nomes a sua lista é a forma mais fácil. Ela começa assim:
 ```
 my_list <- list(vec = my_vector)
 ```
-Add the other two components in a similar fashion.
+Adicione os outros dois componentes de forma similar.
 
 *** =pre_exercise_code
 ```{r}
@@ -179,57 +180,57 @@ Add the other two components in a similar fashion.
 
 *** =sample_code
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vetor com números de 1 a 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matriz com números de 1 a 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Os 10 primeiros elementos do data frame mtcars
 my_df <- mtcars[1:10,]
 
-# Adapt list() call to give the components names
+# Use a função list() para nomear os componentes
 my_list <- list(my_vector, my_matrix, my_df)
 
-# Print out my_list
+# Exiba my_list
 
 ```
 
 *** =solution
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vetor com números de 1 a 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matriz com números de 1 a 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Os 10 primeiros elementos do data frame mtcars
 my_df <- mtcars[1:10,]
 
-# Adapt list() call to give the components names
-my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
+# Use a função list() para nomear os componentes
+my_list <- list(my_vector, my_matrix, my_df)
 
-# Print out my_list
+# Exiba my_list
 my_list
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definiton of the variables `my_vector`, `my_matrix` or `my_df`!"
+msg = "Não remova ou mude a definição das variáveis `my_vector`, `my_matrix` ou `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "It looks like `my_list` does not contain the correct elements.")
+            incorrect_msg = "Parece que `my_list` não contém os elementos corretos.")
 test_object("my_list", eq_condition = "equal",
-            incorrect_msg = "It looks like `my_list` does not contain the correct naming for the components. Make sure you use the names `vec`, `mat` and `df`, respectively. Check out the hint if you're struggling.");
-test_output_contains("my_list", incorrect_msg = "Don't forget to print `my_list` to the console! Simply add `my_list` on a new line in the editor.")
-success_msg("Great! Not only do you know how to construct lists now, you can also name them; a skill that will prove most useful in practice. Continue to the next exercise.")
+            incorrect_msg = "Parece que `my_list` não contém o nome correto dos elementos. Tenha certeza de usar os nomes `vec`, `mat` e `df`, respectivamente. Dá uma olhada na dica se você estiver confuso.");
+test_output_contains("my_list", incorrect_msg = "Não esqueça de exibir `my_list` no console! Simplesmente adicione `my_list` em uma nova linha no editor.")
+success_msg("Ótimo! Agora, você não só sabe como construir listas, como também sabe nomeá-las. Essa habilidade se mostrará mais útil em prática. Continue para o próximo exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:19fd17cc792ef870c1558b3a9bae08c1d1e3acae
-## Creating a named list (2)
+## Dando um nome a lista (2)
 
 Being a huge movie fan (remember your job at LucasFilms), you decide to start storing information on good movies with the help of lists. 
 

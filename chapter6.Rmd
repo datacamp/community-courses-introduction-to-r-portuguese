@@ -232,21 +232,21 @@ success_msg("Ótimo! Agora, você não só sabe como construir listas, como tamb
 --- type:NormalExercise xp:100 skills:1 key:19fd17cc792ef870c1558b3a9bae08c1d1e3acae
 ## Dando um nome a lista (2)
 
-Being a huge movie fan (remember your job at LucasFilms), you decide to start storing information on good movies with the help of lists. 
+Como um grande fã de filmes (lembre-se do seu trabalho na LucasFilms), você decidiu começar a armazenar informações de bons filmes com a ajuda das listas.
 
-Start by creating a list for the movie "The Shining". We have already created the variables `mov`, `act` and `rev` in your R workspace. Feel free to check them out in the console.
+Comece criando uma lista para o filme "O Iluminado" ("The Shining", em Inglês). Nós já criamos as variáveis `mov`, `act` e `rev` no seu workspace. Fique a vontade para olhá-los no console.
 
 *** =instructions
-Complete the code on the right to create `shining_list`; it contains three elements:
+Complete o código a direita para criar a `shining_list`. Ela contém três elementos:
 
-- moviename: a character string with the movie title (stored in `mov`)
-- actors: a vector with the main actors' names (stored in `act`)
-- reviews: a data frame that contains some reviews (stored in `rev`)
+- moviename: uma linha de caracteres com o nome do filme (armazenado em `mov`)
+- actors: um vetor com o nome dos atores principais (armazenado em `act`)
+- reviews: um data frame que contém alguns reviews (stored in `rev`)
 
-Do not forget to name the list components accordingly (names are moviename, actors and reviews).
+Não se esqueça de nomear os componentes da lista corretamente (os nomes são moviename, actors e reviews).
 
 *** =hint
-`shining_list <- list(moviename = mov)` is only part of the solution; it's your job to also add `act` and `rev` to the list, with the appropriate names.
+`shining_list <- list(moviename = mov)` é apenas parte da solução; é seu trabalho adicionar também `act` e `rev` a lista, com seus apropriados nomes.
 
 *** =pre_exercise_code
 ```{r}
@@ -261,29 +261,29 @@ rm(scores, sources, comments)
 
 *** =sample_code
 ```{r}
-# The variables mov, act and rev are available
+# As variáveis mov, act e rev estão disponíveis
 
-# Finish the code to build shining_list
+# Finalize o código para construir a shining_list
 shining_list <- list(moviename = mov)
 ```
 
 *** =solution
 ```{r}
-# The variables mov, act and rev are available
+# As variáveis mov, act e rev estão disponíveis
 
-# Finish the code to build shining_list
+# Finalize o código para construir a shining_list
 shining_list <- list(moviename = mov, actors = act, reviews = rev)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of the pre-set variables!"
+msg = "Não altere ou remova a definição das variáveis pré-configuradas!"
 lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list",
-            incorrect_msg = "It looks like `shining_list` does not contain the correct elements: the first element should be `mov`, the second element `act`, and the third `rev`.")
+            incorrect_msg = "Parece que `shining_list` não contém os elementos corretos: o primeiro elemento deveria ser `mov`, o segundo elemento `act`, e `rev` como terceiro elemento.")
 test_object("shining_list", eq_condition = "equal",
-            incorrect_msg = "It looks like `shining_list` does not contain the correct naming for the components: name the first element `moviename`, the second element `actors`, and the third element `reviews`.");
-success_msg("Wonderful! You now know how to construct and name lists. As in the previous chapters, let's look at how to select elements for lists. Head over to the next exercise")
+            incorrect_msg = "Parece que os elementos de `shining_list` não contém os nomes corretos: nomeie o primeiro elemento como `moviename`, o segundo como `actors`, e o terceiro como `reviews`.");
+success_msg("Inacreditável! Você sabe como criar e nomear listas agora. Assim como nos capítulos anteriores, vamos ver como selecionar elementos de uma lista. Avance para o próximo exercício.")
 ```
 
 

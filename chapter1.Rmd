@@ -396,10 +396,10 @@ my_logical <- FALSE
 
 *** =sct
 ```{r}
-test_object("my_numeric", incorrect_msg = "Você alterou o valor de `my_numeric` para 42?")
-test_object("my_character", incorrect_msg = "Você não alterou corretamente o valor de `my_character` para `\"universe\"`. Não se esqueça das aspas duplas!")
-test_object("my_logical", incorrect_msg = "Você alterou o valor de `my_logical` para `FALSE`? Todas as letras de `FALSE` precisam estar em maiúsculas. Não se esqueça!")
-success_msg("Excelente trabalho! Vamos para o próximo exercício.")
+test_object("my_numeric", incorrect_msg = "Voc&#234; alterou o valor de `my_numeric` para 42?")
+test_object("my_character", incorrect_msg = "Voc&#234; n&#227;o alterou corretamente o valor de `my_character` para `\"universe\"`. N&#227;o se esque&#231;a das aspas duplas!")
+test_object("my_logical", incorrect_msg = "Voc&#234; alterou o valor de `my_logical` para `FALSE`? Todas as letras de `FALSE` precisam estar em mai&#250;sculas. N&#227;o se esque&#231;a!")
+success_msg("Excelente trabalho! Vamos para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -455,16 +455,16 @@ class(my_logical)
 
 *** =sct
 ```{r}
-msg <- "Não remova a declaração das variáveis!"
+msg <- "N&#227;o remova a declara&#231;&#227;o das vari&#225;veis!"
 lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
-patt <- "Você incluiu `class(%1$s)` no código para exibir a classe de `%1$s`?"
+patt <- "Voc&#234; incluiu `class(%1$s)` no c&#243;digo para exibir a classe de `%1$s`?"
 test_output_contains("class(my_numeric)",
-                     incorrect_msg = "Não remova o código que exibe o tipo de dado de `my_numeric`.")
+                     incorrect_msg = "N&#227;o remova o c&#243;digo que exibe o tipo de dado de `my_numeric`.")
 test_output_contains("class(my_character)",
                      incorrect_msg = sprintf(patt, "my_character"))
 test_output_contains("class(my_logical)",
                      incorrect_msg = sprintf(patt, "my_logical"))
-success_msg("Parabéns. Este foi nosso último exercício deste capítulo! Prossiga para o próximo capítulo para entrarmos de cabeça no mundo dos vetores!")
+success_msg("Parab&#233;ns. Este foi nosso &#250;ltimo exerc&#237;cio deste cap&#237;tulo! Prossiga para o pr&#243;ximo cap&#237;tulo para entrarmos de cabe&#231;a no mundo dos vetores!")
 ```
 
 

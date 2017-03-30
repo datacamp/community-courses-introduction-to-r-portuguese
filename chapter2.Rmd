@@ -286,18 +286,18 @@ names(roulette_vector) <- days_vector
 
 *** =sct
 ```{r}
-msg <- "Não altere os valores predefinidos nas variáveis `poker_vector`, `roulette_vector` ou `days_vector`."
+msg <- "N&#227;o altere os valores predefinidos nas vari&#225;veis `poker_vector`, `roulette_vector` ou `days_vector`."
 test_object("poker_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Você definiu `days_vector` em `poker_vector`?")
+            incorrect_msg = "Voc&#234; definiu `days_vector` em `poker_vector`?")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Certifique-se que você definiu `days_vector` como os nomes em `roulette_vector`.")
-success_msg("Boa! Um conselho: evite duplicar códigos em qualquer situação. Continue para o próximo exercício e aprenda a fazer contas com vetores!")
+            incorrect_msg = "Certifique-se que voc&#234; definiu `days_vector` como os nomes em `roulette_vector`.")
+success_msg("Boa! Um conselho: evite duplicar c&#243;digos em qualquer situa&#231;&#227;o. Continue para o pr&#243;ximo exerc&#237;cio e aprenda a fazer contas com vetores!")
 ```
 
 
@@ -366,12 +366,12 @@ total_vector
 
 *** =sct
 ```{r}
-msg <- "Não altere o conteúdo de `A_vector` ou `B_vector`!"
+msg <- "N&#227;o altere o conte&#250;do de `A_vector` ou `B_vector`!"
 test_object("A_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("B_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("total_vector", incorrect_msg = "Certifique-se que `total_vector` contém a soma de `A_vector` e `B_vector`.")
-test_output_contains("total_vector", incorrect_msg = "Não esqueça de exibir o valor de `total_vector`! Simplesmente escreva `total_vector` em uma nova linha.")
-success_msg("Bom trabalho! Continue para o próximo exercício.")
+test_object("total_vector", incorrect_msg = "Certifique-se que `total_vector` cont&#233;m a soma de `A_vector` e `B_vector`.")
+test_output_contains("total_vector", incorrect_msg = "N&#227;o esque&#231;a de exibir o valor de `total_vector`! Simplesmente escreva `total_vector` em uma nova linha.")
+success_msg("Bom trabalho! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -421,14 +421,14 @@ total_daily <- poker_vector + roulette_vector
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_daily", incorrect_msg = "Tenha certeza que você armazenou a soma de `poker_vector` e `roulette_vector` na variável `total_daily`.")
+test_object("total_daily", incorrect_msg = "Tenha certeza que voc&#234; armazenou a soma de `poker_vector` e `roulette_vector` na vari&#225;vel `total_daily`.")
 
-success_msg("Excelente! Continue para o próximo exercício.")
+success_msg("Excelente! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -502,19 +502,19 @@ total_week
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("total_poker",
-            incorrect_msg = "Tenha certeza de que você armazenou a soma de `poker_vector` em `total_poker`.")
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou a soma de `poker_vector` em `total_poker`.")
 test_object("total_roulette",
-            incorrect_msg = "Tenha certeza de que você armazenou a soma de `roulette_vector` em `total_roulette`.")
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou a soma de `roulette_vector` em `total_roulette`.")
 test_object("total_week",
-            incorrect_msg = "Tenha certeza de que você armazenou a soma de `total_roulette` e `total_poker` em `total_week`.")
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou a soma de `total_roulette` e `total_poker` em `total_week`.")
 
-test_output_contains("total_week", incorrect_msg = "Não esqueça de escrever `total_week` em uma nova linha para exibir o valor da variável.")
-success_msg("Bom trabalho! Mas, sinto que tenho más notícias...")
+test_output_contains("total_week", incorrect_msg = "N&#227;o esque&#231;a de escrever `total_week` em uma nova linha para exibir o valor da vari&#225;vel.")
+success_msg("Bom trabalho! Mas, sinto que tenho m&#225;s not&#237;cias...")
 ```
 
 
@@ -574,18 +574,18 @@ total_poker > total_roulette
 
 *** =sct
 ```{r}
-msg <- "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg <- "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("total_poker",
-            incorrect_msg = "Tenha certeza de que você armazenou em `total_poker` a soma de `poker_vector`. Use `sum()`.")
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou em `total_poker` a soma de `poker_vector`. Use `sum()`.")
 test_object("total_roulette",
-            incorrect_msg = "Tenha certeza de que você armazenou em `total_roulette` a soma de `roulette_vector`. Use `sum()`.")
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou em `total_roulette` a soma de `roulette_vector`. Use `sum()`.")
 test_output_contains("total_poker > total_roulette",
-                     incorrect_msg = "Você comparou os totais? Para saber se `total_poker` é maior que `total_roulette`, simplesmente digite `total_poker > total_roulette`.")
-success_msg("Bom trabalho! Continue para o próximo exercício.")
+                     incorrect_msg = "Voc&#234; comparou os totais? Para saber se `total_poker` &#233; maior que `total_roulette`, simplesmente digite `total_poker > total_roulette`.")
+success_msg("Bom trabalho! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -637,14 +637,14 @@ poker_wednesday <- poker_vector[3]
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_wednesday",
-            undefined_msg = " Por favor, tenha certeza que definiu a variável `poker_wednesday`.",
-            incorrect_msg = " Parece que `poker_wednesday` não está com o valor correto de `poker_vector`.")
-success_msg("Excelente! R também permite a seleção de múltiplos elementos de um vetor de uma vez só. Aprenda como no próximo exercício")
+            undefined_msg = "Por favor, tenha certeza que definiu a vari&#225;vel `poker_wednesday`.",
+            incorrect_msg = "Parece que `poker_wednesday` n&#227;o est&#225; com o valor correto de `poker_vector`.")
+success_msg("Excelente! R tamb&#233;m permite a sele&#231;&#227;o de m&#250;ltiplos elementos de um vetor de uma vez s&#243;. Aprenda como no pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -698,13 +698,13 @@ poker_midweek <- poker_vector[c(2, 3, 4)]
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_midweek",
-            incorrect_msg = "Parece que `poker_midweek` não contém os valores corretos de `poker_vector`. Você pode usar o vetor `c(2, 3, 4)` dentro dos colchetes.")
-success_msg("Muito bem! Continue para o próximo exercício para se especializar em seleção de vetores e muito mais!");
+            incorrect_msg = "Parece que `poker_midweek` n&#227;o cont&#233;m os valores corretos de `poker_vector`. Voc&#234; pode usar o vetor `c(2, 3, 4)` dentro dos colchetes.")
+success_msg("Muito bem! Continue para o pr&#243;ximo exerc&#237;cio para se especializar em sele&#231;&#227;o de vetores e muito mais!");
 ```
 
 
@@ -750,14 +750,14 @@ roulette_selection_vector <- roulette_vector[2:5]
 *** =sct
 
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_selection_vector",
-            undefined_msg = "Tenha certeza de que definiu a variável `roulette_selection_vector`.",
-            incorrect_msg = "Parece que `roulette_selection_vector` não contém a seleção correta de `roulette_vector`. Tenha certeza de usar os indíces corretos.")
-success_msg("Incrível! O caracter de dois pontos é extremamente útil e frequentemente utilizado em programação em R, sendo assim, lembre-se dele. Prossiga para o próximo exercício.")
+            undefined_msg = "Tenha certeza de que definiu a vari&#225;vel `roulette_selection_vector`.",
+            incorrect_msg = "Parece que `roulette_selection_vector` n&#227;o cont&#233;m a sele&#231;&#227;o correta de `roulette_vector`. Tenha certeza de usar os &#237;ndices corretos.")
+success_msg("Incr&#237;vel! O caracter de dois pontos &#233; extremamente &#250;til e frequentemente utilizado em programa&#231;&#227;o em R, sendo assim, lembre-se dele. Prossiga para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -826,14 +826,14 @@ mean(poker_start)
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_start",
-            incorrect_msg = " Parece que `poker_start` não contém os primeiros três dias de `poker_vector`. Você pode usar `c(\"Monday\", \"Tuesday\", \"Wednesday\")` dentro dos colchetes para fazer isso.")
-test_output_contains("mean(poker_start)", incorrect_msg = "Você calculou corretamente a média dos valores em `poker_start` e os exibiu? Use `mean(poker_start)`.")
-success_msg("Bom trabalho! Além de selecionar vetores pelo index ou nome, você também podem fazê-lo por comparação. Te mostraremos como no próximo exercício!");
+            incorrect_msg = "Parece que `poker_start` n&#227;o cont&#233;m os primeiros tr&#234;s dias de `poker_vector`. Voc&#234; pode usar `c(\"Monday\", \"Tuesday\", \"Wednesday\")` dentro dos colchetes para fazer isso.")
+test_output_contains("mean(poker_start)", incorrect_msg = "Voc&#234; calculou corretamente a m&#233;dia dos valores em `poker_start` e os exibiu? Use `mean(poker_start)`.")
+success_msg("Bom trabalho! Al&#233;m de selecionar vetores pelo index ou nome, voc&#234; tamb&#233;m podem faz&#234;-lo por compara&#231;&#227;o. Te mostraremos como no pr&#243;ximo exerc&#237;cio!");
 ```
 
 
@@ -906,14 +906,14 @@ selection_vector
 
 *** =sct
 ```{r}
-msg <- "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg <- "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("selection_vector", incorrect_msg = "Parece que `selection_vector` não contém o resultado correto. Lembra-se que R verifica cada elemento do vetor durante a comparação.")
-test_output_contains("selection_vector", incorrect_msg = "Não esqueça de exibir `selection_vector` na tela ao digitar apenas o nome da variável em uma nova linha.")
-success_msg("Parabéns!")
+test_object("selection_vector", incorrect_msg = "Parece que `selection_vector` n&#227;o cont&#233;m o resultado correto. Lembra-se que R verifica cada elemento do vetor durante a compara&#231;&#227;o.")
+test_output_contains("selection_vector", incorrect_msg = "N&#227;o esque&#231;a de exibir `selection_vector` na tela ao digitar apenas o nome da vari&#225;vel em uma nova linha.")
+success_msg("Parab&#233;ns!")
 ```
 
 
@@ -977,14 +977,14 @@ poker_winning_days <- poker_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("selection_vector", incorrect_msg = "Não altera a forma como `selection_vector` é calculado.")
+test_object("selection_vector", incorrect_msg = "N&#227;o altera a forma como `selection_vector` &#233; calculado.")
 test_object("poker_winning_days",
-            incorrect_msg =  "Parece que `poker_winning_days` não contém o valor correto. Use `poker_vector[selection_vector]`.")
-success_msg("Bom trabalho! Continue para o próximo exercício!")
+            incorrect_msg =  "Parece que `poker_winning_days` n&#227;o cont&#233;m o valor correto. Use `poker_vector[selection_vector]`.")
+success_msg("Bom trabalho! Continue para o pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -1039,14 +1039,14 @@ roulette_winning_days <- roulette_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Não altere nada na declaração das variáveis `poker_vector` e `roulette_vector`."
+msg = "N&#227;o altere nada na declara&#231;&#227;o das vari&#225;veis `poker_vector` e `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("selection_vector",
-            incorrect_msg = "Parece que `selection_vector` não contém o valor correto. Use `roulette_vector > 0`.")
+            incorrect_msg = "Parece que `selection_vector` n&#227;o cont&#233;m o valor correto. Use `roulette_vector > 0`.")
 test_object("roulette_winning_days",
-            incorrect_msg = "Parece que `roulette_winning_days` não contém o valor correto. Use `roulette_vector[selection_vector]`.")
+            incorrect_msg = "Parece que `roulette_winning_days` n&#227;o cont&#233;m o valor correto. Use `roulette_vector[selection_vector]`.")
 
 success_msg("Excelente! Esse exercício conclui o capítulo de vetores. O próximo capítulo irá apresentar você a uma versão bidimensional dos vetores: as matrizes.")
 ```

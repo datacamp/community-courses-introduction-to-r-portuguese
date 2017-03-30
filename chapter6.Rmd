@@ -357,18 +357,18 @@ success_msg("Ótimo! Selecionar elementos de listas é bem fácil, não é mesmo
 
 
 --- type:NormalExercise xp:100 skills:1 key:ca3f7b71504ff93940cf65889d406a58c5b0019c
-## Adding more movie information to the list
+## Adicionando mais informações sobre filmes na lista
 
-Being proud of your first list, you shared it with the members of your movie hobby club. However, one of the senior members, a guy named M. McDowell, noted that you forgot to add the release year. Given your ambitions to become next year's president of the club, you decide to add this information to the list. 
+Orgulhoso de sua primeira lista, você decide compartilhá-la com os membros do seu clube do filme. Contudo, um dos membros mais antigos, um cara chamado M. McDowell, notou que você esqueceu de adicionar o ano de lançamento. Devido as suas ambições de se tornar o próximo presidente do clube no ano que vem, você decide adicionar essa informação a lista.
 
-To conveniently add elements to lists you can use the [`c()`](http://www.rdocumentation.org/packages/base/functions/c) function, that you also used to build vectors:
+Para adicionar elementos a uma lista, a forma mais conveniente é usar a função [`c()`](http://www.rdocumentation.org/packages/base/functions/c), que você também utiliza para criar vetores:
 
 ```
 ext_list <- c(my_list , my_val)
 ``` 
 
-This will simply extend the original list, `my_list`, with the component `my_val`. This component gets appended to the end of the list.
-If you want to give the new list item a name, you just add the name as you did before: 
+Isso simplesmente irá estender a lista original, `my_list`, com o componente `my_val`. Este componente será adicionado ao final da lista.
+Se você quiser dar um nome ao novo item da lista, você simplesmente adiciona o nome como você fez anteriormente:
 
 ```
 ext_list <- c(my_list, my_name = my_val)

@@ -241,7 +241,7 @@ Complete o código a direita para criar a `shining_list`. Ela contém três elem
 
 - moviename: uma linha de caracteres com o nome do filme (armazenado em `mov`)
 - actors: um vetor com o nome dos atores principais (armazenado em `act`)
-- reviews: um data frame que contém alguns reviews (stored in `rev`)
+- reviews: um data frame que contém algumas análises (stored in `rev`)
 
 Não se esqueça de nomear os componentes da lista corretamente (os nomes são moviename, actors e reviews).
 
@@ -302,23 +302,22 @@ shining_list[[1]]
 
 Uma forma rápida de verificar isso é digitando no console. Não se esqueça: para selecionar elementos de vetores, você usa apenas um par de colchetes: `[ ]`. Não misture as coisas!
 
-
-You can also refer to the names of the components, with `[[ ]]` or with the `$` sign. Both will select the data frame representing the reviews: 
+Você também pode se referir aos nomes dos componentes usando `[[ ]]` ou o sinal de `$`. Abaixo, ambos selecionarão o data frame representado as análises:
 
 ```
 shining_list[["reviews"]]
 shining_list$reviews
 ``` 
 
-Besides selecting components, you often need to select specific elements out of these components. For example, with `shining_list[[2]][1]` you select from the second component, `actors` (`shining_list[[2]]`), the first element (`[1]`). When you type this in the console, you will see the answer is Jack Nicholson.
+Além de selecionar componentes, você frequentemente precisará selecionar elementos específicos destes componentes. Por exemplo, com `shining_list[[2]][1]` você selecionará do segundo componente (`shining_list[[2]]`), o primeiro elemento (`[1]`). Quando você digita isso no console, o resultado será "Jack Nicholson".
 
 *** =instructions
-- Select from `shining_list` the vector representing the actors. Simply print out this vector.
-- Select from `shining_list` the second element in the vector representing the actors. Do a printout like before.
+- Selecione o vetor que representa os atores em `shining_list`. Simplesmente exiba o resultado.
+- Selecione o segundo elemento do vetor que representa os atores em `shining_list`. Exiba também o resultado.
 
 *** =hint
-- To select the vector representing the actors, you can use `$actors`.
-- To select the third element in the vector representing the actors, you use `shining_list$actors[3]`. What needs to change to select the second element?
+- Para selecionar o vetor que representa os atores, você pode usar `$actors`.
+- Para selecionar o terceiro elemento no vetor representando os atores, você usa `shining_list$actors[3]`. O que você precisa fazer para selecionar o segundo elemento?
 
 *** =pre_exercise_code
 ```{r}
@@ -327,29 +326,29 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_
 
 *** =sample_code
 ```{r}
-# shining_list is already pre-loaded in the workspace
+# shining_list já está pré-carregado em seu workspace
 
-# Print out the vector representing the actors
+# Exiba o vetor que representa os atores
 
 
-# Print the second element of the vector representing the actors
+# Exiba o segundo elemento do vetor dos atores
 
 ```
 
 *** =solution
 ```{r}
-# shining_list is already pre-loaded in the workspace
+# shining_list já está pré-carregado em seu workspace
 
-# Print out the vector representing the actors
+# Exiba o vetor que representa os atores
 shining_list$actors
 
-# Print the second element of the vector representing the actors
+# Exiba o segundo elemento do vetor dos atores
 shining_list$actors[2]
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not remove or change the definition of `shining_list`, which is pre-loaded in the workspace!"
+msg <- "Não remova ou altere a definição de `shining_list`, que já está pré-carregado no workspace!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("shining_list$actors", incorrect_msg = "Have you correctly selected and printed out the vector representing actors? You can use `shining_list$actors`, for example.")
 test_output_contains("shining_list$actors[2]", incorrect_msg = "To select the second actor from the vector representing actors, you should chain your selections: `shining_list$actors` represents the actors, so you can add a `[2]` to select the second element.")

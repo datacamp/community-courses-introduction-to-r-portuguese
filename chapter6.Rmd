@@ -375,15 +375,15 @@ ext_list <- c(my_list, my_name = my_val)
 ```
 
 *** =instructions
-- Complete the code below such that an item named `year` is added to the `shining_list` with the value 1980. Assign the result to `shining_list_full`.
-- Finally, have a look at the structure of `shining_list_full` with the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function.
+- Complete o código abaixo para que um item chamado `year` seja adicionado a `shining_list` com o valor de 1980. Armazene o resultado em `shining_list_full`.
+- Por fim, dê uma olhada na estrutura de `shining_list_full` com a função [`str()`](http://www.rdocumentation.org/packages/utils/functions/str).
 
 *** =hint
-Have a look at the example code in the exercise assignment. Maybe this can help you start:
+Dá uma olhada no código de exemplo da descrição da tarefa. Talvez isso ajude você a começar:
 ```
 shining_list <- c(shining_list, ...)
 ```
-You still have to add some code where the three dots are.
+Você ainda tem que adicionar algum código onde os três pontos estão.
 
 *** =pre_exercise_code
 ```{r, eval = FALSE}
@@ -393,36 +393,36 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_
 *** =sample_code
 
 ```{r}
-# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+# shining_list, a lista contendo o nome do filme, atores e análises, já está pré-carregada no workspace
 
-# We forgot something; add the year to shining_list
+# Esquecemos de alguma coisa; adicione o ano em shining_list
 shining_list_full <- 
 
-# Have a look at shining_list_full
+# Dê uma olhada em shining_list_full
 
 ```
 
 *** =solution
 
 ```{r}
-# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+# shining_list, a lista contendo o nome do filme, atores e análises, já está pré-carregada no workspace
 
-# Use c() to add a year to shining_list
+# Use c() para adicionar um ano em shining_list
 shining_list_full <- c(shining_list, year = 1980)
 
-# Have a look at shining_list_full
+# Dê uma olhada em shining_list_full
 str(shining_list_full)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of `shining_list`, which is pre-loaded in the workspace!"
+msg = "Não remova ou altere a definição de `shining_list`, que já está pré-carregado no workspace!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list_full", eq_condition = "equal",
-            incorrect_msg = paste("Have you correctly extended `shining_list` with an element named `year`,",
-                                  "whose value is 1980? You can use `c(shining_list, year = 1980)`"))
-test_function("str", "object", incorrect_msg = "Don't forget to display the structure of `shining_list_full` with `str()`.")
-success_msg("Great! This was the last exercise on R lists! You now have a solid basis in the R programming language, but there's so much more to learn. Check out all the other DataCamp courses and become a true data science expert!")
+            incorrect_msg = paste("Você estendeu a lista `shining_list` com um elemento chamado `year`,",
+                                  "cujo o valor é 1980? Você pode usar `c(shining_list, year = 1980)`"))
+test_function("str", "object", incorrect_msg = "Não esqueça de exibir a estrutura de `shining_list_full` com `str()`.")
+success_msg("Excelente! Este foi o último exercício sobre listas em R! Agora você tem um sólido conhecimento na linguagem de programação R, mas há muito mais a aprender. Confira todos os outros cursos do DataCamp e torne-se um especialista em Data Science!")
 ```
 
 

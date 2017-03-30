@@ -1048,5 +1048,5 @@ test_object("selection_vector",
 test_object("roulette_winning_days",
             incorrect_msg = "Parece que `roulette_winning_days` n&#227;o cont&#233;m o valor correto. Use `roulette_vector[selection_vector]`.")
 
-success_msg("Excelente! Esse exercício conclui o capítulo de vetores. O próximo capítulo irá apresentar você a uma versão bidimensional dos vetores: as matrizes.")
+success_msg("Excelente! Esse exerc&#237;cio conclui o cap&#237;tulo de vetores. O pr&#243;ximo cap&#237;tulo ir&#225; apresentar voc&#234; a uma vers&#227;o bidimensional dos vetores: as matrizes.")
 ```

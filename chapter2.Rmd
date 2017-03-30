@@ -38,8 +38,8 @@ vegas <- "Go!"
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Você declarou corretamente a variável `vegas`? Não se esqueça que R é case sensitive!")
-success_msg("Ótimo! Vamos para o próximo exercício.")
+test_object("vegas", incorrect_msg = "Voc&#234; declarou corretamente a vari&#225;vel `vegas`? N&#227;o se esque&#231;a que R &#233; case sensitive!")
+success_msg("&#211;timo! Vamos para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -91,12 +91,12 @@ boolean_vector <- c(TRUE, FALSE, TRUE)
 
 *** =sct
 ```{r}
-msg <- "Não altere o código que declara as variáveis `numeric_vector` e `character_vector`!"
+msg <- "N&#227;o altere o c&#243;digo que declara as vari&#225;veis `numeric_vector` e `character_vector`!"
 test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vector",
-            incorrect_msg = "Tenha certeza que você armazenou os valores corretos na variável `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. Não coloque aspas em torno de `TRUE` e `FALSE`! Outra coisa: não se esqueça de colocar os valores exatamente na ordem descrita nas instruções.")
-success_msg("Perfeito! Perceba que adicionando espaços entre as vírgulas na função `c()` melhora a leitura do seu código. Vamos praticar mais criação de vetores no próximo exercício!")
+            incorrect_msg = "Tenha certeza que voc&#234; armazenou os valores corretos na vari&#225;vel `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. N&#227;o coloque aspas em torno de `TRUE` e `FALSE`! Outra coisa: n&#227;o se esque&#231;a de colocar os valores exatamente na ordem descrita nas instru&#231;&#245;es.")
+success_msg("Perfeito! Perceba que adicionando espa&#231;os entre as v&#237;rgulas na fun&#231;&#227;o `c()` melhora a leitura do seu c&#243;digo. Vamos praticar mais cria&#231;&#227;o de vetores no pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -152,10 +152,10 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Você atribuiu o valor correto a variável `poker_vector`?")
+            incorrect_msg = "Voc&#234; atribuiu o valor correto a vari&#225;vel `poker_vector`?")
 test_object("roulette_vector",
-            incorrect_msg = "Tenha certeza de atribuir o valor correto a variável `roulette_vector`. Não se esqueça de seguir a ordem correta!")
-success_msg("Muito bem! Para ver o conteúdo dos vetores, tudo que você precisa fazer é digitar o nome da variável no console e apertar ENTER. Vamos para o próximo exercício?")
+            incorrect_msg = "Tenha certeza de atribuir o valor correto a vari&#225;vel `roulette_vector`. N&#227;o se esque&#231;a de seguir a ordem correta!")
+success_msg("Muito bem! Para ver o conte&#250;do dos vetores, tudo que voc&#234; precisa fazer &#233; digitar o nome da vari&#225;vel no console e apertar ENTER. Vamos para o pr&#243;ximo exerc&#237;cio?")
 ```
 
 
@@ -218,16 +218,16 @@ names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Não altere os valores dentro da variável `poker_vector`; eles já foram inseridos para você.")
+            incorrect_msg = "N&#227;o altere os valores dentro da vari&#225;vel `poker_vector`; eles j&#225; foram inseridos para voc&#234;.")
 test_object("roulette_vector",
-            incorrect_msg = "Não altere os valores dentro da variável `roulette_vector`; eles já foram inseridos para você.")
+            incorrect_msg = "N&#227;o altere os valores dentro da vari&#225;vel `roulette_vector`; eles j&#225; foram inseridos para voc&#234;.")
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Não altere o código que nomeia os elementos de `poker_vector`; foque em `roulette_vector`!")
+            incorrect_msg = "N&#227;o altere o c&#243;digo que nomeia os elementos de `poker_vector`; foque em `roulette_vector`!")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Certifique-se que você definiu corretamente os nomes para o vetor `roulette_vector`. Utilize exatamente o mesmo código que utilizamos quando nomeamos a variável `poker_vector`.")
-success_msg("Muito bem! Continue para o próximo exercício.")
+            incorrect_msg = "Certifique-se que voc&#234; definiu corretamente os nomes para o vetor `roulette_vector`. Utilize exatamente o mesmo c&#243;digo que utilizamos quando nomeamos a vari&#225;vel `poker_vector`.")
+success_msg("Muito bem! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 

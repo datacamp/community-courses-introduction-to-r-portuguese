@@ -350,9 +350,9 @@ shining_list$actors[2]
 ```{r}
 msg <- "Não remova ou altere a definição de `shining_list`, que já está pré-carregado no workspace!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("shining_list$actors", incorrect_msg = "Have you correctly selected and printed out the vector representing actors? You can use `shining_list$actors`, for example.")
-test_output_contains("shining_list$actors[2]", incorrect_msg = "To select the second actor from the vector representing actors, you should chain your selections: `shining_list$actors` represents the actors, so you can add a `[2]` to select the second element.")
-success_msg("Great! Selecting elements from lists is rather easy isn't it? Continue to the next exercise.")
+test_output_contains("shining_list$actors", incorrect_msg = "Você selecionou e exibiu corretamente o vetor que representa os atores? Você pode usar `shining_list$actors`, por exemplo.")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Para selecionar o segundo ator do vetor que representa os atores, você começa com: `shining_list$actors`. Isso representa os atores, então, você pode adicionar um `[2]` para selecionar o segundo elemento.")
+success_msg("Ótimo! Selecionar elementos de listas é bem fácil, não é mesmo? Continue para o próximo exercício.")
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 title_meta  : Capítulo 2
 title       : Vetores
-description : "Neste curso de R gratuito, nós iremos fazer uma viagem a Las Vegas, onde você irá analizar seus resultados nos jogos usando vetores em R! Depois de completar este capítulo, você será capaz de criar vetores em R, nomeá-los, selecionar elementos dele e compará-lo com diferentes vetores. Vamos nessa!"
+description : "Neste curso gratuito de R, nós iremos fazer uma viagem a Las Vegas, onde você irá analizar seus resultados nos jogos usando vetores! Depois de completar este capítulo, você será capaz de criar vetores em R, nomeá-los,selecionar elementos dele e compará-lo com diferentes vetores. Vamos nessa!"
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Criando um vetor
@@ -26,13 +26,13 @@ vegas <- "Go!"
 
 *** =sample_code
 ```{r}
-# Declare a variavel vegas
+# Declare a variável vegas
 vegas <-
 ```
 
 *** =solution
 ```{r}
-# Declare a variavel vegas
+# Declare a variável vegas
 vegas <- "Go!"
 ```
 
@@ -133,19 +133,19 @@ Para te ajudar nessa etapa, nós criamos o código que armazena os ganhos e perd
 
 *** =sample_code
 ```{r}
-# Vitorias e derrotas no Poker de segunda a sexta
+# Vitórias e derrotas no Poker de segunda a sexta
 poker_vector <- c(140, -50, 20, -120, 240)
 
-# Vitorias e derrotas na Roleta de segunda a sexta
+# Vitórias e derrotas na Roleta de segunda a sexta
 roulette_vector <-  
 ```
 
 *** =solution
 ```{r}
-# Vitorias e derrotas no Poker de segunda a sexta
+# Vitórias e derrotas no Poker de segunda a sexta
 poker_vector <- c(140, -50, 20, -120, 240)
 
-# Vitorias e derrotas na Roleta de segunda a sexta
+# Vitórias e derrotas na Roleta de segunda a sexta
 roulette_vector <- c(-24, -50, 100, -350, 10)
 ```
 
@@ -164,7 +164,7 @@ success_msg("Muito bem! Para ver o conte&#250;do dos vetores, tudo que voc&#234;
 
 Como um analista de dados, é importante ter uma visão clara dos dados que você está usando. Entender o que cada elemento significa é essencial.
 
-No exercício anterior, nós criamos um vetor com suas vitórias e derrotas durante uma semana. Cada elemento do vetor se refere a um dia da semana, mas é difícil qual elemento pertence a um determinado dia. Seria legal se você pudesse mostrar qual valor se refere a um determinado dia.
+No exercício anterior, nós criamos um vetor com suas vitórias e derrotas durante uma semana. Cada elemento do vetor se refere a um dia da semana, mas é difícil saber qual elemento pertence a um determinado dia. Seria legal se você pudesse mostrar qual valor se refere a um determinado dia.
 
 Você pode dar um nome aos elementos de um vetor usando a função `names()`. Dá uma olhada nesse exemplo:
 
@@ -236,7 +236,7 @@ success_msg("Muito bem! Continue para o pr&#243;ximo exerc&#237;cio.")
 
 Se você quer ser um bom estatístico, você precisa ser preguiçoso. (Se você já é preguiçoso, você tem um talento nato para ser um excepcional estatístico.)
 
-No exercício anterior você provavelmente percebeu que é chato e frustrante digitar e redigitar informações como os dias da semana. Contudo, quando você olha de uma perspectiva mais alta, existem maneiras mais eficientes de fazer isso, como armazenar os dias da semana de um vetor em uma **variável**!
+No exercício anterior, você provavelmente percebeu que é chato e frustrante digitar e redigitar informações como os dias da semana. Contudo, quando você olha de uma perspectiva mais alta, existem maneiras mais eficientes de fazer isso, como armazenar os dias da semana de um vetor em uma **variável**!
 
 Assim como você fez com suas jogatinas de Poker e Roleta, você também pode criar uma variável que contenha os dias da semana. Desta forma você poderá usar e reutilizar seu código.
 
@@ -260,7 +260,7 @@ poker_vector <- c(140, -50, 20, -120, 240)
 # Vitórias de Roleta de Segunda-feira a Sexta-feira
 roulette_vector <- c(-24, -50, 100, -350, 10)
 
-# A variavel days_vector
+# A variável days_vector
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 # Defina os nomes dos dias em roulette_vector e poker_vector
@@ -276,7 +276,7 @@ poker_vector <- c(140, -50, 20, -120, 240)
 # Vitórias de Roleta de Segunda-feira a Sexta-feira
 roulette_vector <- c(-24, -50, 100, -350, 10)
 
-# A variavel days_vector
+# A variável days_vector
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 # Defina os nomes dos dias em roulette_vector e poker_vector
@@ -679,7 +679,7 @@ days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Defina a variável baseado na seleção
+# Defina a variável baseando-se na seleção
 poker_midweek <-
 ```
 
@@ -692,7 +692,7 @@ days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 names(roulette_vector) <- days_vector
 
-# Defina a variável baseado na seleção
+# Defina a variável baseando-se na seleção
 poker_midweek <- poker_vector[c(2, 3, 4)]
 ```
 
@@ -936,7 +936,7 @@ R sabe o que fazer quando você passa um vetor lógico dentro dos colchetes: ele
 Coloque `selection_vector` entre colchetes para armazenar a quantidade de dinheiro que você ganhou nos dias bons na variável `poker_winning_days`.
 
 *** =hint
-User `poker_vector[selection_vector]` para selecionar os valores desejados de `poker_vector`, e armazene tal resultado em `poker_winning_days`.
+Use `poker_vector[selection_vector]` para selecionar os valores desejados de `poker_vector`, e armazene tal resultado em `poker_winning_days`.
 
 *** =pre_exercise_code
 ```{r}

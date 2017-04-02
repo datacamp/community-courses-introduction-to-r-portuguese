@@ -46,10 +46,10 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 *** =sct
 ```{r}
 test_function("matrix", c("data", "byrow", "nrow"),
-              incorrect_msg = "Você criou a matriz corretamente? Dá uma olhada na descrição da tarefa. A resposta já foi dada!")
+              incorrect_msg = "Voc&#234; criou a matriz corretamente? D&#225; uma olhada na descri&#231;&#227;o da tarefa. A resposta j&#225; foi dada!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "Parece haver um problema com a declaração da matriz. Dá uma olhada na descrição da tarefa. A resposta já foi dada!")
-success_msg("Ótimo! Continue para o próximo exercício.")
+                     incorrect_msg = "Parece haver um problema com a declara&#231;&#227;o da matriz. D&#225; uma olhada na descri&#231;&#227;o da tarefa. A resposta j&#225; foi dada!")
+success_msg("&#211;timo! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -105,20 +105,20 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
 
 *** =sct
 ```{r}
-msg <- "Não mude nada nas variáveis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
+msg <- "N&#227;o mude nada nas vari&#225;veis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("box_office", incorrect_msg = "Você combinou corretamente os valores de `new_hope`, `empire_strikes` e `return_jedi` no vetor `box_office`?")
+test_object("box_office", incorrect_msg = "Voc&#234; combinou corretamente os valores de `new_hope`, `empire_strikes` e `return_jedi` no vetor `box_office`?")
 
 test_function("matrix", c("data", "nrow", "byrow"),
               incorrect_msg = "Tenha certeza de especificar corretamente os argumentos em `matrix()`: `box_office`, `nrow = 3`, `by_row = TRUE`.")
 
 test_object("star_wars_matrix",
-            incorrect_msg = "Você armazenou corretamente o resultado de `matrix()` em `star_wars_matrix`?")
+            incorrect_msg = "Voc&#234; armazenou corretamente o resultado de `matrix()` em `star_wars_matrix`?")
 
-success_msg("Realmente a Força está com você! Continue para o próximo exercício")
+success_msg("Realmente a For&#231;a est&#225; com voc&#234;! Continue para o pr&#243;ximo exerc&#237;cio")
 ```
 
 
@@ -198,19 +198,19 @@ star_wars_matrix
 
 *** =sct
 ```{r}
-msg <- "Não mude nada nas variáveis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
+msg <- "N&#227;o mude nada nas vari&#225;veis de bilheteria `new_hope`, `empire_strikes` e `return_jedi`!"
 test_object("new_hope", undefined_msg = msg, incorrect_msg = msg)
 test_object("empire_strikes", undefined_msg = msg, incorrect_msg = msg)
 test_object("return_jedi", undefined_msg = msg, incorrect_msg = msg)
-msg <- "Não altere o conteúdo de `star_wars_matrix`; somente o nomes das colunas e linhas!" 
+msg <- "N&#227;o altere o conte&#250;do de `star_wars_matrix`; somente o nomes das colunas e linhas!" 
 test_object("star_wars_matrix", incorrect_msg = msg)
-msg <- "Não altere nada nos vetores `region` e `titles`. Eles já foram definidos para você."
+msg <- "N&#227;o altere nada nos vetores `region` e `titles`. Eles j&#225; foram definidos para voc&#234;."
 test_object("region", undefined_msg = msg, incorrect_msg = msg)
 test_object("titles", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", eq_condition = "equal",
-            incorrect_msg = "Você definiu as linhas e colunas de `star_wars_matrix` corretamente? Use `colnames(star_wars_matrix) <- region` para nomear as colunas; faça algo similar com as linhas.")
-test_output_contains("star_wars_matrix", incorrect_msg = "Não se esqueça de exibir `star_wars_matrix` depois que você nomear as linhas e colunas.")
-success_msg("Bom trabalho! Você está no caminho de se tornar um jedi em R! Continue para o próximo exercício.")
+            incorrect_msg = "Voc&#234; definiu as linhas e colunas de `star_wars_matrix` corretamente? Use `colnames(star_wars_matrix) <- region` para nomear as colunas; fa&#231;a algo similar com as linhas.")
+test_output_contains("star_wars_matrix", incorrect_msg = "N&#227;o se esque&#231;a de exibir `star_wars_matrix` depois que voc&#234; nomear as linhas e colunas.")
+success_msg("Bom trabalho! Voc&#234; est&#225; no caminho de se tornar um jedi em R! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -264,11 +264,11 @@ worldwide_vector <- rowSums(star_wars_matrix)
 
 *** =sct
 ```{r}
-msg <- "Não altere nada nas variáveis `box_office_all` e `star_wars_matrix`!"
+msg <- "N&#227;o altere nada nas vari&#225;veis `box_office_all` e `star_wars_matrix`!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("worldwide_vector", incorrect_msg = "Digite `rowSums()` usando `star_wars_matrix` como argumento e armazene o resultado em `worldwide_vector`.")
-success_msg("Muito bem! Continue para o próximo exercício.")
+success_msg("Muito bem! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -326,15 +326,15 @@ all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 
 *** =sct
 ```{r}
-msg <- "Não altere nada nas variáveis `box_office_all` e `star_wars_matrix`!"
+msg <- "N&#227;o altere nada nas vari&#225;veis `box_office_all` e `star_wars_matrix`!"
 test_object("box_office", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("worldwide_vector",
             incorrect_msg = "Armazene o resultado de `rowSums(star_wars_matrix)` em `worldwide_vector`.")
 
-msg <- "Você usou a função `cbind()` corretamente para adicionar `worldwide_vector` em `star_wars_matrix`? Você deve passar `star_wars_matrix` e `world_wide_vector` como argumento em `cbind()`, nesta mesma ordem. A matriz resultante `all_wars_matrix` deve conter 3 linhas e 3 colunas."
+msg <- "Voc&#234; usou a fun&#231;&#227;o `cbind()` corretamente para adicionar `worldwide_vector` em `star_wars_matrix`? Voc&#234; deve passar `star_wars_matrix` e `world_wide_vector` como argumento em `cbind()`, nesta mesma ordem. A matriz resultante `all_wars_matrix` deve conter 3 linhas e 3 colunas."
 test_object("all_wars_matrix", incorrect_msg = msg)
-success_msg("Bom trabalho! Depois de adicionar uma coluna a uma matriz, o próximo passo é adicionar linhas. Vamos aprender como fazer no próximo exercício.");
+success_msg("Bom trabalho! Depois de adicionar uma coluna a uma matriz, o pr&#243;ximo passo &#233; adicionar linhas. Vamos aprender como fazer no pr&#243;ximo exerc&#237;cio.");
 ```
 
 
@@ -404,12 +404,12 @@ all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 
 *** =sct
 ```{r}
-msg = "Não sobreponha as variáveis que foram definidas para você no workspace (`star_wars_matrix` e `star_wars_matrix2`)."
+msg = "N&#227;o sobreponha as vari&#225;veis que foram definidas para voc&#234; no workspace (`star_wars_matrix` e `star_wars_matrix2`)."
 test_object("star_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("star_wars_matrix2", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("all_wars_matrix", incorrect_msg = "Você usou `rbind()` corretamente para criar `all_wars_matrix()`? `rbind()` usa dois argumentos: `star_wars_matrix` e `star_wars_matrix2`, nesta mesma ordem.")
+test_object("all_wars_matrix", incorrect_msg = "Voc&#234; usou `rbind()` corretamente para criar `all_wars_matrix()`? `rbind()` usa dois argumentos: `star_wars_matrix` e `star_wars_matrix2`, nesta mesma ordem.")
 
-success_msg("Maravilha! Continue para o próximo exercício para ver como você pode combinar os resultados da função `rbind()` com a função `colSums()`!")
+success_msg("Maravilha! Continue para o pr&#243;ximo exerc&#237;cio para ver como voc&#234; pode combinar os resultados da fun&#231;&#227;o `rbind()` com a fun&#231;&#227;o `colSums()`!")
 ```
 
 
@@ -455,13 +455,13 @@ total_revenue_vector
 
 *** =sct
 ```{r}
-msg = "Não altere o conteúdo de `all_wars_matrix`; ele foi criado para você no workspace."
+msg = "N&#227;o altere o conte&#250;do de `all_wars_matrix`; ele foi criado para voc&#234; no workspace."
 test_object("all_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_function("colSums", "x", incorrect_msg = "Você usou a função `colSums()` em all_wars_matrix?")
+test_function("colSums", "x", incorrect_msg = "Voc&#234; usou a fun&#231;&#227;o `colSums()` em all_wars_matrix?")
 test_object("total_revenue_vector",
-            incorrect_msg = "Você armazenou corretamente o resultado de `colSums(all_wars_matrix)` em `total_revenue_vector`?")
-test_output_contains("total_revenue_vector", incorrect_msg = "Não esqueça de exibir `total_revenue_vector`!")
-success_msg("Excelente! Avance para o próximo exercício.")
+            incorrect_msg = "Voc&#234; armazenou corretamente o resultado de `colSums(all_wars_matrix)` em `total_revenue_vector`?")
+test_output_contains("total_revenue_vector", incorrect_msg = "N&#227;o esque&#231;a de exibir `total_revenue_vector`!")
+success_msg("Excelente! Avance para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -532,18 +532,18 @@ mean(non_us_some)
 
 *** =sct
 ```{r}
-msg = "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
+msg = "N&#227;o altere o conte&#250;do de `all_wars_matrix`; essa matriz j&#225; foi criada para voc&#234; no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("non_us_all",
-            incorrect_msg = "Você armazenou em `non_us_all` a segunda coluna inteira de `all_wars_matrix`? Você pode usar `[, 2]` para fazer isso!")
+            incorrect_msg = "Voc&#234; armazenou em `non_us_all` a segunda coluna inteira de `all_wars_matrix`? Voc&#234; pode usar `[, 2]` para fazer isso!")
 test_output_contains("mean(non_us_all)",
-                     incorrect_msg = "Você calculou a média dos valores em `non_us_all` ao usar `mean(non_us_all)`? Simplesmente exiba o resultado.")
+                     incorrect_msg = "Voc&#234; calculou a m&#233;dia dos valores em `non_us_all` ao usar `mean(non_us_all)`? Simplesmente exiba o resultado.")
 test_object("non_us_some",
-            incorrect_msg = "Você armazenou em `non_us_some` o faturamento fora dos EUA para os dois primeiros filmes? Você pode usar `[1:2,2]` para fazer isso!")
+            incorrect_msg = "Voc&#234; armazenou em `non_us_some` o faturamento fora dos EUA para os dois primeiros filmes? Voc&#234; pode usar `[1:2,2]` para fazer isso!")
 test_output_contains("mean(non_us_some)",
-                     incorrect_msg = "Você calculou a média dos valores em `non_us_some` usando `mean(non_us_some)`?simplesmente exiba o resultado.")
-success_msg("Boa! Continue para o próximo exercício.")
+                     incorrect_msg = "Voc&#234; calculou a m&#233;dia dos valores em `non_us_some` usando `mean(non_us_some)`?simplesmente exiba o resultado.")
+success_msg("Boa! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -594,13 +594,13 @@ visitors
 
 *** =sct
 ```{r}
-msg = "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
+msg = "N&#227;o altere o conte&#250;do de `all_wars_matrix`; essa matriz j&#225; foi criada para voc&#234; no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "Parece que `visitors` não está correto. Simplesmente divida `all_wars_matrix` por 5 e armazene a matriz resultante em `visitors`.")
-test_output_contains("visitors", incorrect_msg = "Não esqueça de exibir `visitors` para que você possa visualizá-lo.")
-success_msg("Excelente! O que esse resultado diz a você? Que 92 milhões de pessoas foram assistir Uma Nova Esperança nos cinemas americanos. Continue para o próximo exercício!")
+            incorrect_msg = "Parece que `visitors` n&#227;o est&#225; correto. Simplesmente divida `all_wars_matrix` por 5 e armazene a matriz resultante em `visitors`.")
+test_output_contains("visitors", incorrect_msg = "N&#227;o esque&#231;a de exibir `visitors` para que voc&#234; possa visualiz&#225;-lo.")
+success_msg("Excelente! O que esse resultado diz a voc&#234;? Que 92 milh&#245;es de pessoas foram assistir Uma Nova Esperan&#231;a nos cinemas americanos. Continue para o pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -664,16 +664,16 @@ mean(us_visitors)
 
 *** =sct
 ```{r}
-msg <- "Não altere o conteúdo de `all_wars_matrix`; essa matriz já foi criada para você no workspace."
+msg <- "N&#227;o altere o conte&#250;do de `all_wars_matrix`; essa matriz j&#225; foi criada para voc&#234; no workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("ticket_prices_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("visitors",
-            incorrect_msg = "Você criou corretamente a matriz `visitors`? Você deve dividir `all_wars_matrix` por `ticket_prices_matrix` para conseguir o resultado.")
-test_object("us_visitors", incorrect_msg = "Para criar `us_visitors`, você deve selecionar corretamente a primeira coluna inteira de `visitors`. Você pode usar `[,1]` para isso!")
-test_output_contains("mean(us_visitors)", incorrect_msg = "Uma vez criada `us_visitors`, você pode usar a função `mean()` para calcular o número média de visitantes nos EUA. Tenha certeza de exibir o resultado.")
+            incorrect_msg = "Voc&#234; criou corretamente a matriz `visitors`? Voc&#234; deve dividir `all_wars_matrix` por `ticket_prices_matrix` para conseguir o resultado.")
+test_object("us_visitors", incorrect_msg = "Para criar `us_visitors`, voc&#234; deve selecionar corretamente a primeira coluna inteira de `visitors`. Voc&#234; pode usar `[,1]` para isso!")
+test_output_contains("mean(us_visitors)", incorrect_msg = "Uma vez criada `us_visitors`, voc&#234; pode usar a fun&#231;&#227;o `mean()` para calcular o n&#250;mero m&#233;dia de visitantes nos EUA. Tenha certeza de exibir o resultado.")
 
-success_msg("É fato: a Força R está com você! Esse exercício conclui o capítulo de matrizes. Próxima parada na jornada da linguagem R: fatores.")
+success_msg("&#201; fato: a For&#231;a R est&#225; com voc&#234;! Esse exerc&#237;cio conclui o cap&#237;tulo de matrizes. Pr&#243;xima parada na jornada da linguagem R: fatores.")
 ```
 
 

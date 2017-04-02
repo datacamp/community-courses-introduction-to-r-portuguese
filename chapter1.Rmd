@@ -44,8 +44,8 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não inicie esta linha com um `#`, senão o código não será executado!")
-success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, já que você está familiarizado com a interface do curso, vamos aprender R!")
+test_output_contains("18", incorrect_msg = "Tenha certeza que voc&#234; inseriu uma nova linha que some 6 + 12. N&#227;o inicie esta linha com um `#`, sen&#227;o o c&#243;digo n&#227;o ser&#225; executado!")
+success_msg("Parab&#233;ns! Veja como o console mostra o resultado do seu c&#243;digo. Agora, j&#225; que voc&#234; est&#225; familiarizado com a interface do curso, vamos aprender R!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
@@ -60,7 +60,7 @@ Em sua forma mais básica, R pode ser usado até mesmo como uma simples calculad
 - Exponenciação: `^`
 - Módulo: `%%`
 
-Vamos explicar melhor estes dois últimos. Confira:
+Vamos explicar melhor estes dois últimos:
 - O operador `^` eleva o número da esquerda ao número que está a sua direita. Por exemplo: `3^2` é o mesmo que 3 elevado a 2, cujo o resultado é 9.
 - O Módulo (`%%`) retornará o resto da divisão entre o número da esquerda e o número da direita. Por exemplo: o resto da divisão entre 5 e 3, ou seja, `5 %% 3` será 2.
 
@@ -124,10 +124,10 @@ Outro exemplo com o operador de módulo: `9 %% 2` é igual a `1`.
 
 *** =sct
 ```{r}
-msg = "Não remova os operadores dos códigos de exemplo!"
-test_output_contains("2^5", incorrect_msg = "O código de exponenciação está incorreto. Escreva `2 ^ 5` em uma nova linha e tente de novo.")
-test_output_contains("28 %% 6", incorrect_msg = "Parece que há um problema com seu código de módulo. Escreva `28 %% 6` em uma nova linha e tente novamente.")
-success_msg("Ótimo! Siga em frente para o próximo exercício.")
+msg = "N&#227;o remova os operadores dos c&#243;digos de exemplo!"
+test_output_contains("2^5", incorrect_msg = "O c&#243;digo de exponencia&#231;&#227;o est&#225; incorreto. Escreva `2 ^ 5` em uma nova linha e tente de novo.")
+test_output_contains("28 %% 6", incorrect_msg = "Parece que h&#225; um problema com seu c&#243;digo de m&#243;dulo. Escreva `28 %% 6` em uma nova linha e tente novamente.")
+success_msg("&#211;timo! Siga em frente para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -175,9 +175,9 @@ x
 
 *** =sct
 ```{r}
-test_object("x", undefined_msg = "Tenha certeza de que você declarou corretamente a variável `x`.",
-            incorrect_msg = "Tenha certeza de que você armazenou o valor correto na variável `x`.") 
-success_msg("Bom trabalho! Você percebeu que a linguagem R não exibiu no console o código que você digitou para declarar a variável? Isso é porque o código `x <- 42` não gera nenhuma saída (output), uma vez que R acredita que você precisará dessa variável no futuro. Do contrário, você não precisaria armazenar nenhum valor nessa variável, certo?")
+test_object("x", undefined_msg = "Tenha certeza de que voc&#234; declarou corretamente a vari&#225;vel `x`.",
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou o valor correto na vari&#225;vel `x`.") 
+success_msg("Bom trabalho! Voc&#234; percebeu que a linguagem R n&#227;o exibiu no console o c&#243;digo que voc&#234; digitou para declarar a vari&#225;vel? Isso &#233; porque o c&#243;digo `x <- 42` n&#227;o gera nenhuma sa&#237;da (output), uma vez que R acredita que voc&#234; precisar&#225; dessa vari&#225;vel no futuro. Do contr&#225;rio, voc&#234; n&#227;o precisaria armazenar nenhum valor nessa vari&#225;vel, certo?")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:c5944b90eb
@@ -219,10 +219,10 @@ my_apples
 *** =sct
 ```{r}
 test_object("my_apples", 
-            undefined_msg = "Por favor, verifique se você definiu a variável `my_apples`.",
-            incorrect_msg = "Tenha certeza de que você armazenou o valor correto na variável `my_apples`.")
-test_output_contains("my_apples", incorrect_msg = "Você digitou o código para exibir o valor da variável `my_apples` no console?")
-success_msg("Excelente! Continue para o próximo exercício!")
+            undefined_msg = "Por favor, verifique se voc&#234; definiu a vari&#225;vel `my_apples`.",
+            incorrect_msg = "Tenha certeza de que voc&#234; armazenou o valor correto na vari&#225;vel `my_apples`.")
+test_output_contains("my_apples", incorrect_msg = "Voc&#234; digitou o c&#243;digo para exibir o valor da vari&#225;vel `my_apples` no console?")
+success_msg("Excelente! Continue para o pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -276,13 +276,13 @@ my_fruit <- my_apples + my_oranges
 
 *** =sct
 ```{r}
-test_object("my_apples", incorrect_msg = "Não remova a linha de código que armazena 5 a variável `my_apples`.")
-test_object("my_oranges", incorrect_msg = "Mantenha a linha de código que armazena 6 a variável `my_oranges`")
+test_object("my_apples", incorrect_msg = "N&#227;o remova a linha de c&#243;digo que armazena 5 a vari&#225;vel `my_apples`.")
+test_object("my_oranges", incorrect_msg = "Mantenha a linha de c&#243;digo que armazena 6 a vari&#225;vel `my_oranges`")
 test_output_contains("my_apples + my_oranges",
-                     incorrect_msg = "Tenha certeza de exibir o valor da adição de `my_apples` e `my_oranges`. O código de exemplo na descrição do exercício possui a resposta para essa instrução!")
-msg <- "Você usou `my_fruit <- my_apples + my_oranges` para criar a variável `my_fruit`?"
+                     incorrect_msg = "Tenha certeza de exibir o valor da adi&#231;&#227;o de `my_apples` e `my_oranges`. O c&#243;digo de exemplo na descri&#231;&#227;o do exerc&#237;cio possui a resposta para essa instru&#231;&#227;o!")
+msg <- "Voc&#234; usou `my_fruit <- my_apples + my_oranges` para criar a vari&#225;vel `my_fruit`?"
 test_object("my_fruit", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Boa! A grande vantagem de realizar cálculos entre variáveis é a reutilização de código. Se você simplesmente mudar o valor de `my_apples` de 5 para 12 e rodar novamente o código, `my_fruit` será atualizada automaticamente. Siga em frente para o próximo exercício!")
+success_msg("Boa! A grande vantagem de realizar c&#225;lculos entre vari&#225;veis &#233; a reutiliza&#231;&#227;o de c&#243;digo. Se voc&#234; simplesmente mudar o valor de `my_apples` de 5 para 12 e rodar novamente o c&#243;digo, `my_fruit` ser&#225; atualizada automaticamente. Siga em frente para o pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -331,12 +331,12 @@ my_fruit
 
 *** =sct
 ```{r}
-test_error(incorrect_msg = "Você consegue resolver esse problema configurando uma variável númerica em `my_oranges`, e não uma string (texto)!")
-test_object("my_apples", incorrect_msg = "Tenha certeza de que o número `5` continua armazenado na variável `my_apples`.")
-test_object("my_oranges", incorrect_msg = " Certifique-se que `my_oranges` é igual a `6`.")
-test_object("my_fruit", incorrect_msg = "O valor de `my_fruit` não está correto. Ela deveria ser `11`, uma vez que é a soma das variáveis `my_apples` e `my_oranges`.")
-test_output_contains("my_fruit", incorrect_msg = "Não remova a linha que exibe a variável `my_fruit`.")
-success_msg("Incrível! Continue o bom trabalho! Prossiga para o próximo exercício.")
+test_error(incorrect_msg = "Voc&#234; consegue resolver esse problema configurando uma vari&#225;vel n&#250;merica em `my_oranges`, e n&#227;o uma string (texto)!")
+test_object("my_apples", incorrect_msg = "Tenha certeza de que o n&#250;mero `5` continua armazenado na vari&#225;vel `my_apples`.")
+test_object("my_oranges", incorrect_msg = "Certifique-se que `my_oranges` &#233; igual a `6`.")
+test_object("my_fruit", incorrect_msg = "O valor de `my_fruit` n&#227;o est&#225; correto. Ela deveria ser `11`, uma vez que &#233; a soma das vari&#225;veis `my_apples` e `my_oranges`.")
+test_output_contains("my_fruit", incorrect_msg = "N&#227;o remova a linha que exibe a vari&#225;vel `my_fruit`.")
+success_msg("Incr&#237;vel! Continue o bom trabalho! Prossiga para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -396,10 +396,10 @@ my_logical <- FALSE
 
 *** =sct
 ```{r}
-test_object("my_numeric", incorrect_msg = "Você alterou o valor de `my_numeric` para 42?")
-test_object("my_character", incorrect_msg = "Você não alterou corretamente o valor de `my_character` para `\"universe\"`. Não se esqueça das aspas duplas!")
-test_object("my_logical", incorrect_msg = "Você alterou o valor de `my_logical` para `FALSE`? Todas as letras de `FALSE` precisam estar em maiúsculas. Não se esqueça!")
-success_msg("Excelente trabalho! Vamos para o próximo exercício.")
+test_object("my_numeric", incorrect_msg = "Voc&#234; alterou o valor de `my_numeric` para 42?")
+test_object("my_character", incorrect_msg = "Voc&#234; n&#227;o alterou corretamente o valor de `my_character` para `\"universe\"`. N&#227;o se esque&#231;a das aspas duplas!")
+test_object("my_logical", incorrect_msg = "Voc&#234; alterou o valor de `my_logical` para `FALSE`? Todas as letras de `FALSE` precisam estar em mai&#250;sculas. N&#227;o se esque&#231;a!")
+success_msg("Excelente trabalho! Vamos para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -455,16 +455,16 @@ class(my_logical)
 
 *** =sct
 ```{r}
-msg <- "Não remova a declaração das variáveis!"
+msg <- "N&#227;o remova a declara&#231;&#227;o das vari&#225;veis!"
 lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
-patt <- "Você incluiu `class(%1$s)` no código para exibir a classe de `%1$s`?"
+patt <- "Voc&#234; incluiu `class(%1$s)` no c&#243;digo para exibir a classe de `%1$s`?"
 test_output_contains("class(my_numeric)",
-                     incorrect_msg = "Não remova o código que exibe o tipo de dado de `my_numeric`.")
+                     incorrect_msg = "N&#227;o remova o c&#243;digo que exibe o tipo de dado de `my_numeric`.")
 test_output_contains("class(my_character)",
                      incorrect_msg = sprintf(patt, "my_character"))
 test_output_contains("class(my_logical)",
                      incorrect_msg = sprintf(patt, "my_logical"))
-success_msg("Parabéns. Este foi nosso último exercício deste capítulo! Prossiga para o próximo capítulo para entrarmos de cabeça no mundo dos vetores!")
+success_msg("Parab&#233;ns. Este foi nosso &#250;ltimo exerc&#237;cio deste cap&#237;tulo! Prossiga para o pr&#243;ximo cap&#237;tulo para entrarmos de cabe&#231;a no mundo dos vetores!")
 ```
 
 

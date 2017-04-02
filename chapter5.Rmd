@@ -44,8 +44,8 @@ mtcars
 
 *** =sct
 ```{r}
-test_output_contains("mtcars", incorrect_msg = "Não altere nada no código.")
-success_msg("Ótimo! Continue para o próximo exercício.")
+test_output_contains("mtcars", incorrect_msg = "N&#227;o altere nada no c&#243;digo.")
+success_msg("&#211;timo! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -85,9 +85,9 @@ head(mtcars)
 
 *** =sct
 ```{r}
-test_function("head", "x", incorrect_msg = "Você usou `mtcars` na função `head()`?")
-test_output_contains("head(mtcars)", incorrect_msg = "Simplesmente exiba o resultado da função `head()`, não é necessário armazená-lo em uma variável.")
-success_msg("Maravilha! Então, o que temos aqui neste dataset? Por exemplo, `hp` significa `horsepower`, ou seja, a potência do motor de um carro; O Datsun possui a menor potência entre os seis carros que foram exibidos pela função. Para saber o que cada variável significa, você pode digitar `?mtcars` no console e ler a página de ajuda. Continue para o próximo exercício!");
+test_function("head", "x", incorrect_msg = "Voc&#234; usou `mtcars` na fun&#231;&#227;o `head()`?")
+test_output_contains("head(mtcars)", incorrect_msg = "Simplesmente exiba o resultado da fun&#231;&#227;o `head()`, n&#227;o &#233; necess&#225;rio armazen&#225;-lo em uma vari&#225;vel.")
+success_msg("Maravilha! Ent&#227;o, o que temos aqui neste dataset? Por exemplo, `hp` significa `horsepower`, ou seja, a pot&#234;ncia do motor de um carro; O Datsun possui a menor pot&#234;ncia entre os seis carros que foram exibidos pela fun&#231;&#227;o. Para saber o que cada vari&#225;vel significa, voc&#234; pode digitar `?mtcars` no console e ler a p&#225;gina de ajuda. Continue para o pr&#243;ximo exerc&#237;cio!");
 ```
 
 
@@ -128,8 +128,8 @@ str(mtcars)
 
 *** =sct
 ```{r}
-test_output_contains("str(mtcars)", incorrect_msg = "Você usou corretamente a função `str()` em `mtcars`?")
-success_msg("Bom trabalho! Consegue visualizar todas as informações ditas na descrição do exercício? Continue para o próximo exercício.")
+test_output_contains("str(mtcars)", incorrect_msg = "Voc&#234; usou corretamente a fun&#231;&#227;o `str()` em `mtcars`?")
+success_msg("Bom trabalho! Consegue visualizar todas as informa&#231;&#245;es ditas na descri&#231;&#227;o do exerc&#237;cio? Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -195,7 +195,7 @@ planets_df <- data.frame(name, type, diameter, rotation, rings)
 
 *** =sct
 ```{r}
-msg = "Não altere nada nas definições dos vetores. Apenas adicione `data.frame()` para criar `planets_df`."
+msg = "N&#227;o altere nada nas defini&#231;&#245;es dos vetores. Apenas adicione `data.frame()` para criar `planets_df`."
 test_object("name", undefined_msg = msg, incorrect_msg = msg)
 test_object("type", undefined_msg = msg, incorrect_msg = msg)
 test_object("diameter", undefined_msg = msg, incorrect_msg = msg)
@@ -203,9 +203,9 @@ test_object("rotation", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("planets_df",
-            incorrect_msg = "Você armazenou corretamente o valor de `data.frame()` em `planets_df`? Dentro de `data.frame()`, tenha certeza de passar todos os vetores na ordem correta: `name`, `type`, `diameter`, `rotation` e finalmente `rings`.")
+            incorrect_msg = "Voc&#234; armazenou corretamente o valor de `data.frame()` em `planets_df`? Dentro de `data.frame()`, tenha certeza de passar todos os vetores na ordem correta: `name`, `type`, `diameter`, `rotation` e finalmente `rings`..")
 
-success_msg("Excelente trabalho! Continue para o próximo exercício. O próximo passo será inspecionar o data frame que você acabou de criar. Vamos lá?");
+success_msg("Excelente trabalho! Continue para o pr&#243;ximo exerc&#237;cio. O pr&#243;ximo passo ser&#225; inspecionar o data frame que voc&#234; acabou de criar. Vamos l&#225;?");
 ```
 
 
@@ -238,10 +238,10 @@ str(planets_df)
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df` que já está disponível no seu workspace!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df` que j&#225; est&#225; dispon&#237;vel no seu workspace!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("str(planets_df)", incorrect_msg = "Você exibiu corretamente a estrutura de `planets_df`? Use `str()` para fazer isso!")
-success_msg("Incrível! Agora que você tem um claro entendimento do dataset `planets_df`, é hora de vermos como você pode selecionar elementos dele. Aprenda tudo sobre isso nos próximos exercícios!")
+test_output_contains("str(planets_df)", incorrect_msg = "Voc&#234; exibiu corretamente a estrutura de `planets_df`? Use `str()` para fazer isso!")
+success_msg("Incr&#237;vel! Agora que voc&#234; tem um claro entendimento do dataset `planets_df`, &#233; hora de vermos como voc&#234; pode selecionar elementos dele. Aprenda tudo sobre isso nos pr&#243;ximos exerc&#237;cios!")
 ```
 
 
@@ -291,11 +291,11 @@ planets_df[4, ]
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df`!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1,3]", incorrect_msg = "Você selecionou e exibiu corretamente o diâmetro de Mercúrio? Você pode usar `[1,3]`.")
-test_output_contains("planets_df[4, ]", incorrect_msg = "Você selecionou e exibiu corretamente todos os dados de Marte? Você pode usar `[4,]`.")
-success_msg("Ótimo! Além de selecionar elementos de seu data frame pela posição (ou índice), você pode também usar o nomes das colunas. Quer aprender como? Siga para o próximo exercício.")
+test_output_contains("planets_df[1,3]", incorrect_msg = "Voc&#234; selecionou e exibiu corretamente o di&#226;metro de Merc&#250;rio? Voc&#234; pode usar `[1,3]`.")
+test_output_contains("planets_df[4, ]", incorrect_msg = "Voc&#234; selecionou e exibiu corretamente todos os dados de Marte? Voc&#234; pode usar `[4,]`.")
+success_msg("&#211;timo! Al&#233;m de selecionar elementos de seu data frame pela posi&#231;&#227;o (ou &#237;ndice), voc&#234; pode tamb&#233;m usar o nomes das colunas. Quer aprender como? Siga para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -345,10 +345,10 @@ planets_df[1:5, "diameter"]
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df`!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "Você selecionou corretamente os 5 primeiros elementos da coluna diameter e exibiu o resultado? Você pode usar `[1:5, \"diameter\"]` aqui.")
-success_msg("Boa! Continue para o próximo exercício!")
+test_output_contains("planets_df[1:5, \"diameter\"]", incorrect_msg = "Voc&#234; selecionou corretamente os 5 primeiros elementos da coluna diameter e exibiu o resultado? Voc&#234; pode usar `[1:5, \"diameter\"]` aqui.")
+success_msg("Boa! Continue para o pr&#243;ximo exerc&#237;cio!")
 ```
 
 
@@ -403,12 +403,12 @@ rings_vector
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df`!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector",
-            incorrect_msg = "Você selecionou corretamente a coluna `rings` de `planets_df`? Use `$rings`. Armazene o resultado em `rings_vector`.")
-test_output_contains("rings_vector", incorrect_msg = "Não se esqueça de exibir `rings_vector` depois de tê-lo criado!")
-success_msg("Ótimo! Continue para o próximo exercício e descubra outra forma legal de criar subconjuntos!")
+            incorrect_msg = "Voc&#234; selecionou corretamente a coluna `rings` de `planets_df`? Use `$rings`. Armazene o resultado em `rings_vector`.")
+test_output_contains("rings_vector", incorrect_msg = "N&#227;o se esque&#231;a de exibir `rings_vector` depois de t&#234;-lo criado!")
+success_msg("&#211;timo! Continue para o pr&#243;ximo exerc&#237;cio e descubra outra forma legal de criar subconjuntos!")
 ```
 
 
@@ -457,11 +457,11 @@ planets_df[rings_vector, ]
 
 *** =sct
 ```{r}
-msg <- "Não remova ou sobresescreva o data frame `planets_df` ou `rings_vector`!"
+msg <- "N&#227;o remova ou sobrescreva o data frame `planets_df` ou `rings_vector`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("rings_vector", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Você adaptou corretamente o código para selecionar todas as colunas de planetas que possuem anéis? Você pode usar `planets_df[rings_vector, ]`. Tenha certeza de incluir a vírgula, ela é crucial!")
-success_msg("Que beleza! Contudo, essa é uma solução tediosa. O próximo exercício vai te ensinar uma forma mais concisa para fazer isso.")
+test_output_contains('planets_df[rings_vector, ]', incorrect_msg = "Voc&#234; adaptou corretamente o c&#243;digo para selecionar todas as colunas de planetas que possuem an&#233;is? Voc&#234; pode usar `planets_df[rings_vector, ]`. Tenha certeza de incluir a v&#237;rgula, ela &#233; crucial!")
+success_msg("Que beleza! Contudo, essa &#233; uma solu&#231;&#227;o tediosa. O pr&#243;ximo exerc&#237;cio vai te ensinar uma forma mais concisa para fazer isso.")
 ```
 
 
@@ -513,16 +513,16 @@ subset(planets_df, subset = diameter < 1)
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df`!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_correct({
-  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Você especificou `subset = ...` como argumento de `subset()`? A condição neste caso é `diameter < 1`. Simplesmente exiba o resultado.")  
+  test_output_contains("subset(planets_df, subset = diameter < 1)", incorrect_msg = "Voc&#234; especificou `subset = ...` como argumento de `subset()`? A condi&#231;&#227;o neste caso &#233; `diameter < 1`. Simplesmente exiba o resultado.")  
 }, {
   test_function("subset", args = "x", 
-                not_called_msg = "Tenha certeza de usar a função `subset()` para realizar a seleção!",
-                incorrect_msg = "O primeiro argumento que você deveria passar a `subset()` é `planets_df`.")
+                not_called_msg = "Tenha certeza de usar a fun&#231;&#227;o `subset()` para realizar a sele&#231;&#227;o!",
+                incorrect_msg = "O primeiro argumento que voc&#234; deveria passar a `subset()` &#233; `planets_df`.")
 })
-success_msg("Excelente! Além de deixar as coisas mais concisas, `subset()` provavelmente deixará seu código mais compreensível para pessoas que o lerem. Continue para o próximo exercício.");
+success_msg("Excelente! Al&#233;m de deixar as coisas mais concisas, `subset()` provavelmente deixar&#225; seu c&#243;digo mais compreens&#237;vel para pessoas que o lerem. Continue para o pr&#243;ximo exerc&#237;cio.");
 ```
 
 
@@ -573,7 +573,7 @@ Brinque com a função [`order()`](http://www.rdocumentation.org/packages/base/f
 
 *** =sct
 ```{r}
-success_msg("Legal! Agora, vamos utilizar a função `order()` para ordenar seu data frame!")
+success_msg("Legal! Agora, vamos utilizar a fun&#231;&#227;o `order()` para ordenar seu data frame!")
 ```
 
 
@@ -619,13 +619,13 @@ planets_df[positions, ]
 
 *** =sct
 ```{r}
-msg = "Não remova ou sobrescreva o data frame `planets_df`!"
+msg = "N&#227;o remova ou sobrescreva o data frame `planets_df`!"
 test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("positions",
-            incorrect_msg = "Você criou corretamente a variável `positions`? Você pode usar `sort(planets_df$diameter)`.")
+            incorrect_msg = "Voc&#234; criou corretamente a vari&#225;vel `positions`? Voc&#234; pode usar `sort(planets_df$diameter)`.")
 test_output_contains("planets_df[positions,]",
-                     incorrect_msg = "Use `planets_df[positions, ]` para ordenar `planets_df`; a vírgula dentro dos colchetes é crucial!")
-success_msg("Maravilhoso! Este exercício conclui o capítulo de data frames. Lembre-se que data frames são extremamente importantes em R. Você precisará deles a todo momento. Outra estrutura muito utilizada também são as listas. Este será o assunto do próximo capítulo!")
+                     incorrect_msg = "Use `planets_df[positions, ]` para ordenar `planets_df`; a v&#237;rgula dentro dos colchetes &#233; crucial!")
+success_msg("Maravilhoso! Este exerc&#237;cio conclui o cap&#237;tulo de data frames. Lembre-se que data frames s&#227;o extremamente importantes em R. Voc&#234; precisar&#225; deles a todo momento. Outra estrutura muito utilizada tamb&#233;m s&#227;o as listas. Este ser&#225; o assunto do pr&#243;ximo cap&#237;tulo!")
 ```
 
 

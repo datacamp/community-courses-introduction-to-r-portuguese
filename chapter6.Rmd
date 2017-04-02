@@ -37,7 +37,7 @@ Apenas clique no botão 'Submit Answer'.
 
 *** =sct
 ```{r}
-success_msg("Vamos nessa! Continue para o próximo exercício.")
+success_msg("Vamos nessa! Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -74,7 +74,7 @@ Clique em 'Submit Answer' para iniciar o primeiro exercício sobre listas.
 
 *** =sct
 ```{r}
-success_msg("Boa! Tá na hora de sujar as mãos!")
+success_msg("Boa! T&#225; na hora de sujar as m&#227;os!")
 ```
 
 
@@ -132,13 +132,13 @@ my_list <- list(my_vector, my_matrix, my_df)
 
 *** =sct
 ```{r}
-msg = "Não remova ou mude a definição das variáveis `my_vector`, `my_matrix` ou `my_df`!"
+msg = "N&#227;o remova ou mude a defini&#231;&#227;o das vari&#225;veis `my_vector`, `my_matrix` ou `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "Parece que `my_list` não contém os elementos corretos. Tenha certeza que passou as variáveis `my_vector`, `my_matrix` e `my_df` dentro da função `list()`, separado por vírgulas e nessa ordem.")
-success_msg("Maravilha! Avance para o próximo exercício.")
+            incorrect_msg = "Parece que `my_list` n&#227;o cont&#233;m os elementos corretos. Tenha certeza que passou as vari&#225;veis `my_vector`, `my_matrix` e `my_df` dentro da fun&#231;&#227;o `list()`, separado por v&#237;rgulas e nessa ordem.")
+success_msg("Maravilha! Avance para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -216,16 +216,16 @@ my_list
 
 *** =sct
 ```{r}
-msg = "Não remova ou mude a definição das variáveis `my_vector`, `my_matrix` ou `my_df`!"
+msg = "N&#227;o remova ou mude a defini&#231;&#227;o das vari&#225;veis `my_vector`, `my_matrix` ou `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "Parece que `my_list` não contém os elementos corretos.")
+            incorrect_msg = "Parece que `my_list` n&#227;o cont&#233;m os elementos corretos.")
 test_object("my_list", eq_condition = "equal",
-            incorrect_msg = "Parece que `my_list` não contém o nome correto dos elementos. Tenha certeza de usar os nomes `vec`, `mat` e `df`, respectivamente. Dá uma olhada na dica se você estiver confuso.");
-test_output_contains("my_list", incorrect_msg = "Não esqueça de exibir `my_list` no console! Simplesmente adicione `my_list` em uma nova linha no editor.")
-success_msg("Ótimo! Agora, você não só sabe como construir listas, como também sabe nomeá-las. Essa habilidade se mostrará mais útil em prática. Continue para o próximo exercício.")
+            incorrect_msg = "Parece que `my_list` n&#227;o cont&#233;m o nome correto dos elementos. Tenha certeza de usar os nomes `vec`, `mat` e `df`, respectivamente. D&#225; uma olhada na dica se voc&#234; estiver confuso.");
+test_output_contains("my_list", incorrect_msg = "N&#227;o esque&#231;a de exibir `my_list` no console! Simplesmente adicione `my_list` em uma nova linha no editor.")
+success_msg("&#211;timo! Agora, voc&#234; n&#227;o s&#243; sabe como construir listas, como tamb&#233;m sabe nome&#225;-las. Essa habilidade se mostrar&#225; mais &#250;til em pr&#225;tica. Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -277,13 +277,13 @@ shining_list <- list(moviename = mov, actors = act, reviews = rev)
 
 *** =sct
 ```{r}
-msg = "Não altere ou remova a definição das variáveis pré-configuradas!"
+msg = "N&#227;o altere ou remova a defini&#231;&#227;o das vari&#225;veis pr&#233;-configuradas!"
 lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list",
-            incorrect_msg = "Parece que `shining_list` não contém os elementos corretos: o primeiro elemento deveria ser `mov`, o segundo elemento `act`, e `rev` como terceiro elemento.")
+            incorrect_msg = "Parece que `shining_list` n&#227;o cont&#233;m os elementos corretos: o primeiro elemento deveria ser `mov`, o segundo elemento `act`, e `rev` como terceiro elemento.")
 test_object("shining_list", eq_condition = "equal",
-            incorrect_msg = "Parece que os elementos de `shining_list` não contém os nomes corretos: nomeie o primeiro elemento como `moviename`, o segundo como `actors`, e o terceiro como `reviews`.");
-success_msg("Inacreditável! Você sabe como criar e nomear listas agora. Assim como nos capítulos anteriores, vamos ver como selecionar elementos de uma lista. Avance para o próximo exercício.")
+            incorrect_msg = "Parece que os elementos de `shining_list` n&#227;o cont&#233;m os nomes corretos: nomeie o primeiro elemento como `moviename`, o segundo como `actors`, e o terceiro como `reviews`.");
+success_msg("Inacredit&#225;vel! Voc&#234; sabe como criar e nomear listas agora. Assim como nos cap&#237;tulos anteriores, vamos ver como selecionar elementos de uma lista. Avance para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -348,11 +348,11 @@ shining_list$actors[2]
 
 *** =sct
 ```{r}
-msg <- "Não remova ou altere a definição de `shining_list`, que já está pré-carregado no workspace!"
+msg <- "N&#227;o remova ou altere a defini&#231;&#227;o de `shining_list`, que j&#225; est&#225; pr&#233;-carregado no workspace!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("shining_list$actors", incorrect_msg = "Você selecionou e exibiu corretamente o vetor que representa os atores? Você pode usar `shining_list$actors`, por exemplo.")
-test_output_contains("shining_list$actors[2]", incorrect_msg = "Para selecionar o segundo ator do vetor que representa os atores, você começa com: `shining_list$actors`. Isso representa os atores, então, você pode adicionar um `[2]` para selecionar o segundo elemento.")
-success_msg("Ótimo! Selecionar elementos de listas é bem fácil, não é mesmo? Continue para o próximo exercício.")
+test_output_contains("shining_list$actors", incorrect_msg = "Voc&#234; selecionou e exibiu corretamente o vetor que representa os atores? Voc&#234; pode usar `shining_list$actors`, por exemplo.")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Para selecionar o segundo ator do vetor que representa os atores, voc&#234; come&#231;a com: `shining_list$actors`. Isso representa os atores, ent&#227;o, voc&#234; pode adicionar um `[2]` para selecionar o segundo elemento.")
+success_msg("&#211;timo! Selecionar elementos de listas &#233; bem f&#225;cil, n&#227;o &#233; mesmo? Continue para o pr&#243;ximo exerc&#237;cio.")
 ```
 
 
@@ -416,13 +416,13 @@ str(shining_list_full)
 
 *** =sct
 ```{r}
-msg = "Não remova ou altere a definição de `shining_list`, que já está pré-carregado no workspace!"
+msg = "N&#227;o remova ou altere a defini&#231;&#227;o de `shining_list`, que j&#225; est&#225; pr&#233;-carregado no workspace!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list_full", eq_condition = "equal",
-            incorrect_msg = paste("Você estendeu a lista `shining_list` com um elemento chamado `year`,",
-                                  "cujo o valor é 1980? Você pode usar `c(shining_list, year = 1980)`"))
-test_function("str", "object", incorrect_msg = "Não esqueça de exibir a estrutura de `shining_list_full` com `str()`.")
-success_msg("Excelente! Este foi o último exercício sobre listas em R! Agora você tem um sólido conhecimento na linguagem de programação R, mas há muito mais a aprender. Confira todos os outros cursos do DataCamp e torne-se um especialista em Data Science!")
+            incorrect_msg = paste("Voc&#234; estendeu a lista `shining_list` com um elemento chamado `year`,",
+                                  "cujo o valor &#233; 1980? Voc&#234; pode usar `c(shining_list, year = 1980)`"))
+test_function("str", "object", incorrect_msg = "N&#227;o esque&#231;a de exibir a estrutura de `shining_list_full` com `str()`.")
+success_msg("Excelente! Este foi o &#250;ltimo exerc&#237;cio sobre listas em R! Agora voc&#234; tem um s&#243;lido conhecimento na linguagem de programa&#231;&#227;o R, mas h&#225; muito mais a aprender. Confira todos os outros cursos do DataCamp e torne-se um especialista em Data Science!")
 ```
 
 

@@ -1,16 +1,15 @@
 id: 2902
-title: Introduction to R
+title: Introdução a R
 instructors:
- - jonathan+author@datacamp.com
-time_needed: 4 hours
+ - paulo+paulovasconcellos@iestampa.com.br
+time_needed: 4 horas
 difficulty_level: 1
-description: "In this introduction to R, you will master the basics of this beautiful
-  open source language, including factors, lists and data frames. With the knowledge
-  gained in this course, you will be ready to undertake your first very own data
-  analysis. With over 2 million users worldwide R is rapidly becoming the leading
-  programming language in statistics and data science. Every year, the number of R
-  users grows by 40% and an increasing number of organizations are using it in their
-  day-to-day activities. Leverage the power of R by completing this free R online
-  course today!"
+description: "Neste curso de introdução a R, você dominará o básico desta linda linguagem
+de código aberto, incluindo fatores, listas e data frames. Com o conhecimento adquirido
+nesse curso, você estará pronto para encarar sua primeira análise de dados. Com mais 
+de 2 milhões de usuários ao redor do mundo, R tem crescido rapidamente e tornando-se uma 
+das linguagens de programação líderes em Estatísticas e Data Science. A cada ano, o número
+de usuários de R cresce cerca de 40%, além de um número crescente de organizações estarem
+aderindo a linguagem em suas atividades diárias. Aumente o poder de R ao completar hoje
+este curso gratuito e online de R!"
 from: "r-base-prod:10"
-

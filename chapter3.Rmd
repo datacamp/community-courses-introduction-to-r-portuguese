@@ -1,5 +1,5 @@
 --- 
-title_meta  :Capítulo 3
+title_meta  : Capítulo 3
 title       : Matrizes
 description : Neste capítulo você irá aprender como trabalhar com matrizes em R. Até o final deste capítulo, você será capaz de criar matrizes e entender como fazer computação básica com ela. Você irá analisar algumas informações sobre Star Wars para ilustrar o uso de matrizes em R. Que a Força esteja com você!
 
